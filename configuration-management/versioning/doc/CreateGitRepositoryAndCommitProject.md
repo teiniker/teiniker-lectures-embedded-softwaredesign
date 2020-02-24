@@ -1,4 +1,4 @@
-# Example: Create Git Repository and Commit a Simple Java Project
+# Example: Create Git Repository and Commit a Simple C Project
 
 In this example we create a local Git repository and save a C 
 project in it.
