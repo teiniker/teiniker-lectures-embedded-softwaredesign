@@ -124,3 +124,8 @@ $ git log --pretty=oneline
 6a115638bfb4829d52067da17c71e86004c8223e (HEAD -> master) Added complex_sub operation.
 bdbd20e4400a4f80d02c44944cfeb8af522a1ddc Initial import.    
 ```
+
+## References
+* [Pro Git Book](https://git-scm.com/book/en/v2)
+
+*Egon Teiniker, 2020, GPL v3.0*

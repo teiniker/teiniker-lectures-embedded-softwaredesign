@@ -151,3 +151,8 @@ $ git status
 Auf Branch master
 nichts zu committen, Arbeitsverzeichnis unverändert
 ```
+
+## References
+* [Pro Git Book](https://git-scm.com/book/en/v2)
+
+*Egon Teiniker, 2020, GPL v3.0*
