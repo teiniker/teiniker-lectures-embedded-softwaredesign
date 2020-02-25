@@ -13,7 +13,7 @@ We make some modifications...
 ```C
 complex complex_sub(complex a, complex b)
 {
-	complex c;
+    complex c;
     c.re = a.re - b.re;
     c.im = a.im - b.im;
     return c;
@@ -43,7 +43,7 @@ index f1b077b..caff86e 100644
  
 +complex complex_sub(complex a, complex b)
 +{
-+       complex c;
++    complex c;
 +    c.re = a.re - b.re;
 +    c.im = a.im - b.im;
 +    return c;
@@ -80,7 +80,7 @@ $ vi complex_numbers.c
 ```C
 complex complex_sub(complex a, complex b)
 {
-	complex c;
+    complex c;
     c.re = a.re - b.re;
     c.im = a.im - b.im;
     return c;

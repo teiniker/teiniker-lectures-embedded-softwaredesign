@@ -2,7 +2,7 @@
 
 This example shows how a remote repository can be used.
 
-# Clone a GitHub Repository 
+## Clone a GitHub Repository 
 
 A GitHub repository can be visited via a Web browser. We can review all
 source files and read documentation.
@@ -35,5 +35,5 @@ $ git pull
 ## References
 * [Pro Git Book](https://git-scm.com/book/en/v2)
 
-
 *Egon Teiniker, 2020, GPL v3.0*
+
