@@ -32,3 +32,8 @@ the local repository by a simple update.
 $ git pull
 ```
 
+## References
+* [Pro Git Book](https://git-scm.com/book/en/v2)
+
+
+*Egon Teiniker, 2020, GPL v3.0*
