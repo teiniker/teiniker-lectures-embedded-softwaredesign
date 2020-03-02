@@ -28,8 +28,8 @@ unity.o: $(UNITY)/unity.c $(UNITY)/unity.h
 compare_test.o: $(TEST)/compare_test.c
 	$(CC) $(CFLAGS) -I $(INCLUDE) -I $(UNITY) -c $(TEST)/compare_test.c -o $(BUILD)/compare_test.o
 
-test: init unity.o compare_test.o
-	$(CC) $(CFLAGS) $(BUILD)/unity.o $(BUILD)/compare_test.o -o $(BUILD)/test
+test: init unity.o compare.o compare_test.o
+	$(CC) $(CFLAGS) $(BUILD)/unity.o $(BUILD)/compare.o $(BUILD)/compare_test.o -o $(BUILD)/test
 
 clean:
 	rm -rf build/
