@@ -6,12 +6,12 @@ __Copyright (c) 2007 - 2020 Unity Project by Mike Karlesky, Mark VanderVoord, an
 
 Getting Started
 ===============
-The [docs](docs/) folder contains a [getting started guide](docs/UnityGettingStartedGuide.md)
+The [docs](https://github.com/ThrowTheSwitch/Unity/tree/master/docs) folder contains a [getting started guide](https://github.com/ThrowTheSwitch/Unity/blob/master/docs/UnityGettingStartedGuide.md)
 and much more tips about using Unity. 
 
 Unity Assertion Summary
 =======================
-For the full list, see [UnityAssertionsReference.md](docs/UnityAssertionsReference.md).
+For the full list, see [UnityAssertionsReference.md](https://github.com/ThrowTheSwitch/Unity/blob/master/docs/UnityAssertionsReference.md).
 
 Basic Validity Tests
 --------------------
