@@ -7,7 +7,7 @@ The following topics will be covered:
 * Configuration Management
   * [Source Code Versioning](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/versioning)
   * [Build Automation](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/building)
-  * [Test Automation](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/versioning)
+  * [Test Automation](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/testing)
   
 * Object-Oriented Design
 
