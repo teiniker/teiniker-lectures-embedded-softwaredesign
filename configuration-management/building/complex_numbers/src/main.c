@@ -2,7 +2,7 @@
 #include <memory.h>
 #include <stdlib.h>
 
-#include "complex_numbers.h"
+#include <complex_numbers.h>
 
 int main(void)
 {
