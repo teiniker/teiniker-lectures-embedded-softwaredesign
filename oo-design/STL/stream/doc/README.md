@@ -54,6 +54,7 @@ The simplest formatting controls are called **manipulators**.
 ```
 
 ## References
+
 [<iostream>](http://www.cplusplus.com/reference/iostream/)
 [<sstream>](http://www.cplusplus.com/reference/sstream/)
 [<iomanip>](http://www.cplusplus.com/reference/iomanip/)
