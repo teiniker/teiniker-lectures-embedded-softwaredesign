@@ -87,7 +87,7 @@ $ pkg-config cpputest --libs --cflags
 ```
 
 After installation we can compile and execute test classes with the 
-following commands (which can be found in the Makrfile):
+following commands (which can be found in the Makefile):
 ```
 $ g++ -g -Wall -I include -c test/SprintfTest.cpp -o build/SprintfTest.o
 $ g++ build/SprintfTest.o -o build/SprintfTest -lstdc++ -lCppUTest -lCppUTestExt
@@ -99,6 +99,6 @@ OK (5 tests, 5 ran, 11 checks, 0 ignored, 0 filtered out, 1 ms)
 
 
 ## References
-[CppUTest](https://cpputest.github.io/)
+[CppUTest Framework](https://cpputest.github.io/)
 
 *Egon Teiniker, 2020, GPL v3.0*
