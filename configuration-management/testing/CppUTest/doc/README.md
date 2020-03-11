@@ -27,12 +27,12 @@ TEST_GROUP(TestGroup)
 {
     void setup()
     {
-		// Setup
+        // Setup
     }
 
     void teardown()
     {
-		// Tear down
+        // Tear down
     }    
 };
 
@@ -40,7 +40,7 @@ TEST(TestGroup, TestCaseName)
 {
     // Exercise
 		
-	// Verify
+    // Verify
 }
 
 int main(int ac, char** av)
@@ -48,6 +48,8 @@ int main(int ac, char** av)
     return CommandLineTestRunner::RunAllTests(ac, av);
 }
 ```
+
+## How to Assert the Results
 
 The verification is carried out by assert macros, which carry out 
 different types of checks:

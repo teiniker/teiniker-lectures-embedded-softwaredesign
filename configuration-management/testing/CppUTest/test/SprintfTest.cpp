@@ -5,8 +5,6 @@
 
 using namespace std;
 
-// Test cases
-
 char buffer[81];
 
 TEST_GROUP(SprintfTestGroup)
@@ -24,7 +22,7 @@ TEST_GROUP(SprintfTestGroup)
 
 TEST(SprintfTestGroup, NoFormatStringTest)
 {
-    // Exercise
+        // Exercise
 	int len = sprintf(buffer,"Hello");
 	
 	// Verify
