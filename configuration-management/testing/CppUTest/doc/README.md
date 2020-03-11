@@ -5,7 +5,7 @@ In order to be able to implement tests in C ++ Unit, we use the
 CppUTest is written in C++ but is used in C and C++ projects and 
 frequently used in embedded systems but it works for any C/C++ project.
 
-## How to Write a Test Class
+## Write a Test Class
 
 Each test class has the following structure:
 * Include the test framework header files (**TestHarness.h** and **CommandLineTestRunner.h**)
@@ -49,7 +49,7 @@ int main(int ac, char** av)
 }
 ```
 
-## How to Assert the Results
+## Verify the Results
 
 The verification is carried out by assert macros, which carry out 
 different types of checks:
