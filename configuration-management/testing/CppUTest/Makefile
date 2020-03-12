@@ -7,12 +7,12 @@ all: test
 init:
 	mkdir -p build
 
-SprintfTest.o: test/SprintfTest.cpp
-	$(CC) $(CFLAGS) -c test/SprintfTest.cpp -o build/SprintfTest.o
+CppTest.o: test/CppTest.cpp
+	$(CC) $(CFLAGS) -c test/CppTest.cpp -o build/CppTest.o
 
-test: init SprintfTest.o 
-	$(CC) build/SprintfTest.o -o build/SprintfTest $(LIBS)
-	build/SprintfTest -v
+test: init CppTest.o 
+	$(CC) build/CppTest.o -o build/CppTest $(LIBS)
+	build/CppTest -v
 
 clean:
 	rm -rf build/

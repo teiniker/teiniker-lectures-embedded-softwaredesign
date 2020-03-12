@@ -7,7 +7,7 @@ using namespace std;
 
 char buffer[81];
 
-TEST_GROUP(SprintfTestGroup)
+TEST_GROUP(TestGroup)
 {
     void setup()
     {
@@ -20,9 +20,9 @@ TEST_GROUP(SprintfTestGroup)
 };
 
 
-TEST(SprintfTestGroup, NoFormatStringTest)
+TEST(TestGroup, NoFormatStringTest)
 {
-        // Exercise
+    // Exercise
 	int len = sprintf(buffer,"Hello");
 	
 	// Verify
@@ -31,7 +31,7 @@ TEST(SprintfTestGroup, NoFormatStringTest)
 	CHECK_EQUAL('\0', buffer[5]);
 }
 
-TEST(SprintfTestGroup, StringParameterTest)
+TEST(TestGroup, StringParameterTest)
 {
 	// Setup
 	const char* str = "Graz"; 
@@ -45,7 +45,7 @@ TEST(SprintfTestGroup, StringParameterTest)
 
 }
 
-TEST(SprintfTestGroup, IntegerParameterTest)
+TEST(TestGroup, IntegerParameterTest)
 {
 	// Setup
 	int a = 3;
@@ -60,7 +60,7 @@ TEST(SprintfTestGroup, IntegerParameterTest)
 
 }
 
-TEST(SprintfTestGroup, HexParameterTest)
+TEST(TestGroup, HexParameterTest)
 {
 	// Setup
 	int a = 0xffd2;
@@ -73,7 +73,7 @@ TEST(SprintfTestGroup, HexParameterTest)
 	CHECK_EQUAL(13, len);
 }
 
-TEST(SprintfTestGroup, DoubleParameterTest)
+TEST(TestGroup, DoubleParameterTest)
 {
 	// Setup
 	double d = 3.1415;
@@ -84,6 +84,19 @@ TEST(SprintfTestGroup, DoubleParameterTest)
 	// Verify
 	STRCMP_EQUAL("PI = 3.14", buffer);
 	CHECK_EQUAL(9, len);
+}
+
+
+TEST(TestGroup, MemoryLeakTest)
+{
+	// Setup
+	int *array = new int[7];
+	
+	// Note: If you remove the delete statement, the test runner will
+	// report a memory leak and marks the test as failed!!
+	 
+	// Tear down
+	delete[] array;
 }
 
 

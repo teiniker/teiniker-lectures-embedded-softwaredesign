@@ -74,6 +74,40 @@ different types of checks:
 * **MEMCMP_EQUAL(expected, actual, size)** - compares two areas of memory
 
 
+## Memory Leak Detection
+CppUTest has memory leak detection support on a per-test level. 
+This means that it automatically checks whether the memory at the end of 
+a test is the same as at the beginning of the test.
+
+Explained another way:
+* Pre-setup -> Record the amount of memory used
+* Do setup
+* Run test
+* Do teardown
+* Post-teardown -> Check whether the amount of memory is the same
+
+```C++
+TEST(TestGroup, MemoryLeakTest)
+{
+	// Setup
+	int *array = new int[7];
+	
+	// Tear down
+	//delete[] array;
+}
+
+```
+
+If we run this test case we get something like:
+```
+test/CppTest.cpp:90: error: Failure in TEST(TestGroup, MemoryLeakTest)
+	Memory leak(s) found.
+Alloc num (4) Leak size: 28 Allocated at: test/CppTest.cpp and line: 93. Type: "new []"
+	Memory: <0x5542c0> Content:
+    0000: 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 |................|
+    0010: 00 00 00 00 00 00 00 00  00 00 00 00             |............|
+```
+
 ## Setup
 
 There are several ways to setup CppUTest. 
@@ -96,7 +130,6 @@ $ build/SprintfTest
 .....
 OK (5 tests, 5 ran, 11 checks, 0 ignored, 0 filtered out, 1 ms)
 ```
-
 
 ## References
 [CppUTest Framework](https://cpputest.github.io/)
