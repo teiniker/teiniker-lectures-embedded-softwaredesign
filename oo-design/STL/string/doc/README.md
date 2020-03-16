@@ -1,4 +1,4 @@
-# STL: String
+# Standard Library: String
 
 Strings are objects that represent sequences of characters.
 The string class of the C++ standard library are designed in such a way
