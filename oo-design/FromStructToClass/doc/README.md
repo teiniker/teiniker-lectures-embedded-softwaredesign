@@ -218,10 +218,16 @@ This must be done to avoid memory leak.
     
 
 ## References
+Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
+* Chapter 16: Classes
+* Chapter 17: Construction, Cleanup, Copy, and Move 
 
 [C++ Classes and Objects](https://www.geeksforgeeks.org/c-classes-and-objects/)
+
 [Constructors in C++](https://www.geeksforgeeks.org/constructors-c/)
+
 [Copy Constructor in C++](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
+
 [Destructors in C++](https://www.geeksforgeeks.org/destructors-c/)
 
 *Egon Teiniker, 2020, GPL v3.0*
