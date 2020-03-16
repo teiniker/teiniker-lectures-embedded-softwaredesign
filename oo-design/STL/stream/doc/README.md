@@ -56,10 +56,10 @@ The simplest formatting controls are called **manipulators**.
 ## References
 Nicolai M. Josuttis. The C++ Standard Library: A Tutorial and Reference. Addison Wesley 2012
 
-[<iostream>](http://www.cplusplus.com/reference/iostream/)
+[iostream](http://www.cplusplus.com/reference/iostream/)
     
-[<sstream>](http://www.cplusplus.com/reference/sstream/)
+[sstream](http://www.cplusplus.com/reference/sstream/)
 
-[<iomanip>](http://www.cplusplus.com/reference/iomanip/)
+[iomanip](http://www.cplusplus.com/reference/iomanip/)
 
 *Egon Teiniker, 2020, GPL v3.0*
