@@ -1,0 +1,15 @@
+Exercise: Classes and Objects User --[1]-> Mail
+--------------------------------------------------------------------------------
+
+Given a class diagram, implement the classes "User" and "Mail" as well as the
+directed association with multiplicity 1 between them.
+
+1) Define the header files "User.h" and "Mail.h"
+
+2) Implement the classes in "User.cpp" and "Mail.cpp"
+
+3) Test your implementation using the "UserTest.cpp" class.
+
+Note that the Makefile is already implementet - don't forget to respect 
+the project layout.
+
