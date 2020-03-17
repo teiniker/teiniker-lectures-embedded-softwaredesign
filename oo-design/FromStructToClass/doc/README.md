@@ -65,7 +65,7 @@ In C++ a **class** is a user-defined type that has **attributes** (data members)
 (private) to the code that uses instances of that class.
 
 <p align="center">
-<img src="ClassDiagram-ComplexNumber.png" alt="Class Diagram" width="200" />
+<img src="ClassDiagram-ComplexNumber.png" alt="Class Diagram" width="400" />
 </p>
 
 ```C++
