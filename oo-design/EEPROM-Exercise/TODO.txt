@@ -1,0 +1,11 @@
+Exercise: Classes and Objects
+--------------------------------------------------------------------------------
+
+Create the missing "EEPROM.cpp" file and implement the methods declared
+in "EEPROM.h".
+
+Use "EEPROMTest.cpp" to verify your implementations.
+
+Note that the Makefile is already implementet - don't forget to respect 
+the project layout.
+
