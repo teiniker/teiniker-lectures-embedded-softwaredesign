@@ -64,6 +64,10 @@ In C++ a **class** is a user-defined type that has **attributes** (data members)
 **methods** (member functions). Both of them can be visible (public) or invisible
 (private) to the code that uses instances of that class.
 
+<p align="center">
+<img src="ClassDiagram-ComplexNumber.png" alt="Class Diagram" width="200" />
+</p>
+
 ```C++
 class ComplexNumber
 {
