@@ -4,7 +4,7 @@ A class can have static members (attributes and methods) which are
 underlined in the class diagram. 
 
 <p align="center">
-<img src="ClassDiagram-IntegerSequence.png" alt="Class Diagram" width="200" />
+<img src="ClassDiagram-IntegerSequence.png" alt="Class Diagram" width="400" />
 </p>
 
 ## Static Attributes
