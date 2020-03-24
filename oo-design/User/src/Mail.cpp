@@ -1,10 +1,7 @@
 #include <Mail.h>
 
-Mail::Mail(const string& address) : address_{address} 
-{
-}
-
-Mail::~Mail() 
+Mail::Mail(const string& address) 
+    : address_{address} 
 {
 }
     

@@ -8,10 +8,6 @@ User::User(int id, const string& username, const string& password, Mail* mail)
 {
 }
 	
-User::~User()
-{
-} 
-
 int User::id()
 {
 	return id_;
@@ -21,7 +17,7 @@ void User::id(int id)
 	id_ = id;
 }
 		
-string User::username(void) const
+string User::username(void)
 {
 	return username_;
 }
@@ -30,7 +26,7 @@ void User::username(const string& username)
 	username_ = username;	
 }
 		
-string User::password() const
+string User::password()
 {
 	return password_;
 }

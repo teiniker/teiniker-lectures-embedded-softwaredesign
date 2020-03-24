@@ -12,7 +12,6 @@ class Mail
  
 	public:
 		Mail(const string& address);
-		~Mail(); 
     
 		string address();
 		void address(const string& address);

@@ -7,20 +7,19 @@
 using namespace std;
 
 User* user = NULL;
-Mail* mail = NULL;
 
 TEST_GROUP(UserTestGroup)
 {
     void setup()
     {
-        mail = new Mail("homer.simpson@springfield.com");
+        Mail* mail = new Mail("homer.simpson@springfield.com");
         user = new User(7, "homer", "c3R1ZGVudA", mail);
     }
 
     void teardown()
     {
-        delete(mail);
-        delete(user);
+        delete user->mail();
+        delete user;
     }
 };
 
@@ -29,10 +28,10 @@ TEST(UserTestGroup, ConstructorTest)
 {
     // Verify
     CHECK_EQUAL(7, user->id());
-    STRCMP_EQUAL("homer", user->username().c_str());
-    STRCMP_EQUAL("c3R1ZGVudA", user->password().c_str());
+    CHECK_EQUAL("homer", user->username());
+    CHECK_EQUAL("c3R1ZGVudA", user->password());
     
-    STRCMP_EQUAL("homer.simpson@springfield.com", user->mail()->address().c_str());
+    CHECK_EQUAL("homer.simpson@springfield.com", user->mail()->address());
 }
 
 

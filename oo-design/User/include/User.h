@@ -16,16 +16,15 @@ class User
 		Mail* mail_;
  
 	public:
-		User(int id, const string& username, const string& password, Mail* mail_ptr);
-		~User(); 
+		User(int id, const string& username, const string& password, Mail* mail);
 
 		int id();
 		void id(int id);
 		
-		string username(void) const;
+		string username(void);
 		void username(const string& username);
 		
-		string password() const;
+		string password();
 		void password(const string& password);
 		
 		Mail* mail();
