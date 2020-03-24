@@ -114,7 +114,7 @@ There are several ways to setup CppUTest.
 We simply use the package management:
 
 ```
-$ apt-get install cpputest
+$ sudo apt-get install cpputest
 
 $ pkg-config cpputest --libs --cflags
 -lstdc++ -lCppUTest -lCppUTestExt
