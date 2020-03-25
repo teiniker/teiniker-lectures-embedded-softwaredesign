@@ -10,7 +10,7 @@ The following topics will be covered:
   * [Test Automation](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/testing)
   
 * Object-Oriented Design
-  * [Classes and Objects](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design)
+  * [Classes and Objects](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/README.md)
  
 * Embedded Computing 
   
