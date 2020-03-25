@@ -13,6 +13,8 @@
   * [Order](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Order-Exercise) 
   * [Exercise: User](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Exercise)
     ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User))
+* Bidirectional Associations
+  * [Directory](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Directory) 
 
 ## C++ Standard Library
 * [string](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/string)
