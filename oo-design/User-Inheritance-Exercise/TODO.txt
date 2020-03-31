@@ -1,0 +1,23 @@
+Exercise: Inheritance - User and Admin
+--------------------------------------------------------------------------------
+
+User --[1]-> Mail
+ ^
+ |
+Admin
+ 
+Given a class diagram, implement the classes "Admin" which inherits from "User"
+and adds a new attribute "password" of type string. Also implement the constrctor
+and the following methods:
+	string password();
+	void password(const string& password);
+
+1) Define the header file "Admin.h"
+
+2) Implement the classes in "Admin.cpp" 
+
+3) Test your implementation using the "UserTest.cpp" class.
+
+Note that the Makefile is already implementet - don't forget to respect 
+the project's layout.
+
