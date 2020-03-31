@@ -2,7 +2,7 @@
 #define _USER_H_
 
 #include <string>
-
+#include <vector>
 #include <Mail.h>
 
 using namespace std;
@@ -13,10 +13,10 @@ class User
 		int id_; 
 		string username_;
 		string password_;
-		Mail* mail_;
+		Mail* mail_;			// ---[1]-> Mail
  
-	public:
-		User(int id, const string& username, const string& password, Mail* mail);
+	public:                
+		User(const int id, const string& username, const string& password, Mail* mail);
 
 		int id();
 		void id(int id);
@@ -27,8 +27,9 @@ class User
 		string password();
 		void password(const string& password);
 		
+		// ---[1]-> Mail
 		Mail* mail();
-		void maild(Mail* mail);		
+		void mail(Mail* mail);
  };
 
 #endif /*_USER_H_ */

@@ -12,6 +12,7 @@ class Mail
  
 	public:
 		Mail(const string& address);
+		//~Mail(void) {}
     
 		string address();
 		void address(const string& address);

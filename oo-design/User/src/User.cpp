@@ -3,7 +3,7 @@
 
 using namespace std;
 
-User::User(int id, const string& username, const string& password, Mail* mail)
+User::User(const int id, const string& username, const string& password, Mail* mail)
 	: id_{id}, username_{username}, password_{password}, mail_{mail}
 {
 }
@@ -34,7 +34,8 @@ void User::password(const string& password)
 {
 	password_ = password;
 }
-		
+
+// ---[1]-> Mail		
 Mail* User::mail()
 {
 	return mail_;
