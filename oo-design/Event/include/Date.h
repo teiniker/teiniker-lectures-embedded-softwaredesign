@@ -10,8 +10,7 @@ class Date
  
 	public:
 		Date(int dd, int mm, int yyyy);
-		
-		void setDate(int dd, int mm, int yyyy);
+				
 		int day(void);
 		int month(void);
 		int year(void);

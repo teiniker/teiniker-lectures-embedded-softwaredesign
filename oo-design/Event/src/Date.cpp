@@ -1,15 +1,8 @@
 #include <Date.h>
 
 Date::Date(int dd, int mm, int yyyy)
+    : dd_{dd}, mm_{mm}, yyyy_{yyyy}
 {
-    setDate(dd,mm,yyyy);
-}
-
-void Date::setDate(int dd, int mm, int yyyy)
-{
-    dd_ = dd;
-    mm_ = mm;
-    yyyy_ = yyyy;
 }
 
 int Date::day(void)
