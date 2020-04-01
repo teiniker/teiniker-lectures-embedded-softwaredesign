@@ -8,6 +8,10 @@ or Super class.
 
 ## Implementing Inheritance
 
+<p align="center">
+<img src="ClassDiagram-Order-Inheritance.png" alt="Class Diagram" width="400" />
+</p>
+
 Given a base class named *Entity* which implements a common attribute
 and its accessor methods.
 
