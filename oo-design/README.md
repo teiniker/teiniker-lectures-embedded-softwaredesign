@@ -15,7 +15,13 @@
     ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User))
 * Bidirectional Associations
   * [Directory](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Directory) 
-
+* Composition
+  * [Event](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Event)
+* Generalization (Inheritance)
+  * [Order-Inheritance](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Order-Inheritance)
+  * [Exercise: User-Inheritance](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Inheritance-Exercise)
+    ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Inheritance))
+  
 ## C++ Standard Library
 * [string](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/string)
 * [iostreams](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/stream)
