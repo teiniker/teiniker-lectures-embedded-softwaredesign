@@ -1,0 +1,27 @@
+Exercise: Inheritance - Print
+--------------------------------------------------------------------------------
+
+Given a header file "Print.h":
+
+├── include
+│   └── Print.h
+├── src
+├── test
+│   └── PrintTest.cpp
+├── Makefile
+└── TODO.txt
+
+1. Implement the subclass ConsolePrint
+---------------------------------------
+Implement all "print()" methods in a way that they use the abstract method 
+"write(int c)" to write every single character of their parameters. For these 
+implementations, create a file called "Print.cpp".
+
+Create a inherited class named "ConsolePrint" (ConsolePrint.h, ConsolePrint.cpp)
+which implements the abstract "write(int c)" method by using the "putchar(c)"
+function from the C standard library (don't forget to #include <cstdio>).
+
+Use "PrintTest.cpp" to verify your implementations.
+
+Note that the Makefile is already implementet - don't forget to respect 
+the project layout.

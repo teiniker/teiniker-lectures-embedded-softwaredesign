@@ -1,0 +1,28 @@
+Exercise: Namespaces - LCD
+--------------------------------------------------------------------------------
+
+Given the known LCD example:
+
+├── include
+│   └── LCD.h
+├── src
+│   └── LCD.cpp
+├── test
+│   └── LCDTest.cpp
+├── Makefile
+└── TODO.txt
+
+$ make
+mkdir -p build
+g++ -g -Wall -I include -c test/LCDTest.cpp -o build/LCDTest.o
+g++ -g -Wall -I include -c src/LCD.cpp -o build/LCD.o
+g++ build/LCDTest.o build/LCD.o -o build/LCDTest -lstdc++ -lCppUTest -lCppUTestExt
+build/LCDTest
+......
+OK (6 tests, 6 ran, 9 checks, 0 ignored, 0 filtered out, 1 ms)
+
+
+Put all classes into a namespace
+--------------------------------
+Add the namespace "org::se::lab" to all classes (including "LCDTest") and
+make sure that again all tests are successful.
