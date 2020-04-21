@@ -21,10 +21,17 @@
   * [Order-Inheritance](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Order-Inheritance)
   * [Exercise: User-Inheritance](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Inheritance-Exercise)
     ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Inheritance))
-  
+  * [SumOfSequence](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/SumOfSequence)
+
+## Packages
+  * [Namespaces](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Namespaces)
+
 ## C++ Standard Library
 * [string](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/string)
 * [iostreams](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/stream)
 * [vector](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/vector)
+
+## Real World Examples
+* [Arduino Core AVR](https://github.com/arduino/ArduinoCore-avr)
 
 *Egon Teiniker, 2020, GPL v3.0*
