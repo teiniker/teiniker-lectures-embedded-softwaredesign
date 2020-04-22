@@ -10,7 +10,7 @@
 * Static Class Members
   * [IntegerSequence](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/IntegerSequence)  
 * Directed Associations
-  * [Order](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Order-Exercise) 
+  * [Order](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Order) 
   * [Exercise: User](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Exercise)
     ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User))
 * Bidirectional Associations
@@ -22,9 +22,11 @@
   * [Exercise: User-Inheritance](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Inheritance-Exercise)
     ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Inheritance))
   * [SumOfSequence](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/SumOfSequence)
-
+  * [Exercise: Print](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Print-Exercise)
+  
 ## Packages
   * [Namespaces](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Namespaces)
+  * [Exercise: LCD-Namespaces](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/LCD-Namespaces-Exercise)
 
 ## C++ Standard Library
 * [string](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/string)
