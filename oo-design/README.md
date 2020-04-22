@@ -10,7 +10,7 @@
 * Static Class Members
   * [IntegerSequence](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/IntegerSequence)  
 * Directed Associations
-  * [Order](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Order-Exercise) 
+  * [Order](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Order) 
   * [Exercise: User](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Exercise)
     ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User))
 * Bidirectional Associations
