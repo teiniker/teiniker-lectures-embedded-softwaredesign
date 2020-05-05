@@ -1,0 +1,27 @@
+Exercise: Operator Overloading - Counter
+--------------------------------------------------------------------------------
+
+Given the following project structure:
+.
+├── Makefile
+├── include
+│   └── Counter.h
+├── src
+├── test
+│   └── CounterTest.cpp
+└── TODO.txt
+
+Create a file named "src/Counter.cpp" and implement the class declaration found in 
+"Counter.h":
+
+> Counter(int value, int min, int max);
+Implement the constructor and check if the passed argument values are correct.
+Pre-conditions: min <= max; min <= value <= max 
+If there are invalid arguments throw the "std::invalid_argument" exception. 
+
+> void operator ++(int);
+  void operator --(int);
+Overload the increment and decrement operators.
+Note that the int-parameter declares the postfix operation (the parameter value is not
+used in the implementation). 
+
