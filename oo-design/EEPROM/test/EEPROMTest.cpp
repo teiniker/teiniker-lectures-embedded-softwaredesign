@@ -18,15 +18,6 @@ TEST(EEPROMTestGroup, ReadWriteTest)
     CHECK_EQUAL(0xaa, eeprom.read(0x0100));
 }
 
-TEST(EEPROMTestGroup, ArrayTest)
-{
-    // Exercise
-    eeprom[0x0100] = 0xaa;
-    
-    // Verify
-    CHECK_EQUAL(0xaa, eeprom[0x0100]);
-}
-
 int main(int ac, char** av)
 {
     return CommandLineTestRunner::RunAllTests(ac, av);
