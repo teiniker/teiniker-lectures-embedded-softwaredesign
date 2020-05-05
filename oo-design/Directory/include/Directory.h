@@ -4,22 +4,25 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class File; // forward declaration
 
+// Directory  ----[*]->  File
+// Directory  <-[1]----  File
+
+// Directory -[1]---[*]- File (bidirectional)
 class Directory 
 {
 	private:
-		string name_;
-		vector<File*> files_;
+		std::string name_;
+		std::vector<File*> files_;  // ---[*]-> File
  
 	public:
-		Directory(const string& name);
+		Directory(const std::string& name);
 		
-		string name(void);
-		void name(const string& name);
+		std::string name(void);
+		void name(const std::string& name);
 		
+		// ---[*]-> File
 		void addFile(File* file);
 		File* file(int index);
 		int numberOfFiles(void);

@@ -12,7 +12,7 @@ class File
 	private:
 		string name_; 
 		size_t size_;
-		Directory* directory_;
+		Directory* directory_ = NULL;	// ---[0..1]-> Directory
  
 	public:
 		File(const string& name, size_t size);
