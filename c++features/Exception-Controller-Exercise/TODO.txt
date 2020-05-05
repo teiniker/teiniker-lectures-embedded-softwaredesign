@@ -1,0 +1,31 @@
+Exercise: Exception Handling - Controller
+--------------------------------------------------------------------------------
+
+Given the following project structure:
+
+.
+├── Makefile
+├── include
+│   ├── Controller.h
+│   └── GPIO.h
+├── src
+│   ├── Controller.cpp
+│   └── GPIO.cpp
+└── test
+    └── ControllerTest.cpp
+
+Implement a custom exception type "ControllerException" in the Controller.h file:
+
+> ControllerException(const std::string& cause);
+
+> const char* what() const noexcep;
+
+
+Implement the missing "Controller.cpp" file.
+
+> Controller()
+Try to create an instance of "GPIO" on the heap. 
+If that fails, throw an "ControllerException". 
+
+> ~Controller()
+Remove the "GPIO" object from memory.
