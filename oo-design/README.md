@@ -23,10 +23,11 @@
     ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/User-Inheritance))
   * [SumOfSequence](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/SumOfSequence)
   * [Exercise: Print](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Print-Exercise)
-  
+   ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Print))
 ## Packages
   * [Namespaces](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/Namespaces)
   * [Exercise: LCD-Namespaces](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/LCD-Namespaces-Exercise)
+   ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/LCD-Namespaces))
 
 ## C++ Standard Library
 * [string](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/string)
@@ -35,5 +36,6 @@
 
 ## Real World Examples
 * [Arduino Core AVR](https://github.com/arduino/ArduinoCore-avr)
+* [YouTube: How to Upload an Arduino Sketch from Linux Terminal](https://youtu.be/qAM2S27FWAI)
 
 *Egon Teiniker, 2020, GPL v3.0*
