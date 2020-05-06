@@ -12,9 +12,9 @@ TEST(PointersAndReferencesGroup, BasicsTest)
     // Setup
     int i = 7;
     
-    int* ptr = &i;  // pointer to variable i
+    int* ptr = &i;  // pointer to variable i: ptr -> i
     
-    int& ref = i;   // reference (or alias) for i
+    int& ref = i;   // reference (or alias) for i: ref -> i
     
     // Verify
     CHECK_EQUAL(7, i);
@@ -114,7 +114,7 @@ TEST(PointersAndReferencesGroup, ArithmeticOperationsTest)
     
     // There is no Reference Arithmetic
     CHECK_EQUAL(11, ref);
-    CHECK_EQUAL(12, ref+1); // array[0]+2
+    CHECK_EQUAL(12, ref+1); // array[0]+1
     CHECK_EQUAL(13, ref+2); // array[0]+2
 }
 

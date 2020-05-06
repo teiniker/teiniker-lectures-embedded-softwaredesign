@@ -22,6 +22,7 @@ If there are invalid arguments throw the "std::invalid_argument" exception.
 > void operator ++(int);
   void operator --(int);
 Overload the increment and decrement operators.
+A Counter object can only be incremented and decremented within its range [min,max]. 
 Note that the int-parameter declares the postfix operation (the parameter value is not
 used in the implementation). 
 

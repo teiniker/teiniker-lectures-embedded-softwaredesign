@@ -32,7 +32,7 @@ TEST(ComplexNumberTestGroup, SubOperatorTest)
     Complex b(3.0, 4.0);
 
     // Exercise
-    Complex result = a - b;
+    Complex result = a - b;  // Complex a.sub(const Complex& b)
     
     // Verify
     CHECK_EQUAL(1.0 - 3.0, result.real());

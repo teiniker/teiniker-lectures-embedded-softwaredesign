@@ -27,7 +27,34 @@ TEST(ControllerTestGroup, WhatTest)
     }
     catch(ControllerException& e)
     {
-        cout << e.what() << endl;
+        STRCMP_EQUAL("Can't access GPIO! (because: No hardware in place!)", e.what());
+    }
+}
+
+TEST(ControllerTestGroup, ExceptionBaseClassTest)
+{
+    try
+    {
+        Controller();
+        FAIL("No exception!"); 
+    }
+    catch(std::exception& e) // Catch subtypes of std::exception
+    {
+       STRCMP_EQUAL("Can't access GPIO! (because: No hardware in place!)", e.what());
+    }
+}
+
+
+TEST(ControllerTestGroup, AnyExceptionTest)
+{
+    try
+    {
+        Controller();
+        FAIL("No exception!"); 
+    }
+    catch(...) // Catch any exception
+    {
+        // Exception thrown
     }
 }
 

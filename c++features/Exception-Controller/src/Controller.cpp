@@ -13,8 +13,11 @@ Controller::Controller()
 	}
 	catch(std::runtime_error& e)
 	{
-		std::cout << e.what() << std::endl;
-		throw ControllerException("Can't access GPIO!");
+		string msg;
+		msg.append("Can't access GPIO! (because: ");
+		msg.append(e.what());
+		msg.append(")"); 
+		throw ControllerException(msg);
 	}
 }
 
