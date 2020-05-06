@@ -9,8 +9,8 @@ Admin
 Given a class diagram, implement the classes "Admin" which inherits from "User"
 and adds a new attribute "password" of type string. Also implement the constrctor
 and the following methods:
-	string password();
-	void password(const string& password);
+	string password(); // getter
+	void password(const string& password); // setter
 
 1) Define the header file "Admin.h"
 

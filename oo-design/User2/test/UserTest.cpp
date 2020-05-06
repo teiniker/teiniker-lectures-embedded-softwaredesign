@@ -13,7 +13,8 @@ TEST_GROUP(UserTestGroup)
     void setup()
     {
         user = new User(7, "homer", "c3R1ZGVudA");
-        user->addMail(new Mail("homer.simpson@springfield.com"));
+        Mail* mail = new Mail("homer.simpson@springfield.com");
+        user->addMail(mail);
         user->addMail(new Mail("homer.simpson@powerplant.com"));
     }
 

@@ -6,14 +6,14 @@
 
 #include <OrderLine.h>
 
-using namespace std;
+//using namespace std;
 
 class Order 
 {
 	private:
 		int id_; 
 		string name_;
-		vector<OrderLine*> lines_;
+		std::vector<OrderLine*> lines_;  // ---[*]-> OrderLine
  
 	public:
 		Order(int id, const string& name);	

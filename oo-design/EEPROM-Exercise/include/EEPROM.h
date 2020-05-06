@@ -14,13 +14,13 @@ class EEPROM
 		uint8_t* memory_;
  
 	public:
-		EEPROM(const string& type, const size_t size);
+		EEPROM(string& type, size_t size);
 		~EEPROM(); 
 
-		string type(void) const;
+		string type(void);
 		
-		uint8_t read(const uint32_t address);
-		void write(const uint32_t address, uint8_t const value);
+		uint8_t read(uint32_t address);
+		void write(uint32_t address, uint8_t value);
  };
 
 #endif /*_EEPROM_H_ */

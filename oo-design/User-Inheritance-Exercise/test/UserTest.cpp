@@ -40,7 +40,7 @@ TEST(UserTestGroup, AdminTest)
     // Verify
     CHECK_EQUAL(7, admin->id());
     CHECK_EQUAL("burns", admin->username());
-    
+    CHECK_EQUAL("c3R1ZGVudA", admin->password());
     CHECK_EQUAL("monti.burns@springfield.com", admin->mail()->address());
 
     // Teardown 

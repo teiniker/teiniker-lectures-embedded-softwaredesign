@@ -2,7 +2,7 @@
 
 Order::Order(int id, const string& name)
 	: Entity(id), name_{name}
-{
+{	
 }
 
 string Order::name(void)

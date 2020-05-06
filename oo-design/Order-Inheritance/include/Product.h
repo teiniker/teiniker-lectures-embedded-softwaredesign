@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Product: public Entity
+class Product : public Entity
 {
 	private:
 		string description_; 
@@ -18,6 +18,7 @@ class Product: public Entity
 
 		string description(void);
 		long price(void);
+		// int id(void);
  };
 
 #endif /*_PRODUCT_H_ */

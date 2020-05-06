@@ -8,7 +8,7 @@ class IntegerSequence
 		int id_;
 				
 	public:
-		IntegerSequence(void);
+		IntegerSequence(void); // Constructor
 
 		static void init(int value);
 		static int next(void); 

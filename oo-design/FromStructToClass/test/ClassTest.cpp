@@ -1,6 +1,10 @@
 #include <CppUTest/TestHarness.h>
 #include <CppUTest/CommandLineTestRunner.h>
 
+#include <iostream>
+
+using namespace std;
+
 // SUT
 
 class ComplexNumber
@@ -12,12 +16,17 @@ class ComplexNumber
     public:
         ComplexNumber(double re, double im) : re_{re}, im_{im}
         {
+            cout << "constructor" << endl; 
+            //re_ = re;
+            //im_ = im;
         }
         ComplexNumber() : re_{0}, im_{0}
         {
+            cout << "constructor - default" << endl;
         }
-        ~ ComplexNumber() 
-        {            
+        ~ComplexNumber() 
+        {
+            cout << "destructor" << endl;            
         }
         
         double real()
@@ -26,6 +35,7 @@ class ComplexNumber
         }
         void real(double re)
         {
+            // Input validation
             re_ = re;
         }
         
@@ -67,7 +77,7 @@ TEST_GROUP(ClassTestGroup)
 TEST(ClassTestGroup, ConstructorTest)
 {
     // Setup & Exercise
-    ComplexNumber c(1.0, 2.0); 
+    ComplexNumber c(1.0, 2.0); // stack
 
     // Verify
     DOUBLES_EQUAL(1.0, c.real(), 1E-3);
@@ -78,7 +88,7 @@ TEST(ClassTestGroup, ConstructorTest)
 TEST(ClassTestGroup, DefaultConstructorTest)
 {
     // Setup & Exercise
-    ComplexNumber c; 
+    ComplexNumber c; // stack
 
     // Verify
     DOUBLES_EQUAL(0.0, c.real(), 1E-3);
@@ -89,7 +99,7 @@ TEST(ClassTestGroup, DefaultConstructorTest)
 TEST(ClassTestGroup, ChangeValuesTest)
 {
     // Setup & Exercise
-    ComplexNumber c(1.0, 2.0); 
+    ComplexNumber c(1.0, 2.0); // stack 
     c.real(7.0);
     c.imag(3.0);
 
@@ -132,14 +142,14 @@ TEST(ClassTestGroup, SubTest)
 TEST(ClassTestGroup, HeapTest)
 {
     // Setup & Exercise
-    ComplexNumber *c_ptr = new ComplexNumber(1.0, 2.0); 
+    ComplexNumber *c_ptr = new ComplexNumber(1.0, 2.0); // heap
 
     // Verify
     DOUBLES_EQUAL(1.0, c_ptr->real(), 1E-3);
     DOUBLES_EQUAL(2.0, c_ptr->imag(), 1E-3) ;
     
     // Tear down
-    delete(c_ptr);
+    delete c_ptr;
 }
 
 

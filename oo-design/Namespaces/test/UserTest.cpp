@@ -20,7 +20,7 @@ using namespace std;
 using namespace org::se::lab;
 //using org::se::lab::User;
 
-// org::se::lab::User* user = NULL;
+//org::se::lab::User* user = NULL;
 User* user = NULL;
 
 TEST_GROUP(UserTestGroup)

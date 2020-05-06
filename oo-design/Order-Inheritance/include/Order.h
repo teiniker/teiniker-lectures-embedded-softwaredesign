@@ -7,7 +7,7 @@
 #include <Entity.h>
 #include <OrderLine.h>
 
-class Order: public Entity  
+class Order : public Entity  
 {
 	private:
 		string name_;

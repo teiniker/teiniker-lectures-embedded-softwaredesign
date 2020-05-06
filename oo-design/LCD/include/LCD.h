@@ -1,10 +1,7 @@
 #ifndef _LCD_H_
 #define _LCD_H_
 
-#include <string>
 #include <cstdint>
-
-using namespace std;
 
 class LCD 
 {
@@ -16,14 +13,18 @@ class LCD
 		size_t index_;
  
 	public:
-		LCD(size_t cols, size_t rows);
-		~LCD(); 
+		LCD(size_t cols, size_t rows); // Constructor
+		~LCD(void); // Destructor
 
 		void clear(void);
 		void print(char c);
 		void print(const char * c_ptr);
 
-		char* buffer(void);	
+		char* buffer(void)  // Inline-Operation
+		{
+			return buffer_;
+		}
+		
  };
 
 #endif /*_LCD_H_ */

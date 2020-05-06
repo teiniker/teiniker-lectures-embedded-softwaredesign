@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class OrderLine: public Entity 
+class OrderLine : public Entity 
 {
 	private:
 		int quantity_;

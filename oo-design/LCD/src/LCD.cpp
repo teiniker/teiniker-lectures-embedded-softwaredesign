@@ -1,17 +1,16 @@
-#include <LCD.h>
 #include <cstring>
 
-using namespace std;
+#include <LCD.h>
 
 LCD::LCD(size_t cols, size_t rows) : cols_{cols}, rows_{rows}
 {	
-	buffer_ = new char[cols_*rows_]; 
+	buffer_ = new char[cols_*rows_]; // malloc(cols_*rows_*sizeof(char))
 	index_ = 0;
 }
 
 LCD::~LCD()
 {
-	delete[] buffer_;
+	delete[] buffer_; // free();
 } 
 				
 void LCD::clear(void)
@@ -28,11 +27,13 @@ void LCD::print(char c)
 
 void LCD::print(const char* c_ptr)
 {
-	strncpy(buffer_ + index_, c_ptr, strlen(c_ptr));
+	strcpy(buffer_ + index_, c_ptr);
 	index_ += sizeof(c_ptr);
 }
 
+/*
 char* LCD::buffer(void)
 {
 	return buffer_;
 }
+*/

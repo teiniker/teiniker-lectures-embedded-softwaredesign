@@ -2,7 +2,7 @@
 
 Admin::Admin(const int id, const string& username, const string& password, Mail* mail)
 	: User(id, username, mail), password_{password}
-{
+{	
 }
 			
 string Admin::password()

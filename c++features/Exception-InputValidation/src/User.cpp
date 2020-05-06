@@ -15,7 +15,7 @@ User::User(const int id, const string& username, const string& password)
 		
 	if(password.length() < 10)
 		throw invalid_argument("Invalid password!");
-	
+		
 	// Implementation	
 	id_ = id;	
 	username_ = username;
