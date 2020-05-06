@@ -15,7 +15,7 @@ replaces the contents of existing objects.**
 
 The assignment operator must be overloaded as a member function.
 	
-The overloaded **operator=** returns ** *this**, so that we can chain multiple 
+The overloaded **operator=** returns ***this**, so that we can chain multiple 
 assignments together.
 	
 
