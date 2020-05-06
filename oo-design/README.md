@@ -29,6 +29,27 @@
   * [Exercise: LCD-Namespaces](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/LCD-Namespaces-Exercise)
    ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/LCD-Namespaces))
 
+## C++ Language Features
+* [Pointers and References](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/PointersAndReferences)
+* Exception Handling
+  * [Exception-InputValidation](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/Exception-InputValidation)
+  * [Exception-DataService](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/Exception-DataService)
+  * [Exercise: Exception-Controller](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/Exception-Controller-Exercise)
+  ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/Exception-Controller))
+
+* Operator Overloading
+ * [OperatorOverloading-ComplexNumber](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/OperatorOverloading-ComplexNumber)
+ * [Exercise: OperatorOverloading-Counter](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/OperatorOverloading-Counter-Exercise)
+   ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/OperatorOverloading-Counter))
+ * [Exercise: OperatorOverloading-EEPROM](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/OperatorOverloading-EEPROM-Exercise)
+   ([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures/OperatorOverloading-EEPROM))
+
+* Copy Constructor
+
+* Assignment Operator
+
+* Smart Pointer
+
 ## C++ Standard Library
 * [string](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/string)
 * [iostreams](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/STL/stream)
