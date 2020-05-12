@@ -1,0 +1,45 @@
+Exercise: Proxy und Factory Method
+--------------------------------------------------------------------------------
+
+Es ist folgende Projektstruktur gegeben:
+
+├── Makefile
+├── include
+│   ├── Factory.h
+│   ├── FileService.h
+│   ├── FileServiceImpl.h
+├── src
+│   ├── FileServiceImpl.cpp
+├── test
+│   ├── FileServiceTest.cpp
+│   └── test.data
+└── TODO.txt
+
+Es sollen die folgenden Punkte implementiert werden:
+
+i) FileServiceProxy
+Fügen sie eine Klasse "FileServiceProxy" (*.h und *.cpp) hinzu.
+Der Proxy speichert einen Pointer vom Type "FileService":
+	shared_ptr<FileService> service_
+	
+und überprüft, ob der Filenamen der Operation
+	std::string readFile(const std::string& filename);
+mit "*.data" endet.
+Wenn nicht, wird eine "invalid_argument" Exception geworfen.
+
+Tipp: Verwenden Sie folgende Helper-Methode:
+	bool endsWith(const string& s, const string& suffix)
+	{
+		return s.rfind(suffix) == (s.size()-suffix.size());
+	}
+
+ii) FactoryImpl
+Implementieren Sie das gegebene "Factory" Interface ("FactoryImpl.h" und
+"FactoryImpl.cpp").
+Die Methode "createFileService()" instanziiert die Klassen "FileServiceImpl" 
+und "FileServiceProxy", hängt sie zusammen und liefert einen Pointer vom Typ
+"shared_ptr<FileService>" zurück.
+
+Testen Sie Ihre Implementierungen mit der Klasse "FileServiceTest".
+
+
