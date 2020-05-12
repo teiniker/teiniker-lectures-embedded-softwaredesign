@@ -1,8 +1,7 @@
 # Unique Pointer
 
-Manages the storage of a pointer, providing a limited garbage-collection 
-facility, with little to no overhead over built-in pointers (depending on 
-the deleter used).
+Manages the storage of a pointer, providing a **limited garbage-collection facility**, 
+with little to no overhead over built-in pointers.
 
 These objects have the ability of taking ownership of a pointer: once they 
 take ownership they manage the pointed object by becoming responsible for 
@@ -27,7 +26,7 @@ unique_ptr objects replicate a limited pointer functionality by providing
 access to its managed object through operators * and -> (for individual 
 objects), or operator [] (for array objects). 
 
-For safety reasons, they do not support pointer arithmetics, and only support 
+For safety reasons, they **do not support pointer arithmetics**, and only support 
 move assignment (disabling copy assignments).
 
 ## Example
