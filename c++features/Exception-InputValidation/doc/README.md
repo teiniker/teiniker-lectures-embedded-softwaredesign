@@ -24,15 +24,15 @@ raises more than one exception in different situations.
 	{
 		// protected code
 	} 
-	catch( ExceptionName e1 ) 
+	catch( ExceptionType1 e ) 
 	{
 		// catch block
 	} 
-	catch( ExceptionName e2 ) 
+	catch( ExceptionType2 e ) 
 	{
 		// catch block
 	} 
-	catch( ExceptionName eN ) 
+	catch( ExceptionTypeN e ) 
 	{
 		// catch block
 	}
