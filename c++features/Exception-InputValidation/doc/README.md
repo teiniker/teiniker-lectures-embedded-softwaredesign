@@ -12,7 +12,7 @@ C++ exception handling is built upon three keywords: try, catch, and throw:
 * **catch** − A program catches an exception with an exception handler at the place in a program where 
 	you want to handle the problem. The catch keyword indicates the catching of an exception.
 
-* try** − A try block identifies a block of code for which particular exceptions will be activated. 
+* **try** − A try block identifies a block of code for which particular exceptions will be activated. 
 	It's followed by one or more catch blocks.
 
 
