@@ -21,7 +21,7 @@ void UserTableProxy::insert(shared_ptr<User> user)
 	// Delegation" 
 	table_->insert(user);	
 	
-	// Post-Processing"
+	// Post-Processing
 }
 
 shared_ptr<User> UserTableProxy::findUserById(int id)

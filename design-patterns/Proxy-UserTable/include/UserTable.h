@@ -4,6 +4,7 @@
 #include <User.h>
 #include <memory>
 
+// Interface (API)
 class UserTable 
 {
 	public:                
