@@ -8,7 +8,6 @@
 class Directory : public Node
 {
 	private:
-		std::string name_;
 		std::vector<std::shared_ptr<Node>> nodes_; 
 		
 	public:                
