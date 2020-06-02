@@ -19,7 +19,7 @@ in C++. These Patterns are organized in three chapters:
 
 * Behavioral Patterns 
 	* **Strategy**
-		* [Strategy-Bubble-Sort](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Strategy-BubbleSort)
+		* [Strategy-BubbleSort](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Strategy-BubbleSort)
 		
 	* **Template Method**
 		* [TemplateMethod-BubbleSort](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/TemplateMethod-BubbleSort)
