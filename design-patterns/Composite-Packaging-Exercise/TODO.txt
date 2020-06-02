@@ -1,0 +1,34 @@
+Exercise: Composite - Packaging
+--------------------------------------------------------------------------------
+
+Es ist folgende Projektstruktur gegeben:
+
+├── Makefile
+├── include
+│   ├── Article.h
+│   └── Node.h
+├── src
+└── test
+    └── PackagingTest.cpp
+
+Es sollen die folgenden Punkte implementiert werden:
+
+i) Article.cpp
+Implementieren Sie die Blatt-Klasse "Article", die von "Node" ableitet.
+Fields:
+	"name" als String
+	"quantity" als int
+	Ein Feld "weight" als int ist bereits in der Basis-Klasse implementiert.
+	
+Methoden:
+	name():string
+	totalWeight():int	
+
+ii) Box.h, Box.cpp
+Implementieren Sie die Composite-Klasse "Box", die einen std::vector von "Node"
+Pointern (shared_ptr) speichert, und ein "weight" besitzt (über die Basisklasse).
+Die Klasse implementiert ebenfalls die Methode "totalWeight():int".
+
+Testen Sie Ihre Implementierungen mit der Klasse "PackagingTest".
+
+
