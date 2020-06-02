@@ -11,6 +11,8 @@ The following topics will be covered:
   
 * Object-Oriented Design
   * [Classes and Objects](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/README.md)
+  * [C++ Language Features](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures)
+  * [Design Patterns](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns)
  
 * Embedded Computing 
   
