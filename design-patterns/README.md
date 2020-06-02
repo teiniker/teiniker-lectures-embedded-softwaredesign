@@ -1,7 +1,7 @@
 # Design Patterns
 
-The following examples give a first look into the GoF design Patterns 
-in C++. These Patterns are organized in three chapters:
+The following examples give a first look into the GoF design patterns 
+in C++. These patterns are organized in three chapters:
 
 * Creational Patterns
 	* **Factory Method**
