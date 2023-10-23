@@ -1,6 +1,6 @@
 # Standard Library: I/O Streams
 
-The I/O strea library provides formatted and unformatted buffered I/O
+The I/O streams library provides formatted and unformatted buffered I/O
 of text and numeric values.
 
 ## Standard Output Streams
