@@ -1,7 +1,8 @@
-# Embedded Computing by Example
+# Software Design in C++
 
 This project collects examples, exercises and model solutions needed to 
-understand embedded computing in C and C++.
+understand software design and architectures for embedded systems written in C++.
+
 The following topics will be covered:
 
 * Configuration Management
