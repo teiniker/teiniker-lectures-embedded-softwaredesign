@@ -5,7 +5,8 @@ understand software design and architectures for embedded systems written in C++
 
 The following topics will be covered:
 
-1. **Introduction** 
+1. **Introduction**
+   
   * Configuration Management
      * [Source Code Versioning](configuration-management/versioning)
      * [Build Automation](configuration-management/building)
@@ -16,6 +17,7 @@ The following topics will be covered:
      * [C++ Language Features](c%2B%2Bfeatures)
 
 2. **Software Design** 
+  
   * Object-Oriented Design
      * [Design Patterns](design-patterns)
  
