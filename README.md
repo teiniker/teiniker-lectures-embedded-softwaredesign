@@ -1,4 +1,4 @@
-# Software Design in C++
+# Software Design an Architectures
 
 This project collects examples, exercises and model solutions needed to 
 understand software design and architectures for embedded systems written in C++.
@@ -7,17 +7,17 @@ The following topics will be covered:
 
 1. **Introduction** 
   * Configuration Management
-     * [Source Code Versioning](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/versioning)
-     * [Build Automation](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/building)
-     * [Test Automation](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/configuration-management/testing)
+     * [Source Code Versioning](configuration-management/versioning)
+     * [Build Automation](configuration-management/building)
+     * [Test Automation](configuration-management/testing)
 
   * Object-Oriented Programming in C++
-     * [Classes and Objects](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/oo-design/README.md)
-     * [C++ Language Features](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/c%2B%2Bfeatures)
+     * [Classes and Objects](oo-design/README.md)
+     * [C++ Language Features](c%2B%2Bfeatures)
 
 2. **Software Design** 
   * Object-Oriented Design
-     * [Design Patterns](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns)
+     * [Design Patterns](design-patterns)
  
 3. **Software Architectures** 
   
