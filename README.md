@@ -5,7 +5,7 @@ understand software design and architectures for embedded systems written in C++
 
 The following topics will be covered:
 
-1. **Introduction**
+* **Introduction**
    
   * Configuration Management
      * [Source Code Versioning](configuration-management/versioning)
@@ -16,12 +16,12 @@ The following topics will be covered:
      * [Classes and Objects](oo-design/README.md)
      * [C++ Language Features](c%2B%2Bfeatures)
 
-2. **Software Design** 
+* **Software Design** 
   
   * Object-Oriented Design
      * [Design Patterns](design-patterns)
  
-3. **Software Architectures** 
+* **Software Architectures** 
   
 
 As a development environment, you can use a pre-configured Linux VM image:
