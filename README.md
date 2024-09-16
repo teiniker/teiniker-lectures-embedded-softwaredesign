@@ -13,6 +13,7 @@ The following topics will be covered:
      * [Build Automation](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/building)
      * [Test Automation](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/testing)
   * Object-Oriented Programming in C++
+     * [From C to C++](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B) 
      * [Classes and Objects](oo-design/README.md)
      * [C++ Language Features](c%2B%2Bfeatures)
    * Object-Oriented Modeling in UML
