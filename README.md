@@ -19,7 +19,7 @@ The following topics will be covered:
    * [Unified Modeling Language (UML)](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/documentation/uml/README.md)
      
 * **Software Design** 
-  * Class Design Principles
+  * [Class Design Principles (SOLID)](solid-principles/README.md)
   * [Design Patterns](design-patterns)
   * Functional Programming
      

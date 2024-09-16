@@ -5,23 +5,23 @@ in C++. These patterns are organized in three chapters:
 
 * Creational Patterns
 	* **Factory Method**
-		* [FactoryMethod-Mail](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/FactoryMethod-Mail)
+		* [FactoryMethod-Mail](creational/factory-method/FactoryMethod-Mail/)
 
 * Structural Patterns
 	* **Proxy**
-		* [Proxy-UserTable](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Proxy-UserTable)
-		* [Exercise: Proxy-FileService](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Proxy-FileService-Exercise)
-			([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Proxy-FileService))
+		* [Proxy-UserTable](structural/proxy/Proxy-UserTable/)
+		* [Exercise: Proxy-FileService](structural/proxy/Proxy-FileService-Exercise/)
+			([Model Solution](structural/proxy/Proxy-FileService/))
 	* **Composite**
-		* [Composite-FileSystem](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Composite-FileSystem)
-		* [Exercise: Composite-Packaging](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Composite-Packaging-Exercise)
-			([Model Solution](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Composite-Packaging))
+		* [Composite-FileSystem](structural/composite/Composite-FileSystem/)
+		* [Exercise: Composite-Packaging](structural/composite/Composite-Packaging-Exercise/)
+			([Model Solution](structural/composite/Composite-Packaging/))
 
 * Behavioral Patterns 
 	* **Strategy**
-		* [Strategy-BubbleSort](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/Strategy-BubbleSort)
+		* [Strategy-BubbleSort](behavioral/strategy/Strategy-BubbleSort/)
 		
 	* **Template Method**
-		* [TemplateMethod-BubbleSort](https://github.com/teiniker/teiniker-lectures-embeddedcomputing/tree/master/design-patterns/TemplateMethod-BubbleSort)
+		* [TemplateMethod-BubbleSort](behavioral/template-method/TemplateMethod-BubbleSort/)
 
-*Egon Teiniker, 2020, GPL v3.0*
+*Egon Teiniker, 2020-2024, GPL v3.0*
