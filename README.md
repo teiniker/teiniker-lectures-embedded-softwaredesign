@@ -16,7 +16,7 @@ The following topics will be covered:
      * [From C to C++](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B) 
      * [Classes and Objects](oo-design/README.md)
      * [C++ Language Features](c%2B%2Bfeatures)
-   * Object-Oriented Modeling in UML
+   * [Unified Modeling Language (UML)](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/documentation/uml/README.md)
      
 * **Software Design** 
   * Class Design Principles
