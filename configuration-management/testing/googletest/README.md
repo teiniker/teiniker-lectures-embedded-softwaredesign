@@ -42,6 +42,28 @@ $ sudo make install
 $ g++ test.cpp -o test -lgtest -lgtest_main -pthread
 ```
 
+### EXPECT_* vs. ASSERT_* in GoogleTest
+
+GoogleTest provides two sets of macros for making assertions within tests:
+
+1. **EXPECT_* Macros**:
+    * When an `EXPECT_*` assertion fails, GoogleTest records the failure but 
+        continues executing the rest of the test.
+
+    * Ideal for situations where we want to check multiple conditions within 
+        a single test, even if some of them fail. This allows you to see all 
+        the failures in one test run rather than stopping at the first failure.
+
+2. **ASSERT_* Macros**:
+    * When an `ASSERT_*` assertion fails, GoogleTest records the failure and 
+        immediately aborts the current test.
+
+    * Best used when subsequent test steps depend on the success of the assertion. 
+        If the assertion fails, continuing the test could lead to undefined behavior 
+        or misleading results.
+
+
+
 ## References
 * [GoogleTest User’s Guide](https://google.github.io/googletest/)
 

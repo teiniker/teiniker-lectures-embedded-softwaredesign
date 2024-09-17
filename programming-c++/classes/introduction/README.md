@@ -1,4 +1,4 @@
-# C++ Classes
+# Introduction to C++ Classes
 
 Classes are the central feature of an **object-oriented language**. 
 

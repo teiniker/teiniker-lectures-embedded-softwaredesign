@@ -1,6 +1,6 @@
 CFLAGS=-g -Wall -I include
 CC=g++
-LIBS=-lstdc++ -lCppUTest -lCppUTestExt
+LIBS=-lgtest -lgtest_main -pthread
 
 all: UserTest  
 

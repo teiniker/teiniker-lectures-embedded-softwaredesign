@@ -34,4 +34,4 @@ Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 
 [Copy Constructor in C++](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
 
-*Egon Teiniker, 2020, GPL v3.0*
+*Egon Teiniker, 2020-2024, GPL v3.0*
