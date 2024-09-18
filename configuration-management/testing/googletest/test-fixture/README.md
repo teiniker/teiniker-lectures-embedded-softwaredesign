@@ -64,5 +64,7 @@ fixture.
 
 ## References
 * [GoogleTest Primer](https://google.github.io/googletest/primer.html)
+* [Assertions Reference](https://google.github.io/googletest/reference/assertions.html)
+
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
