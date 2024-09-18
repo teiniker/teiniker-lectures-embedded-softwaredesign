@@ -42,8 +42,4 @@ TEST(DateTest, Setters)
     EXPECT_EQ(1913, birthday.getYear());
 }
 
-int main(int argc, char** argv) 
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+// Use gtest_main library

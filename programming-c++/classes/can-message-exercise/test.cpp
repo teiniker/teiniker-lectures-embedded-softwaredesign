@@ -45,8 +45,4 @@ TEST(CanMsgTest, AsString)
     EXPECT_EQ(expected, msgStr);
 }
 
-int main(int argc, char** argv) 
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+// Use gtest_main library
