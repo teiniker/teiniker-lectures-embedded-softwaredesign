@@ -8,10 +8,13 @@ The following topics will be covered:
 * **Introduction**
   * Linux Environment
      * [Introduction](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux)  
+  
   * Configuration Management
      * [Source Code Versioning](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
      * [Build Automation](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/building)
      * [Test Automation](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/testing)
+        * [GoogleTest](configuration-management/testing/googletest/)
+
   * Object-Oriented Programming in C++
      * [From C to C++](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B) 
      * [Classes and Objects](oo-design/README.md)
