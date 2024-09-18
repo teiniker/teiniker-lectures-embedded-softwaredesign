@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS= -g -Wall  
+CFLAGS= -g -Wall -I.  
 LIBS=-lgtest -lgtest_main -pthread
 
 all: run_test

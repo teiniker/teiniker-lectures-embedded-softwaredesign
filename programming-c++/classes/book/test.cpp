@@ -17,15 +17,10 @@ TEST(BookTest, ToJson)
 {
     Book book("978-0131103627", "Brian W. Kernighan and Dennis Ritchie", "The C Programming Language");                         
     std::string json = book.toJson();
-    std::cout << "json: " << json << std::endl;
+    printf("json: %s\n", json.c_str());
 
     std::string expected = "{\"isbn\":\"978-0131103627\",\"author\":\"Brian W. Kernighan and Dennis Ritchie\",\"title\":\"The C Programming Language\"}";
     EXPECT_EQ(expected, json);
 }
 
-
-int main(int argc, char** argv) 
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+// Use gtest_main library
