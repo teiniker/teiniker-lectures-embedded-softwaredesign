@@ -55,7 +55,6 @@ $ make
 
 After a successful build, we can run the generated executable:
 
-
 ```
 $ ./main
 ```

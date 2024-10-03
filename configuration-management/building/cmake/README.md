@@ -17,6 +17,7 @@ environment.
 
 * [CMake Homepage](https://cmake.org/)
 
+* [CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 
 	
 *Egon Teiniker, 2020-2024, GPL v3.0*
