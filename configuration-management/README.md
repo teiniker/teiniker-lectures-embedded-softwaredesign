@@ -7,10 +7,10 @@ uniquely identified, and modified.
 We select the following topics from a wide range of configuration management 
 techniques used in C++:
 
-* [Build Automation](configuration-management/building/)
+* [Build Automation](building/)
     * [CMake](building/cmake/)
-* [Test Automation](configuration-management/testing/)
-    * [GoogleTest](configuration-management/testing/googletest/)
+* [Test Automation](testing/)
+    * [GoogleTest](testing/googletest/)
 * [Source Code Versioning](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
 
 
