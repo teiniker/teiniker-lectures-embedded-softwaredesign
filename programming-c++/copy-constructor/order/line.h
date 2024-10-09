@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include <Product.h>
+#include <product.h>
 
 class OrderLine 
 {
@@ -14,7 +14,8 @@ class OrderLine
  
 	public:
 		OrderLine(int id, int quantity, Product* product);
-		
+		OrderLine(const OrderLine& old);	// Copy Constructor
+
 		int id(void);
 		int quantity(void);
 		Product* product(void);

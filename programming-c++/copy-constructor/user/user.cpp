@@ -1,5 +1,4 @@
-#include <User.h>
-#include <Mail.h>
+#include <user.h>
 
 using namespace std;
 

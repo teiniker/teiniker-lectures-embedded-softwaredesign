@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include <OrderLine.h>
+#include <line.h>
 
 class Order 
 {
@@ -15,6 +15,7 @@ class Order
  
 	public:
 		Order(int id, const std::string& name);	
+		Order(const Order& old);	// Copy Constructor   
 		   
 		int id(void);		
 		std::string name(void);

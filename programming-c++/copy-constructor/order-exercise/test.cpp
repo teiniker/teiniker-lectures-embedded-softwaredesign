@@ -1,35 +1,30 @@
-#include <CppUTest/TestHarness.h>
-#include <CppUTest/CommandLineTestRunner.h>
+#include <gtest/gtest.h>
 
-#include <Order.h>
+#include <order.h>
 
 using namespace std;
 
-TEST_GROUP(OrderTestGroup)
-{
-};
-
-
-TEST(OrderTestGroup, CopyConstructorProductTest)
+// Copy Constructor Test for Product
+TEST(OrderTest, CopyConstructorProductTest) 
 {
     // Setup
     Product* original = new Product(1, "Pizza Frutti di Mare", 880);
     
     // Exercise
-    Product* copy = new Product(*original);    
+    Product* copy = new Product(*original);
     delete original;
     
     // Verify
-    CHECK_EQUAL(1, copy->id());
-    CHECK_EQUAL("Pizza Frutti di Mare", copy->description());
-    CHECK_EQUAL(880, copy->price());
+    EXPECT_EQ(1, copy->id());
+    EXPECT_EQ("Pizza Frutti di Mare", copy->description());
+    EXPECT_EQ(880, copy->price());
     
     // Teardown
     delete copy;
 }
 
-
-TEST(OrderTestGroup, CopyConstructorOrderLineTest)
+// Copy Constructor Test for OrderLine
+TEST(OrderTest, CopyConstructorOrderLineTest) 
 {
     // Setup
     OrderLine* original = new OrderLine(3, 10, new Product(1, "Pizza Frutti di Mare", 880));
@@ -40,21 +35,21 @@ TEST(OrderTestGroup, CopyConstructorOrderLineTest)
     delete original;
     
     // Verify
-    CHECK_EQUAL(3, copy->id());
-    CHECK_EQUAL(10, copy->quantity());
+    EXPECT_EQ(3, copy->id());
+    EXPECT_EQ(10, copy->quantity());
     
     Product* p = copy->product();
-    CHECK_EQUAL(1, p->id());
-    CHECK_EQUAL("Pizza Frutti di Mare", p->description());
-    CHECK_EQUAL(880, p->price());
-
+    EXPECT_EQ(1, p->id());
+    EXPECT_EQ("Pizza Frutti di Mare", p->description());
+    EXPECT_EQ(880, p->price());
+    
     // Teardown
     delete copy->product();
     delete copy;
 }
 
-
-TEST(OrderTestGroup, CopyConstructorOrderTest)
+// Copy Constructor Test for Order
+TEST(OrderTest, CopyConstructorOrderTest) 
 {
     // Setup
     Order* original = new Order(5, "Special Order");
@@ -67,26 +62,20 @@ TEST(OrderTestGroup, CopyConstructorOrderTest)
     delete original;
     
     // Verify
-    CHECK_EQUAL(5, copy->id());
-    CHECK_EQUAL("Special Order", copy->name());
+    EXPECT_EQ(5, copy->id());
+    EXPECT_EQ("Special Order", copy->name());
     
     OrderLine* line = copy->line(0);
-    CHECK_EQUAL(3, line->id());
-    CHECK_EQUAL(10, line->quantity());
-
+    EXPECT_EQ(3, line->id());
+    EXPECT_EQ(10, line->quantity());
+    
     Product* p = line->product();
-    CHECK_EQUAL(1, p->id());
-    CHECK_EQUAL("Pizza Frutti di Mare", p->description());
-    CHECK_EQUAL(880, p->price());
-
+    EXPECT_EQ(1, p->id());
+    EXPECT_EQ("Pizza Frutti di Mare", p->description());
+    EXPECT_EQ(880, p->price());
+    
     // Teardown
     delete copy->line(0)->product();
     delete copy->line(0);
-    delete copy;    
-}
-
-
-int main(int ac, char** av)
-{
-    return CommandLineTestRunner::RunAllTests(ac, av);
+    delete copy;
 }

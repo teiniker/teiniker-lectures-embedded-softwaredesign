@@ -2,7 +2,7 @@
 #define _USER_H_
 
 #include <string>
-#include <Mail.h>
+#include <mail.h>
 
 class User 
 {

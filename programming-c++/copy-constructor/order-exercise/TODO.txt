@@ -1,0 +1,14 @@
+Exercise: Copy Constructor - Order
+--------------------------------------------------------------------------------
+
+Implement a Copy Constructor for every class:
+
+> Product(const Product& old);
+
+> OrderLine(const OrderLine& old);
+
+> Order(const Order& old);
+
+Make sure that you implement a Deep Copy!!
+
+Use the file "test.cpp" to test your implementations.

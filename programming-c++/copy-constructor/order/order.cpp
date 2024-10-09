@@ -1,10 +1,21 @@
-#include <Order.h>
+#include <order.h>
 
 using namespace std;
 
 Order::Order(int id, const string& name)
 	: id_{id}, name_{name}
 {
+}
+
+// Copy Constrcutor
+Order::Order(const Order& old)
+{
+	id_ = old.id_;
+	name_ = old.name_;
+	for(OrderLine* line : old.lines_)
+	{
+		lines_.push_back(new OrderLine(*line));
+	}
 }
 
 int Order::id(void)
