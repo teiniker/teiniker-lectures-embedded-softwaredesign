@@ -20,9 +20,9 @@
 
 * **Copy Constructor**
   * [Introduction](copy-constructor/README.md)
-  * Example: [CopyConstructor-User](copy-constructor/CopyConstructor-User)
-  * Exercise: [CopyConstructor-Order](copy-constructor/CopyConstructor-Order-Exercise)
-      ([Model Solution](copy-constructor/CopyConstructor-Order))
+  * Example: [CopyConstructor-User](copy-constructor/user/)
+  * Exercise: [CopyConstructor-Order](copy-constructor/order-exercise/)
+      ([Model Solution](copy-constructor/order/))
   
 * Assignment Operator
   * Example: [AssignmentOperator-User](assignment-operator/AssignmentOperator-User)
