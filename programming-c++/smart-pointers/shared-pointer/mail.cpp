@@ -1,5 +1,5 @@
-#include <Mail.h>
 #include <iostream>
+#include <mail.h>
 
 using namespace std;
 

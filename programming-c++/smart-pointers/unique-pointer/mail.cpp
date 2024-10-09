@@ -1,4 +1,4 @@
-#include <Mail.h>
+#include <mail.h>
 
 using namespace std;
 

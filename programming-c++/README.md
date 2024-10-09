@@ -24,9 +24,10 @@
   * Exercise: [CopyConstructor-Order](copy-constructor/order-exercise/)
       ([Model Solution](copy-constructor/order/))
   
-* Assignment Operator
-  * Example: [AssignmentOperator-User](assignment-operator/AssignmentOperator-User)
 * Operator Overloading
+  * [AssignmentOperator](assignment-operator/AssignmentOperator-User)
+    
+    
     * Example: [OperatorOverloading-ComplexNumber](operator-overloading/OperatorOverloading-ComplexNumber)
     * Exercise: [OperatorOverloading-Counter](operator-overloading/OperatorOverloading-Counter-Exercise)
       ([Model Solution](operator-overloading/OperatorOverloading-Counter))
@@ -34,9 +35,9 @@
       ([Model Solution](operator-overloading/OperatorOverloading-EEPROM))
 
 * **Smart Pointers**
-  * Example: [Pointers and References](smart-pointers/PointersAndReferences/)
-  * Example: [UniquePointer-Mail](smart-pointers/UniquePointer-Mail)
-  * Example: [SharedPointer-Mail](smart-pointers/SharedPointer-Mail)
+  * [Pointers and References](smart-pointers/references/)
+  * [Unique Pointer](smart-pointers/unique-pointer/)
+  * [Shared Pointer](smart-pointers/shared-pointer/)
 
 * **Exception Handling**
   * Example: [Exception-InputValidation](exceptions/Exception-InputValidation)
