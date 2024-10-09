@@ -11,7 +11,6 @@ techniques used in C++:
         * [CMake](building/cmake/)
     * [Test Automation](configuration-management/testing/)
         * [GoogleTest](configuration-management/testing/googletest/)
-    * [Unified Modeling Language](configuration-management/uml/)
     * [Source Code Versioning](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
 
 
