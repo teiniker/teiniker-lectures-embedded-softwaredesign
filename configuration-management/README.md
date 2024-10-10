@@ -58,10 +58,15 @@ Successful configuration management includes at least the following activities:
     Typing in commands or clicking through dialog boxes is a waste of time and 
     a breeding ground for mistakes. These tasks should be automated.
 
+    _Example:_ [Steps of a C++ build process](building/build-steps/)
+
     Tools for automated builds are a common feature of systems. The C/C++ world has 
     had **GNU make** for decades and uses **CMake** these days. 
 
     Make sure we can build and launch our system using these tools in a single command.
+
+    _Example_ [C++ compiler flags](building/compiler-flags/)
+    
 
 * [**Test Automation**](testing/googletest/)
     
