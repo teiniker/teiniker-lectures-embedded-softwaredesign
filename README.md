@@ -6,7 +6,7 @@ understand software design and architectures for embedded systems written in C++
 The following topics will be covered:
 
 * **Introduction**
-  * [Linux Environment](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux)    
+  * [Linux Environment](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux/README.md)    
   * [Configuration Management](configuration-management/README.md)
   * [C++ Programming](programming-c++/) 
   * [Software Modeling](modeling/)

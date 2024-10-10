@@ -1,5 +1,7 @@
 # CMake: Simple Example
 
+This example shows the minimal configuration for CMake. 
+All source files are in one directory.
 
 ## Create CMakeLists.txt
 In order to build this simple project, we create a file named `CMakeLists.txt` 
@@ -37,18 +39,9 @@ add_executable(main main.cpp book.cpp)
 
 Follow these steps to build your project using CMake:
 
-* Navigate to the project directory
-* Create a `build/` directory
-* Generate build files (e.g. `Makefile`) with CMake
-* Build the project
-* Run the executable
-
 ```
-$ cd book/
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
+$ cmake -S . -B build
+$ cmake --build build
 ```
 
 ## Run the Executable
@@ -56,12 +49,8 @@ $ make
 After a successful build, we can run the generated executable:
 
 ```
-$ ./main
+$ ./build/main
 ```
 
-## References
-
-
-	
 *Egon Teiniker, 2020-2024, GPL v3.0*
 
