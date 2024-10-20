@@ -3,21 +3,6 @@
 GoogleTest is a testing framework developed by the Testing Technology team with 
 Google’s specific requirements and constraints in mind. 
 
-**Tests** use assertions to verify the tested code’s behavior. If a test crashes 
-or has a failed assertion, then it fails; otherwise it succeeds.
-
-**Assertions** are statements that check whether a condition is true. An assertion’s 
-result can be success, nonfatal failure, or fatal failure. If a fatal failure occurs, 
-it aborts the current function; otherwise the program continues normally.
-
-A **Test Suite** contains one or many tests. You should group your tests into test 
-suites that reflect the structure of the tested code. When multiple tests in a test 
-suite need to share common objects and subroutines, you can put them into 
-a **Test Fixture** class.
-
-A **Test Program** can contain multiple test suites.
-
-
 ## Setup GoogleTest
 
 GoogleTest can be built directly from the source code. To do this, the source 
