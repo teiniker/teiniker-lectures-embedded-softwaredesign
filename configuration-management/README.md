@@ -51,6 +51,22 @@ In every phase we need configuration management techniques:
 
 Successful configuration management includes at least the following activities:
 
+* [**Version Control**](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
+
+    Version control systems are a mechanism for **keeping multiple versions
+    of our files**, so that when we modify a file, we can still access the 
+    previous revisions.
+
+    A version control system:
+    * Retains, and provides access to, **every version of every file** that has 
+        ever been stored in it. 
+    * Provides **metadata** (information that describes the data stored) attached 
+        to single files or collections of files. 
+    * Allows teams that may be distributed across space and time to **collaborate**.	
+
+    ![Version Control](figures/VersionControl.png)
+
+
 * [**Build Automation**](building/cmake/)
     
     Having a **common project layout** is fundamental to successful software 
@@ -86,21 +102,6 @@ Successful configuration management includes at least the following activities:
     **Extreme Programming (XP)** and **Test-Driven Development (TDD)** have 
     done a great deal to popularize self-testing code and as a result many 
     people have seen the value of the technique.
-
-* [**Version Control**](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
-
-    Version control systems are a mechanism for **keeping multiple versions
-    of our files**, so that when we modify a file, we can still access the 
-    previous revisions.
-
-    A version control system:
-    * Retains, and provides access to, **every version of every file** that has 
-        ever been stored in it. 
-    * Provides **metadata** (information that describes the data stored) attached 
-        to single files or collections of files. 
-    * Allows teams that may be distributed across space and time to **collaborate**.	
-
-    ![Version Control](figures/VersionControl.png)
 
 
 ## Continuous Integration
