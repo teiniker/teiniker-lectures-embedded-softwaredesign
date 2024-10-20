@@ -53,6 +53,13 @@ Successful configuration management includes at least the following activities:
 
 * [**Build Automation**](building/cmake/)
     
+    Having a **common project layout** is fundamental to successful software 
+    development. It refers to adopting a standardized directory structure and 
+    file organization that is widely recognized and utilized within the developer 
+    community.
+
+    _Example:_ [Layout of C++ projects](building/project-layout/README.md)
+
     Getting the sources turned into a running system involves compilation, moving 
     files around, loading schemas into the databases, and so on. 
     Typing in commands or clicking through dialog boxes is a waste of time and 
