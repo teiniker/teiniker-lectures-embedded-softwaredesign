@@ -52,5 +52,9 @@ After a successful build, we can run the generated executable:
 $ ./build/main
 ```
 
+## References
+
+* Rafał Świdziński. **Modern CMake for C++: Discover a better approach to building, testing, and packaging your software**. Packt Publishing, 2022.
+
 *Egon Teiniker, 2020-2024, GPL v3.0*
 

@@ -1,7 +1,7 @@
-# CMake: Simple Example With GoogleTests
+# CMake: Example With GoogleTests
 
 The given example shows the use of Google Test to test a class. It assumes that 
-GoogleTest is already installed (header files and libraries are available).
+**GoogleTest is already installed** (header files and libraries are available).
 
 See: [Setup GoogleTest](../../../testing/googletest/README.md)
 
@@ -12,9 +12,7 @@ in the root of your project directory with the following content:
 
 ```CMake
 cmake_minimum_required(VERSION 3.25)
-
 project(book-test LANGUAGES CXX)
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -46,15 +44,14 @@ Additional `CMakeLists.txt` components:
             Linking against `pthread` ensures that threading functionalities work 
             correctly.
         
+
 ## Build the Project
 
 We can build our project using the following commands:
 
 ```
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
+$ cmake -S . -B build
+$ cmake --build build
 ```
 
 ## Run the Tests 
@@ -63,7 +60,7 @@ After a successful build, we can run our tests by executing the generated
 executable:
 
 ```
-./test
+./build/test
 Running main() from /home/student/Downloads/googletest/googletest/src/gtest_main.cc
 [==========] Running 3 tests from 1 test suite.
 [----------] Global test environment set-up.
@@ -83,9 +80,9 @@ Running main() from /home/student/Downloads/googletest/googletest/src/gtest_main
 
 GoogleTest will execute all defined test cases and provide a summary of the results, 
 including any failures or errors.
-
+	
 ## References
 
+* Rafał Świdziński. **Modern CMake for C++: Discover a better approach to building, testing, and packaging your software**. Packt Publishing, 2022.
 
-	
 *Egon Teiniker, 2020-2024, GPL v3.0*
