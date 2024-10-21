@@ -104,6 +104,14 @@ Successful configuration management includes at least the following activities:
     people have seen the value of the technique.
 
 
+* [**Generative AI**](generative-ai/README.md)
+
+    Generative AI is increasingly transforming software development by enhancing 
+    the traditional **pair programming model**. Pair programming involves two developers 
+    working collaboratively on the same codebase, typically with one writing code 
+    (the "driver") and the other reviewing and providing guidance (the "navigator").
+
+
 ## Continuous Integration
 
 > **Continuous Integration (CI)** is a software development practice where members 
