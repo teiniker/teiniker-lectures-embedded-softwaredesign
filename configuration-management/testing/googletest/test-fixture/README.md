@@ -62,6 +62,61 @@ For each test defined with `TEST_F()`, GoogleTest will create a
 run the test, clean up by calling `TearDown()`, and then delete the test 
 fixture. 
 
+
+## Build and Execute the Tests
+
+To execute the test cases, we need to compile the test class and link the testing framework.
+
+### Using GNU Make
+
+_Example:_ Makefile to build the tests
+```
+CFLAGS= -g -Wall  
+LIBS=-lgtest -lgtest_main -pthread
+CC=g++
+
+all: run_test
+
+build:
+	mkdir -p build
+
+build/test: test.cpp 
+	$(CC) $(CFLAGS) test.cpp -o build/test $(LIBS)
+
+run_test: build build/test 
+	build/test
+
+clean:
+	rm -rf build/
+```
+
+After building the test executable, the tests will be started automatically.
+
+
+### Using CMake 
+
+_Example:_ CMakeList.txt to build the tests
+```
+cmake_minimum_required(VERSION 3.25)
+
+project(test-fixture LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+add_executable(test test.cpp)
+
+target_link_libraries(test PRIVATE gtest gtest_main pthread)
+```
+
+Run build and run the tests type:
+```
+$ cmake -S . -B build
+$ cmake --build build
+
+$ ./build/test
+```
+
 ## References
 * [GoogleTest Primer](https://google.github.io/googletest/primer.html)
 * [Assertions Reference](https://google.github.io/googletest/reference/assertions.html)

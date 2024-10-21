@@ -66,6 +66,7 @@ GoogleTest provides two sets of macros for making assertions within tests:
         If the assertion fails, continuing the test could lead to undefined behavior 
         or misleading results.
 
+
 ## Writing the main() Function
 
 Most users should not need to write their own main function and instead link 
@@ -93,6 +94,99 @@ flags, and removes all recognized flags. This allows the user to control a test
 program’s behavior via various flags.
 We must call this function **before calling `RUN_ALL_TESTS()`**, or the flags 
 won’t be properly initialized.
+
+
+## Build and Execute the Tests
+
+To execute the test cases, we need to compile the test class and link the testing framework.
+
+### Using GNU Make
+
+_Example:_ Makefile to build the tests
+```
+CFLAGS= -g -Wall  
+LIBS=-lgtest -lgtest_main -pthread
+CC=g++
+
+all: run_test
+
+build:
+	mkdir -p build
+
+build/test: test.cpp 
+	$(CC) $(CFLAGS) test.cpp -o build/test $(LIBS)
+
+run_test: build build/test 
+	build/test
+
+clean:
+	rm -rf build/
+```
+
+After building the test executable, the tests will be started automatically.
+
+```
+$ make
+build/test
+Running main() from /home/student/Downloads/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from VectorTest
+[ RUN      ] VectorTest.Length
+[       OK ] VectorTest.Length (0 ms)
+[ RUN      ] VectorTest.IndexOperator
+[       OK ] VectorTest.IndexOperator (0 ms)
+[ RUN      ] VectorTest.Equals
+[       OK ] VectorTest.Equals (0 ms)
+[ RUN      ] VectorTest.PushBack
+[       OK ] VectorTest.PushBack (0 ms)
+[----------] 4 tests from VectorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+```
+
+### Using CMake 
+
+_Example:_ CMakeList.txt to build the tests
+```
+cmake_minimum_required(VERSION 3.25)
+
+project(simple-test LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+add_executable(test test.cpp)
+
+target_link_libraries(test PRIVATE gtest gtest_main pthread)
+```
+
+Run build and run the tests type:
+```
+$ cmake -S . -B build
+$ cmake --build build
+
+$ ./build/test
+Running main() from /home/student/Downloads/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from VectorTest
+[ RUN      ] VectorTest.Length
+[       OK ] VectorTest.Length (0 ms)
+[ RUN      ] VectorTest.IndexOperator
+[       OK ] VectorTest.IndexOperator (0 ms)
+[ RUN      ] VectorTest.Equals
+[       OK ] VectorTest.Equals (0 ms)
+[ RUN      ] VectorTest.PushBack
+[       OK ] VectorTest.PushBack (0 ms)
+[----------] 4 tests from VectorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+```
 
 
 ## References
