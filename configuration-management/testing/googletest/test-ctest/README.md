@@ -45,6 +45,8 @@ $ ctest
 
 
 ## References
+* [YouTube: Do you even test? (your code with CMake)](https://youtu.be/pxJoVRfpRPE?si=j6v2g1hNGbn0Rv3u)
+
 * [Testing With CMake and CTest](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Testing%20With%20CMake%20and%20CTest.html)
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
