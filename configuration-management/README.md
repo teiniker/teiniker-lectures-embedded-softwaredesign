@@ -90,7 +90,7 @@ Successful configuration management includes at least the following activities:
 
     _See also:_ [C/C++ compiler flags](building/compiler-flags/)
     
-* [**Test Automation**](testing/googletest/)
+* [**Test Automation**](testing/)
     
     A compiled program may run, but that doesn't mean it does the right thing. 
     A good way to catch bugs more quickly and efficiently is to **include automated 
