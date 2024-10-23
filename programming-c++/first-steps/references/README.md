@@ -1,10 +1,11 @@
 # References
 
-Pointers are a crucial feature of C. 
-They enable you to handle large amounts of data efficiently by passing around 
-data addresses instead of the actual data. 
+Pointers are a crucial feature of C. They are the basis for **memory management 
+in C** and allow **call-by-reference** semantics for parameter passing.
 
-Pointers are equally crucial to C++, but you have additional safety features 
+See also: [Memory Management in C](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c/c-advanced/memory-management)
+
+Pointers are equally crucial to C++, but we have additional safety features 
 available that defend against null dereferences and unintentional pointer 
 reassignments. 
 
