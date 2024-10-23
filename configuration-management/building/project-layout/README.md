@@ -1,6 +1,6 @@
 # Project Layout 
 
-A project layout specifies the order of files within a C++ project.
+A project layout specifies the order of files within a C/C++ project.
 
 Without a defined structure, C++ projects look like:
 

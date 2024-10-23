@@ -1,4 +1,4 @@
-# From C++ Source Code to the Executable
+# From C/C++ Source Code to the Executable
 
 ## One Step Build 
 
