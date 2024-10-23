@@ -51,7 +51,7 @@ four-phase procedure:
 * **Teardown**: We tear down the test fixture to put the world back 
     into the state in which we found it.
 
-## Testing Frameworks 
+## C/C++ Testing Frameworks 
 
 A testing framework in C/C++ serves as a structured environment to write,
 organize, and run tests for your code. It provides tools to automate the 
@@ -61,7 +61,7 @@ of your program work correctly.
 ### Google Test
 
 The following examples show the implementation of test cases using the 
-[Google Test framework](googletest/).
+[Google Test Framework](googletest/).
 
 _Example_: The four test phases implemented in a single test macro
 ```C++
@@ -146,10 +146,9 @@ Therefore, **test cases can be executed in any order and as often as required**.
 
 ### Unity Test Framework
 
-The [Unity framework](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/testing) is used for very simple projects, especially in the context of embedded software development.
+The [Unity framework](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/testing) is used for very simple C/C++ projects, especially in the context of embedded software development.
 
-The framework consists of only a header file and a C file and can easily be built together 
-with the project. There is no need to install a library.
+The framework consists of only a header file and a C file and can easily be built together with the project. There is no need to install a library.
 
 
 
