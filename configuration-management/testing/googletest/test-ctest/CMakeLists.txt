@@ -5,8 +5,10 @@ project(simple-test LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+find_package(GTest REQUIRED)
+
 add_executable(test_executable test.cpp)
-target_link_libraries(test_executable PRIVATE gtest gtest_main pthread)
+target_link_libraries(test_executable PRIVATE GTest::GTest GTest::Main pthread)
 
 # Enable testing for the project
 enable_testing()

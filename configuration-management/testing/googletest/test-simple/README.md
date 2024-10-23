@@ -154,14 +154,28 @@ _Example:_ CMakeList.txt to build the tests
 cmake_minimum_required(VERSION 3.25)
 
 project(simple-test LANGUAGES CXX)
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(test test.cpp)
+find_package(GTest REQUIRED)
 
-target_link_libraries(test PRIVATE gtest gtest_main pthread)
+add_executable(test test.cpp)
+target_link_libraries(test PRIVATE GTest::GTest GTest::Main pthread)
 ```
+
+`CMakeLists.txt` components:
+
+* **find_package(GTest REQUIRED)**: This tells CMake to search for the 
+    GTest package. If it's not found, CMake will throw an error due 
+    to the `REQUIRED` flag.
+
+* **target_link_libraries(test PRIVATE GTest::GTest GTest::Main pthread)**: 
+    Instead of linking directly to `gtest` and `gtest_main`, this links against 
+    the imported targets provided by the `GTest` package, namely 
+    `GTest::GTest` and `GTest::Main`, ensuring correct linking.
+
+This setup assumes we have `GTest` installed on your system in a location 
+CMake can find. 
 
 Run build and run the tests type:
 ```
