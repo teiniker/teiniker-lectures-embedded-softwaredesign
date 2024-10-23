@@ -51,6 +51,18 @@ four-phase procedure:
 * **Teardown**: We tear down the test fixture to put the world back 
     into the state in which we found it.
 
+## Testing Frameworks 
+
+A testing framework in C/C++ serves as a structured environment to write,
+organize, and run tests for your code. It provides tools to automate the 
+process of checking if individual units (functions, classes, or modules) 
+of your program work correctly.
+
+### Google Test
+
+The following examples show the implementation of test cases using the 
+[Google Test framework](googletest/).
+
 _Example_: The four test phases implemented in a single test macro
 ```C++
 TEST(VectorTest, Length) 
@@ -64,7 +76,9 @@ TEST(VectorTest, Length)
     // Teardown
 }
 ```
-To **avoid code redundancies** we can use explicit setup and teardown functions. 
+
+To **avoid code redundancies** we can use explicit setup and teardown 
+functions as well. 
 
 _Example_: `SetUp()` and `TearDown()` implemented in a fixture class 
 ```C++
@@ -130,9 +144,20 @@ Each test case begins with the same prerequisites.
 Therefore, **test cases can be executed in any order and as often as required**.
 
 
+### Unity Test Framework
+
+The [Unity framework](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/testing) is used for very simple projects, especially in the context of embedded software development.
+
+The framework consists of only a header file and a C file and can easily be built together 
+with the project. There is no need to install a library.
+
+
 
 ## References
 * Gerard Meszaros. **xUnit Test Patterns**. Addison-Wesley, 2007 
 * [XUnit Basics](http://xunitpatterns.com/XUnitBasics.html)
+
+* [GitHub: GoogleTest](https://github.com/google/googletest)
+* [GitHub: Unity Test](https://github.com/ThrowTheSwitch/Unity)
 
 *Egon Teiniker, 2020-2024, GPL v3.0* 
