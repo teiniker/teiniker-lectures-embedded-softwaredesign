@@ -26,13 +26,24 @@ It’s possible to benefit immediately from at least **some C++ idioms**:
     improving readability.
 
 * [Implicit typedef](implicit-typedef/)
+    In C++, `struct` names are automatically treated as types, so `typedef` 
+    isn’t needed for convenience. We can directly define a new type without 
+    explicitly defining it as a `typedef`.
 
 * [Function Overloading](function-overloading/)
+    This feature allows multiple functions with the same name to be 
+    defined in the same scope, differentiated by their parameter types 
+    and/or counts, enabling different behaviors based on arguments passed.
 
 * [Default Arguments](default-arguments/)
+    Default arguments allow you to set a default value for a function's 
+    parameters, so if an argument is not provided during a call, the 
+    function will use the specified default.
 
 * [References](references/)
-
+    A reference is an alias for another variable, created using the `&` 
+    symbol, enabling direct modification of the variable it references 
+    without needing pointers.
 
 Many of these language extensions incur **little to no overhead compared 
 to C code** and can therefore also be used in embedded systems.
