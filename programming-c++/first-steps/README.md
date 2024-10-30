@@ -25,13 +25,13 @@ It’s possible to benefit immediately from at least **some C++ idioms**:
     the type of a variable** from its initializer, simplifying code and 
     improving readability.
 
-* [Implicit typedef](structures/implicit-typedef/)
+* [Implicit typedef](implicit-typedef/)
 
-* [Function Overloading](functions/function-overloading/)
+* [Function Overloading](function-overloading/)
 
-* [Default Arguments](basics/functions/default-arguments/)
+* [Default Arguments](default-arguments/)
 
-* [References](basics/functions/references/)
+* [References](references/)
 
 
 Many of these language extensions incur **little to no overhead compared 
