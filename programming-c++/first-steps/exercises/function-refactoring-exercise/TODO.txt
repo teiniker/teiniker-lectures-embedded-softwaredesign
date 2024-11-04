@@ -1,0 +1,18 @@
+Exercise: Function Refactoring 
+-------------------------------------------------------------------------------
+
+Given a C++ file called "i2c.cpp" that contains some functions and a main() 
+function which checks the given implementations. 
+You can compile and run this code using the play button or the following 
+commands:
+    $ c++ -g -Wall i2c.cpp -o i2c
+    $ ./i2c
+
+Now, you need to refactor this code towards more C++ style...
+
+A) 
+
+B) 
+
+C)
+
