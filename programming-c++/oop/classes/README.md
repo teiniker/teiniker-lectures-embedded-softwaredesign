@@ -131,13 +131,13 @@ Note that the methods can be called directly on these instances using the
 dot notation.
 
 ```C++
-void test_constructor(void)
+TEST(DateTest, Constructor) 
 {
-    Date birthday(23, 6, 1912); // Alan Turing's date of birth                        
+    Date birthday(23, 6, 1912); // Alan Turing's date of birth
 
-    TEST_ASSERT_EQUAL(23, birthday.getDay());
-    TEST_ASSERT_EQUAL(6, birthday.getMonth());
-    TEST_ASSERT_EQUAL(1912, birthday.getYear());
+    EXPECT_EQ(23, birthday.getDay());
+    EXPECT_EQ(6, birthday.getMonth());
+    EXPECT_EQ(1912, birthday.getYear());
 }
 ``` 
 These objects are also created on the stack and go out of scope at the end of a method 
@@ -148,13 +148,13 @@ we use the **delete operator**.
 Note that all objects on the heap must be deleted manually using delete.
 
 ```C++
-void test_constructor_with_new(void)
+TEST(DateTest, ConstructorWithNew) 
 {
-    Date *birthday = new Date(23, 6, 1912); 
+    Date* birthday = new Date(23, 6, 1912);
 
-    TEST_ASSERT_EQUAL(23, birthday->getDay());
-    TEST_ASSERT_EQUAL(6, birthday->getMonth());
-    TEST_ASSERT_EQUAL(1912, birthday->getYear());
+    EXPECT_EQ(23, birthday->getDay());
+    EXPECT_EQ(6, birthday->getMonth());
+    EXPECT_EQ(1912, birthday->getYear());
 
     delete birthday;
 }

@@ -4,28 +4,27 @@
   * [From C to C++](first-steps/)
     
 * **Object-Oriented Programming**
-  * [Classes and Objects](classes/)
-    * Example: [book](classes/book/)
-    * Example: [date](classes/date/)
-    * Exercise: [resistor](classes/resistor-exercise/) 
-        ([Model Solution](classes/resistor/))
-    * Exercise: [can-message](classes/can-message-exercise/)
-        ([Model Solution](classes/can-message/))
+  * [Classes and Objects](oop/classes/README.md)
+    * Example: [date](oop/classes/date/)
+    * Example: [book](oop/classes/book/)
+    * Exercise: [resistor](oop/classes/resistor-exercise/) 
+        ([Model Solution](oop/classes/resistor/))
+    * Exercise: [can-message](oop/classes/can-message-exercise/)
+        ([Model Solution](oop/classes/can-message/))
 
-  * [Copy Constructor](copy-constructor/)
-    * Example: [CopyConstructor-User](copy-constructor/user/)
-    * Exercise: [CopyConstructor-Order](copy-constructor/order-exercise/)
-        ([Model Solution](copy-constructor/order/))
+  * [Copy Constructor](oop/copy-constructor/)
+    * Example: [CopyConstructor-User](oop/copy-constructor/user/)
+    * Exercise: [CopyConstructor-Order](oop/copy-constructor/order-exercise/)
+        ([Model Solution](oop/copy-constructor/order/))
   
   * Operator Overloading
-    * [AssignmentOperator](assignment-operator/AssignmentOperator-User)
+    * [AssignmentOperator](oop/assignment-operator/AssignmentOperator-User)
       
-      
-      * Example: [OperatorOverloading-ComplexNumber](operator-overloading/OperatorOverloading-ComplexNumber)
-      * Exercise: [OperatorOverloading-Counter](operator-overloading/OperatorOverloading-Counter-Exercise)
-        ([Model Solution](operator-overloading/OperatorOverloading-Counter))
-      * Exercise: [OperatorOverloading-EEPROM](operator-overloading/OperatorOverloading-EEPROM-Exercise)
-        ([Model Solution](operator-overloading/OperatorOverloading-EEPROM))
+      * Example: [OperatorOverloading-ComplexNumber](oop/operator-overloading/OperatorOverloading-ComplexNumber)
+      * Exercise: [OperatorOverloading-Counter](oop/operator-overloading/OperatorOverloading-Counter-Exercise)
+        ([Model Solution](oop/operator-overloading/OperatorOverloading-Counter))
+      * Exercise: [OperatorOverloading-EEPROM](oop/operator-overloading/OperatorOverloading-EEPROM-Exercise)
+        ([Model Solution](oop/operator-overloading/OperatorOverloading-EEPROM))
 
   * Inheritance
 
