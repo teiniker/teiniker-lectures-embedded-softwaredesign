@@ -20,21 +20,21 @@ allowing for easier manipulation and avoiding common pitfalls like buffer overfl
 ## Operations
 Here are some key features and functions provided by the `std::string` class:
 
-* String Creation and Assignment:
+* **String Creation and Assignment**:
     * We can create a string object using various constructors, such as the 
         default constructor, copy constructor, or constructor that takes a 
         C-string or a portion of another string.
     * String objects can be assigned to one another using assignment 
         operators `=`, allowing you to easily copy or modify strings.
 
-* String Manipulation:
+* **String Manipulation**:
     * The `std::string` class provides member functions for appending (append), 
         concatenating `+` or `+=`, inserting (insert), erasing (erase), replacing 
         (replace), and resizing strings.
     * You can access individual characters of a string using the indexing operator 
         `[]` or the `at()` member function.
 
-* String Information and Access:
+* **String Information and Access**:
     * We can retrieve information about a string's length using the `length() or 
         `size()` member functions.
     * The `c_str()` member function returns a C-style null-terminated string 
@@ -43,13 +43,13 @@ Here are some key features and functions provided by the `std::string` class:
     * The `std::string` object can be iterated over using iterators or with 
         range-based for loops.
 
-* String Comparison and Searching:
+* **String Comparison and Searching**:
     * The `std::string` class provides comparison operators `==`, `!=`, `<`,
     `>`, `<=`, `>=` to compare strings lexicographically.
     * We can search for substrings within a string using member functions like 
     `find()` and `rfind()`, which return the position of the found substring.
 
-* Other Utility Functions:
+* **Other Utility Functions**:
     * The `std::string` class includes various utility functions, such as 
     `empty()` to check if a string is empty, `clear()` to remove all characters 
     from a string, and `swap()` to exchange the contents of two string objects 
@@ -60,4 +60,4 @@ Here are some key features and functions provided by the `std::string` class:
 
 * [C++ Reference: string](https://en.cppreference.com/w/cpp/string)
 
-*Egon Teiniker, 2020-2023, GPL v3.0*
+*Egon Teiniker, 2020-2024, GPL v3.0*

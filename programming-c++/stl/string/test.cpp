@@ -4,27 +4,19 @@
 #include <iostream>
 #include <string>
 
-#include <unity.h>
+#include <gtest/gtest.h>
 
 using namespace std;
-
-void setUp(void)
-{
-}
-
-void tearDown(void)
-{
-}
 
 /**
  * size() returns the number of elements in the string.
  **/
-void test_string_size(void)
+TEST(StringTest, SizeTest) 
 {
    string str = "Hello World";
    size_t len = str.size();
 
-   TEST_ASSERT_EQUAL(11, len);
+   EXPECT_EQ(11, len);
 }
 
 
@@ -37,15 +29,16 @@ void test_string_size(void)
  * Bounds checking is performed, exception of type std::out_of_range will 
  * be thrown on invalid access.
  **/ 
-void test_string_at(void)
+TEST(StringTest, AtTest) 
 {
    string str = "Hello World";
    char c1 = str[4];
    char c2 = str.at(4);
-   TEST_ASSERT_EQUAL(c1, c2);
+
+   EXPECT_EQ(c1, c2);
 
    str.at(4) = 'O';
-   TEST_ASSERT_EQUAL('O', str[4]);
+   EXPECT_EQ('O', str[4]);
 }
 
 
@@ -54,55 +47,41 @@ void test_string_at(void)
  * equivalent to those stored in the string.
  * Note that c_str() and data() perform the same function.
  **/
-void test_c_str(void)
+TEST(StringTest, CStrTest) 
 {
    string str = "Hello World";
    const char* s = str.c_str();
 
-   TEST_ASSERT_EQUAL(0, strcmp("Hello World", s));
-   TEST_ASSERT_EQUAL(11, strlen(s));
-   TEST_ASSERT_EQUAL('\0', s[11]);
+   EXPECT_STREQ("Hello World", s);
+   EXPECT_EQ(11, strlen(s));
+   EXPECT_EQ('\0', s[11]);
 }
+
 
 /**
  * Comparison Operators (==, !=, <, >, <=, >=):
  * We can use the comparison operators directly with std::string objects. 
  * These operators compare the lexicographical order of the strings.
  **/
-void test_string_comparison_operators(void)
+TEST(StringTest, ComparisonOperatorsTest) 
 {
    string str1 = "Hello";
    string str2 = "World";
 
-   TEST_ASSERT_FALSE(str1 == str2);
-   TEST_ASSERT_TRUE(str1 != str2);
-   TEST_ASSERT_TRUE(str1 < str2);
-   TEST_ASSERT_FALSE(str1 > str2);
+   EXPECT_FALSE(str1 == str2);
+   EXPECT_TRUE(str1 != str2);
+   EXPECT_TRUE(str1 < str2);
+   EXPECT_FALSE(str1 > str2);
 }
 
 
-void test_string_concatination(void)
+TEST(StringTest, ConcatenationTest) 
 {
    string str1 = "Hello ";
    string str2 = "World";
 
    string str = str1 + str2;
 
-   TEST_ASSERT_FALSE("" == str2);
-   TEST_ASSERT_TRUE(str1 != str2);
-   TEST_ASSERT_TRUE(str1 < str2);
-   TEST_ASSERT_FALSE(str1 > str2);
+   EXPECT_TRUE("Hello World" == str);
 }
 
-
-int main(void)
-{
-	UNITY_BEGIN();
-   RUN_TEST(test_string_size);
-   RUN_TEST(test_string_at);
-   RUN_TEST(test_c_str);
-   RUN_TEST(test_string_comparison_operators);
-   //...
-
-	return UNITY_END();
-}
