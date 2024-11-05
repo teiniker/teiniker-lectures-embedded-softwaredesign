@@ -1,8 +1,9 @@
 Exercise: Function Refactoring 
 -------------------------------------------------------------------------------
 
-Given a C++ file called "i2c.cpp" that contains some functions and a main() 
+Given a C++ file called "i2c.cpp" that contains some operations and a "main()" 
 function which checks the given implementations. 
+
 You can compile and run this code using the play button or the following 
 commands:
     $ c++ -g -Wall i2c.cpp -o i2c
@@ -10,9 +11,24 @@ commands:
 
 Now, you need to refactor this code towards more C++ style...
 
-A) 
+A) Separate header file and implementation
+    Create a file called "i2c.h" which acts as the declaration file for 
+    the functions in "i2c.cpp". 
+    Don't forget to include the necessary header guards.
 
-B) 
+B) Adding a namespace   
+    Add a namespace called "i2c" to the functions in "i2c.cpp" and "i2c.h".
 
-C)
+C) Function overloading 
+    Overload the "i2c_write()" function to accept different types of data. 
+
+D) Default arguments
+    Add default arguments to the "i2c_init()" function to make it more 
+    flexible.    
+    pin_scl is 1 by default, uint8_t pin_sda is 0 by default.
+
+After removing the "main()" function from "i2c.cpp", we can use CMake to 
+compile and run the code.
+
+At the end, all the given test cases should pass.
 
