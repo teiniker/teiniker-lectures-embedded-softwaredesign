@@ -21,8 +21,8 @@ $ sudo make install
 
 The libraries and header files are installed in the following locations:
 ```
-/usr/local/lib/libgmock.a
-/usr/local/include/gtest/gtest.h
+$ ll /usr/local/lib/libgmock.a
+$ ll /usr/local/include/gtest/gtest.h
 ```
 
 These are standard locations so the library can be used directly by the linker:
