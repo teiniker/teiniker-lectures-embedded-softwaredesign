@@ -17,7 +17,7 @@ A) Separate header file and implementation
     Don't forget to include the necessary header guards.
 
 B) Adding a namespace   
-    Add a namespace called "i2c" to the functions in "i2c.cpp" and "i2c.h".
+    Add a namespace called "io" to the functions in "i2c.cpp" and "i2c.h".
 
 C) Function overloading 
     Overload the "i2c_write()" function to accept different types of data. 

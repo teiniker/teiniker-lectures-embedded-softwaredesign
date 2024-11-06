@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstdint>
+#include <string>
 
 namespace electronics
 {
@@ -21,9 +22,12 @@ namespace math
 }
 
 using namespace math;
+using namespace std;
 
 int main(void)
 {
+    string s = "Hello, World!";
+
     electronics::Resistor r;
     r.value = 470; // in Ohm 
     r.tolerance = 1; // in % 

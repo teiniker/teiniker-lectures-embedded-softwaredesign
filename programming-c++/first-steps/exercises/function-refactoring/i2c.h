@@ -1,9 +1,7 @@
 #ifndef I2C_H
 #define I2C_H
 
-#include <cstdio>
-#include <cstdlib>
-#include <stdint.h>
+#include <cstdint>
 
 namespace io
 {

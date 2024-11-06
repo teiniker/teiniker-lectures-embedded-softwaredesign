@@ -9,7 +9,7 @@ struct Resistor
     uint8_t tolerance;
 };
 
-void resistor_print(Resistor& r)
+void resistor_print(Resistor& r)    // Call by Reference
 {
     printf("r = %d Ohm, %d%% tolerance\n", r.value, r.tolerance);
 }
