@@ -14,7 +14,7 @@ Now, you need to refactor this code towards more C++ style...
 A) Separate header file and implementation
     Create a file called "i2c.h" which acts as the declaration file for 
     the functions in "i2c.cpp". 
-    Don't forget to include the necessary header guards.
+    See: https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c/c-advanced/modular-programming/modules
 
 B) Adding a namespace   
     Add a namespace called "io" to the functions in "i2c.cpp" and "i2c.h".
