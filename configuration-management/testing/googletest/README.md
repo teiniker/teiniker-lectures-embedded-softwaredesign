@@ -60,6 +60,36 @@ $ g++ test.cpp -o test -lgtest -lgtest_main -pthread
     Some parts of the GoogleTest library or your test code might explicitly 
     use pthreads for synchronization or concurrent operations.
 
+
+## Run GoogleTests
+
+When using GoogleTest from the command line, several parameters are important 
+to control how tests are run, filtered, and reported. 
+
+Here’s an overview of the most commonly used command-line parameters:
+
+* **--gtest_list_tests**: Lists all tests in the test executable.
+
+* **--gtest_filter=pattern**: Runs only tests whose names match the given 
+    pattern. The pattern can contain wildcards (`*`), question marks (`?`), 
+    and negations (`-`).
+
+    _Example:_ `./test --gtest_filter=VectorTestFixture.Equals*`
+
+* **--gtest_repeat=number**: Runs all tests the specified number of times.
+
+* **--gtest_shuffle**: Randomizes the order of tests.
+
+* **--gtest_output=xml**: Generates an XML report of the test results.
+
+    _Example:_ `./test --gtest_output=xml:test_results.xml`
+
+* **--gtest_color=yes**: Enables colored output.
+
+* **--gtest_break_on_failure**: Stops the test run after the first failure.
+
+
+
 ## References
 * [GoogleTest User’s Guide](https://google.github.io/googletest/)
 
