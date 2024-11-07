@@ -48,7 +48,8 @@ Follow these steps to build your project using CMake:
 
 ```
 $ cmake -S . -B build
-$ cmake --build build
+$ cd build 
+$ make
 ```
 
 ## Run the Executable
@@ -56,7 +57,7 @@ $ cmake --build build
 After a successful build, we can run the generated executable:
 
 ```
-$ ./build/main
+$ ./main
 ```
 
 

@@ -112,9 +112,9 @@ target_link_libraries(test PRIVATE gtest gtest_main pthread)
 Run build and run the tests type:
 ```
 $ cmake -S . -B build
-$ cmake --build build
-
-$ ./build/test
+$ cd build 
+$ make
+$ ./test
 ```
 
 ## References

@@ -51,7 +51,8 @@ We can build our project using the following commands:
 
 ```
 $ cmake -S . -B build
-$ cmake --build build
+$ cd build 
+$ make
 ```
 
 ## Run the Tests 
@@ -60,7 +61,7 @@ After a successful build, we can run our tests by executing the generated
 executable:
 
 ```
-./build/test
+$ ./test
 Running main() from /home/student/Downloads/googletest/googletest/src/gtest_main.cc
 [==========] Running 3 tests from 1 test suite.
 [----------] Global test environment set-up.

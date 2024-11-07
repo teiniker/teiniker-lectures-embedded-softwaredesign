@@ -36,8 +36,8 @@ a more descriptive name, and `test_executable` refers to the binary created by t
 To build and run the tests, type:
 ```
 $ cmake -S . -B build
-$ cmake --build build
-$ cd build
+$ cd build 
+$ make
 $ ctest
 ```
 

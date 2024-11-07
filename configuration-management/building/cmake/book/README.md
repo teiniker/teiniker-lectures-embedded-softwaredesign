@@ -41,7 +41,9 @@ Follow these steps to build your project using CMake:
 
 ```
 $ cmake -S . -B build
-$ cmake --build build
+$ cd build 
+$ make
+$ ./test
 ```
 
 ## Run the Executable

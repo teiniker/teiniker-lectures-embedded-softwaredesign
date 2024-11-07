@@ -180,9 +180,10 @@ CMake can find.
 Run build and run the tests type:
 ```
 $ cmake -S . -B build
-$ cmake --build build
+$ cd build 
+$ make
 
-$ ./build/test
+$ ./test
 Running main() from /home/student/Downloads/googletest/googletest/src/gtest_main.cc
 [==========] Running 4 tests from 1 test suite.
 [----------] Global test environment set-up.
