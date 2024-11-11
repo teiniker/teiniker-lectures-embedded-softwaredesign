@@ -1,5 +1,0 @@
-# Integer Types
-
-
-
-## References
