@@ -1,4 +1,4 @@
-# Operator Overloading
+# Operator Overloading (Binary Operators)
 
 The meaning of an operator is always same for variable of basic types like: int, float, double etc. 
 For example: To add two integers, + operator is used.
