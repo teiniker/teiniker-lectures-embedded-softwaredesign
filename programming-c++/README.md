@@ -1,7 +1,7 @@
 # C++ Programming
 
 * **Introduction**
-  * [From C to C++](first-steps/)
+  * [First Steps in C++](first-steps/)
     
 * **Object-Oriented Programming**
   * [Classes and Objects](oop/classes/README.md)
@@ -13,17 +13,18 @@
         ([Model Solution](oop/classes/can-message/))
 
   * [Copy Constructor](oop/copy-constructor/)
-    * Example: [CopyConstructor-User](oop/copy-constructor/user/)
+    * Example: [user](oop/copy-constructor/user/)
     * Exercise: [CopyConstructor-Order](oop/copy-constructor/order-exercise/)
         ([Model Solution](oop/copy-constructor/order/))
   
   * Operator Overloading
-    * [AssignmentOperator](oop/assignment-operator/AssignmentOperator-User)
+    * [AssignmentOperator](oop/operator-overloading/operator-assignment/)
       
-      * Example: [OperatorOverloading-ComplexNumber](oop/operator-overloading/OperatorOverloading-ComplexNumber)
-      * Exercise: [OperatorOverloading-Counter](oop/operator-overloading/OperatorOverloading-Counter-Exercise)
+    * [Binary Operators](oop/operator-overloading/operator-binary/)
+
+    * Exercise: [OperatorOverloading-Counter](oop/operator-overloading/OperatorOverloading-Counter-Exercise)
         ([Model Solution](oop/operator-overloading/OperatorOverloading-Counter))
-      * Exercise: [OperatorOverloading-EEPROM](oop/operator-overloading/OperatorOverloading-EEPROM-Exercise)
+    * Exercise: [OperatorOverloading-EEPROM](oop/operator-overloading/OperatorOverloading-EEPROM-Exercise)
         ([Model Solution](oop/operator-overloading/OperatorOverloading-EEPROM))
 
   * Inheritance
