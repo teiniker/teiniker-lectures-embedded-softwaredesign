@@ -125,7 +125,9 @@ development lifecycle.
 
 ## References
 
-
-
+* Robert C. Martin. **Agile Software Development, Principles, Patterns, and Practices**. Prentice Hall, 2002
+* Bjarne Stroustrup. **The C++ Programming Language**. Addison-Wesley, 4th edition,2013
+* Robert C. Martin. **Clean Code: A Handbook of Agile Software Craftsmanship.**. Pearson, 2008
+* Martin Fowler. **UML Distilled**. Addison-Wesley, 3rd Edition, 2004
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
