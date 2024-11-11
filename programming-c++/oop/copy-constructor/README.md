@@ -8,7 +8,8 @@ A copy constructor is a member function which initializes an object using anothe
 
 A Copy Constructor may be called in following cases:
 * When an object of the class is **returned by value**.
-* When an object of the class is **passed by value** (to a function) as an argument.
+* When an object of the class is **passed by value** (to a function) 
+    as an argument.
 * When an object is constructed based on another object of the same class.
 * When the compiler generates a temporary object.
 
@@ -27,6 +28,14 @@ or any runtime allocation of the resource.
 In user defined copy constructor, we make sure that pointers (or references) 
 of copied object point to new memory locations.
 	
+## Examples and Exercises
+
+The following examples and exercises are intended to clarify the concept 
+of copy constructures and deep copy:
+
+* Example: [user](user/)
+* Exercise: [order](order-exercise/) ([Model Solution](order/))
+
 
 ## References
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017

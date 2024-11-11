@@ -1,6 +1,7 @@
-# Introduction to C++ Classes
+# Classes and Objects 
 
-Classes are the central feature of an **object-oriented language**. 
+Classes are the central feature of an **object oriented language**. 
+
 
 ## Class Declaration
 
@@ -162,6 +163,15 @@ TEST(DateTest, ConstructorWithNew)
 
 The new operator returns a pointer to the created object, thus, 
 the members of an object are accessed with the **arrow operator**.
+
+## Examples and Exercises
+
+The following examples and exercises are intended to further clarify the concepts surrounding classes:
+
+* Example: [date](date/)
+* Example: [book](book/)
+* Exercise: [resistor](resistor-exercise/) ([Model Solution](resistor/))
+* Exercise: [can-message](can-message-exercise/) ([Model Solution](can-message/))
 
 
 ## References
