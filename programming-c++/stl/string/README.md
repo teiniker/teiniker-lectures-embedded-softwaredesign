@@ -61,6 +61,6 @@ Here are some key features and functions provided by the `std::string` class:
 
 ## References
 
-* [C++ Reference: string](https://en.cppreference.com/w/cpp/string)
+* [C++ Reference: string](https://en.cppreference.com/w/cpp/string/basic_string)
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
