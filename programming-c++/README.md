@@ -26,12 +26,8 @@
 * **Standard Template Library (STL)**
   * [Strings](stl/string/)
     
-  * Containers 
-    * [std::vector](stl/vector/)
-    * [std::list](stl/list/)
-    * [std::stack](stl/stack/)
-    * [std::queue](stl/queue/)  
-
+  * [Containers](stl/container/) 
+ 
   * Algorithms
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
