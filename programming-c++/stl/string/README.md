@@ -55,6 +55,9 @@ Here are some key features and functions provided by the `std::string` class:
     from a string, and `swap()` to exchange the contents of two string objects 
     efficiently.
 
+## Examples and Exercises
+
+* Example: 
 
 ## References
 
