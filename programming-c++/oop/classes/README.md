@@ -181,6 +181,10 @@ The following examples and exercises are intended to further clarify the concept
     * Example: [order](order/)
     * Exercise: [user](user-exercise/) ([Model Solution](user/))
 
+* **Bidirectional Associations**
+
+
+
 ## References
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 * Chapter 16: Classes
