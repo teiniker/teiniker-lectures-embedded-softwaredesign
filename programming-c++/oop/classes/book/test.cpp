@@ -8,9 +8,9 @@ TEST(BookTest, Constructor)
 {
     Book book("978-0131103627", "Brian W. Kernighan and Dennis Ritchie", "The C Programming Language");                         
     
-    EXPECT_EQ("978-0131103627", book.getIsbn());
-    EXPECT_EQ("Brian W. Kernighan and Dennis Ritchie", book.getAuthor());
-    EXPECT_EQ("The C Programming Language", book.getTitle());
+    EXPECT_EQ("978-0131103627", book.isbn());
+    EXPECT_EQ("Brian W. Kernighan and Dennis Ritchie", book.author());
+    EXPECT_EQ("The C Programming Language", book.title());
 }
 
 TEST(BookTest, ToJson) 

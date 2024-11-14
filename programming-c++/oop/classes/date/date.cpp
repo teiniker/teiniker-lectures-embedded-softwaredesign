@@ -8,14 +8,14 @@ Date::~Date()
 {
 }
 
-int Date::getDay() const { return _day; }
-void Date::setDay(const int day) { _day = day; }
+int Date::day() const { return _day; }
+void Date::day(const int day) { _day = day; }
 
-int Date::getMonth() const { return _month; }
-void Date::setMonth(const int month) { _month = month; }
+int Date::month() const { return _month; }
+void Date::month(const int month) { _month = month; }
 
-int Date::getYear() const { return _year; }
-void Date::setYear(const int year) { _year = year; }
+int Date::year() const { return _year; }
+void Date::year(const int year) { _year = year; }
 
 bool Date::isLeapYear()
 {

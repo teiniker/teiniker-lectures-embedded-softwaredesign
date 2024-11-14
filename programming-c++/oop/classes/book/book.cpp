@@ -11,31 +11,31 @@ Book::Book(const string& isbn, const string& author, const string& title)
 }
 
 // Accessor methods for isbn
-string Book::getIsbn() const
+string Book::isbn() const
 {
     return _isbn;
 }
-void Book::setIsbn(const string& isbn)
+void Book::isbn(const string& isbn)
 {
     _isbn = isbn;
 }
 
 // Accessor methods for author
-string Book::getAuthor() const
+string Book::author() const
 {
     return _author;
 }
-void Book::setAuthor(const string& author)
+void Book::author(const string& author)
 {
     _author = author;
 }
 
 // Accessor methods for title
-string Book::getTitle() const
+string Book::title() const
 {
     return _title;
 }
-void Book::setTitle(const string& title)
+void Book::title(const string& title)
 {
     _title = title;
 }
