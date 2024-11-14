@@ -8,9 +8,6 @@
 
 using namespace std;
 
-/**
- * size() returns the number of elements in the string.
- **/
 TEST(StringTest, SizeTest) 
 {
    string str = "Hello World";
@@ -20,15 +17,6 @@ TEST(StringTest, SizeTest)
 }
 
 
-/**
- * Operator[] returns a reference to the character at specified location pos 
- * if pos < size(), or a reference to CharT() if pos == size(). 
- * No bounds checking is performed.
- * 
- * at() returns a reference to the character at specified location pos. 
- * Bounds checking is performed, exception of type std::out_of_range will 
- * be thrown on invalid access.
- **/ 
 TEST(StringTest, AtTest) 
 {
    string str = "Hello World";
@@ -42,11 +30,6 @@ TEST(StringTest, AtTest)
 }
 
 
-/**
- * c_str() returns a pointer to a null-terminated character array with data 
- * equivalent to those stored in the string.
- * Note that c_str() and data() perform the same function.
- **/
 TEST(StringTest, CStrTest) 
 {
    string str = "Hello World";
@@ -58,11 +41,6 @@ TEST(StringTest, CStrTest)
 }
 
 
-/**
- * Comparison Operators (==, !=, <, >, <=, >=):
- * We can use the comparison operators directly with std::string objects. 
- * These operators compare the lexicographical order of the strings.
- **/
 TEST(StringTest, ComparisonOperatorsTest) 
 {
    string str1 = "Hello";

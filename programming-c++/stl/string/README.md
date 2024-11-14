@@ -24,7 +24,7 @@ The basic characteristics of `std::string` are:
 
 ## Operations
 
-* **Construction**l
+* **Construction**
 
     There are several ways to create an `std::string`:
     ```C++
