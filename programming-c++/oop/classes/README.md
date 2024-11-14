@@ -184,7 +184,8 @@ The following examples and exercises are intended to further clarify the concept
 * **Bidirectional Associations**
     * Example: [directory](directory/)
 
-
+* **Composition**
+    * Example: [event](event/)
 
 ## References
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
