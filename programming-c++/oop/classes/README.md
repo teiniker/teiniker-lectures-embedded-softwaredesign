@@ -182,6 +182,7 @@ The following examples and exercises are intended to further clarify the concept
     * Exercise: [user](user-exercise/) ([Model Solution](user/))
 
 * **Bidirectional Associations**
+    * Example: [directory](directory/)
 
 
 
