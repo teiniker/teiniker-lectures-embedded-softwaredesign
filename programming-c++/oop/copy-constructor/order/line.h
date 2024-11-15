@@ -2,7 +2,6 @@
 #define _ORDERLINE_H_
 
 #include <string>
-
 #include <product.h>
 
 class OrderLine 
