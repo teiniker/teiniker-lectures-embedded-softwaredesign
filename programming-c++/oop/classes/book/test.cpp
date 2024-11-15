@@ -17,6 +17,20 @@ TEST(BookTest, Constructor)
     // Teardown
 }
 
+TEST(BookTest, ConstructorWithNew) 
+{
+    // Setup
+    Book *book = new Book("978-0131103627", "Brian W. Kernighan and Dennis Ritchie", "The C Programming Language");                         
+    
+    // Exercise + Verify 
+    EXPECT_EQ("978-0131103627", book->isbn());
+    EXPECT_EQ("Brian W. Kernighan and Dennis Ritchie", book->author());
+    EXPECT_EQ("The C Programming Language", book->title());
+
+    // Teardown 
+    delete book;
+}
+
 TEST(BookTest, ToJson) 
 {
     // Setup
@@ -31,18 +45,4 @@ TEST(BookTest, ToJson)
     EXPECT_EQ(expected, json);
 
     // Teardown
-}
-
-TEST(BookTest, Heap) 
-{
-    // Setup
-    Book *book = new Book("978-0131103627", "Brian W. Kernighan and Dennis Ritchie", "The C Programming Language");                         
-    
-    // Exercise + Verify 
-    EXPECT_EQ("978-0131103627", book->isbn());
-    EXPECT_EQ("Brian W. Kernighan and Dennis Ritchie", book->author());
-    EXPECT_EQ("The C Programming Language", book->title());
-
-    // Teardown 
-    delete book;
 }
