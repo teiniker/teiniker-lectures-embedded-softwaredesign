@@ -3,6 +3,10 @@
 
 class IntegerSequence 
 {
+	private:
+		static int _value;	// Static class variable
+		int _id;
+
 	public:
 		IntegerSequence(void); 
 
@@ -11,10 +15,6 @@ class IntegerSequence
 		static int next(void); 
 		
 		int id(void);
-
-	private:
-		static int _value;	// Static class variable
-		int _id;
  };
 
 #endif /*_INTEGER_SEQUENCE_H_ */

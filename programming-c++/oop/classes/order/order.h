@@ -8,6 +8,11 @@
 
 class Order 
 {
+ 	private:
+		int _id; 
+		std::string _name;
+		std::vector<OrderLine*> _lines;  // ---[*]-> OrderLine
+
  	public:
 		Order(int id, const std::string& name);	
 		   
@@ -18,10 +23,6 @@ class Order
 		OrderLine* line(int index);
 		int numberOfLines(void);
  
- 	private:
-		int _id; 
-		std::string _name;
-		std::vector<OrderLine*> _lines;  // ---[*]-> OrderLine
  };
 
 #endif /*_MAIL_H_ */
