@@ -16,10 +16,8 @@ class User
 		User(const int id, const std::string& username, const std::string& password, Mail* mail);
 		User(const User& old);	// Copy Constructor
 
-		int id();
-		
+		int id();	
 		std::string username(void);
-		
 		std::string password();
 		
 		// ---[1]-> Mail
