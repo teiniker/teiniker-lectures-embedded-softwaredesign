@@ -102,6 +102,10 @@ Successful configuration management includes at least the following activities:
     done a great deal to popularize self-testing code and as a result many 
     people have seen the value of the technique.
 
+* [**Debugging**](debugging/README.md)
+    Debugging is the **systematic process of identifying, analyzing, and resolving 
+    defects** or "bugs" which employs various tools and techniques within the 
+    software development. 
 
 * [**Generative AI**](generative-ai/README.md)
 
