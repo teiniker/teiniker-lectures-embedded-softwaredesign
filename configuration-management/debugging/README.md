@@ -114,10 +114,45 @@ Here the final `launch.json` file:
 }
 ```
 
+## Dynamic Memory Analysis
+
+**Memory management** is a crucial aspect of C++ programming due to the language's 
+design philosophy and its balance between performance, control, and flexibility. 
+Understanding and effectively managing memory in C++ is essential for creating 
+robust, efficient, and secure applications.
+
+**Valgrind** is a powerful instrumentation framework primarily used for building 
+dynamic analysis tools that aid developers in debugging and profiling their applications. 
+
+Valgrind operates by running programs on a synthetic CPU, intercepting and monitoring 
+various operations to detect a range of memory-related issues without requiring any 
+modifications to the source code.
+
+* **Detecting Memory Leaks**: Memory leaks occur when a program allocates memory but 
+    fails to release it back to the system, leading to increased memory consumption 
+    over time. Valgrind identifies these leaks, helping developers ensure efficient 
+    memory usage.
+
+* **Identifying Invalid Memory Accesses**: Programs might inadvertently read from or 
+    write to memory locations that they shouldn't access, leading to undefined behavior 
+    or crashes. Valgrind detects such invalid reads and writes, including accessing 
+    freed memory or buffer overflows.
+
+* **Tracking Memory Mismanagement**: Valgrind can identify issues like use of uninitialized 
+    memory, double frees (attempting to free memory that has already been freed), and 
+    mismatched memory management routines (e.g., using malloc with delete).
+
+Integrating Valgrind into the development and testing lifecycle fosters proactive 
+identification and resolution of memory-related issues, ultimately leading to more 
+stable and secure applications.
+
+
 ## References
 
 *  David J Agans. **Debugging: The 9 Indispensable Rules for Finding Even the Most Elusive Software and Hardware Problems**. AMACOM, 2006.
 
 * Rafał Świdziński. **Modern CMake for C++**. Packt Publishing, 2022.
+
+* [Valgrind Home](https://valgrind.org/)
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
