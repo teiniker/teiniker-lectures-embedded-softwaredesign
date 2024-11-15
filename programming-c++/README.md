@@ -1,7 +1,8 @@
 # C++ Programming
 
 * **Introduction**
-  * [First Steps in C++](first-steps/)
+  * [What We Know From C](first-steps/CKnowHow.md)
+  * [First Steps in C++](first-steps/README.md)
     
 * **Object-Oriented Programming**
   * [Introduction](oop/introduction/README.md)
