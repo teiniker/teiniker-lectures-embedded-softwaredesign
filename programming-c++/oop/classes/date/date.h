@@ -26,4 +26,4 @@ class Date
         bool isLeapYear();
 };
 
-#endif 
+#endif // _DATE_H_

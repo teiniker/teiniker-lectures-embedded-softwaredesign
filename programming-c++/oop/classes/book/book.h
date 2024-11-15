@@ -1,5 +1,5 @@
-#ifndef BOOK_H
-#define BOOK_H
+#ifndef _BOOK_H_
+#define _BOOK_H_
 
 #include <string>
 
@@ -30,4 +30,4 @@ public:
     std::string toJson() const;
 };
 
-#endif // BOOK_H
+#endif // _BOOK_H_

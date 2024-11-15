@@ -164,6 +164,33 @@ string Book::toJson() const
 
 ## Testing the Book Class
 
+The following test case is designed to verify that the `Book` class's constructor correctly 
+initializes its member variables and that the corresponding getter methods (`isbn()`, `author()`,
+and `title()`) return the expected values. 
+
+```C++
+TEST(BookTest, Constructor) 
+{
+    Book book("978-0131103627", "Brian W. Kernighan and Dennis Ritchie", "The C Programming Language");                         
+    
+    EXPECT_EQ("978-0131103627", book.isbn());
+    EXPECT_EQ("Brian W. Kernighan and Dennis Ritchie", book.author());
+    EXPECT_EQ("The C Programming Language", book.title());
+}
+```
+
+The primary goal of the test case is to confirm that the `Book` class's constructor properly 
+initializes the object's state with the provided parameters.
+The test also ensures that the getter methods (`isbn()`, `author()`, `title()`) accurately 
+retrieve the initialized values.
+
+* **Object Construction**: A `Book` object is created with the given ISBN, author, and title.
+
+* **Assertions**: The `EXPECT_EQ` macros verify that the getter methods return the expected values.
+
+By verifying that an object is correctly instantiated with the expected values, the test case  
+lays the groundwork for more complex tests and helps maintain the integrity of the `Book` 
+class as the codebase evolves.
 
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
