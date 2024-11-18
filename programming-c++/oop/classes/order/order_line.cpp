@@ -7,17 +7,17 @@ OrderLine::OrderLine(int id, int quantity, Product* product)
 {
 }
 
-int OrderLine::id(void)
+int OrderLine::id(void) const
 {
 	return _id;
 }
 
-int OrderLine::quantity(void)
+int OrderLine::quantity(void) const
 {
 	return _quantity;
 }
 
-Product* OrderLine::product(void)
+Product* OrderLine::product(void) const
 {
 	return _product;
 }

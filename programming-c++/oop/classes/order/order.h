@@ -16,8 +16,8 @@ class Order
  	public:
 		Order(int id, const std::string& name);	
 		   
-		int id(void);		
-		std::string name(void);
+		int id(void) const;		
+		std::string name(void) const;
 		
 		void addLine(OrderLine* line);
 		OrderLine* line(int index);

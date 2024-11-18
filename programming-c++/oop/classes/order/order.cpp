@@ -7,12 +7,12 @@ Order::Order(int id, const string& name)
 {
 }
 
-int Order::id(void)
+int Order::id(void) const
 {
 	return _id;	
 }
 
-string Order::name(void)
+string Order::name(void) const
 {
 	return _name;
 }

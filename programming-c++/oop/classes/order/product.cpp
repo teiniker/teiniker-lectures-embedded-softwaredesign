@@ -7,17 +7,17 @@ Product::Product(int id, const string& description, long price)
 {
 }
 
-int Product::id(void)
+int Product::id(void) const
 {
 	return _id;
 }
 
-string Product::description(void)
+string Product::description(void) const
 {
 	return _description;
 }
 
-long Product::price(void)
+long Product::price(void) const
 {
 	return _price;
 } 
