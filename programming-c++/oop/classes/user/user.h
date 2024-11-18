@@ -5,30 +5,28 @@
 #include <vector>
 #include "mail.h"
 
-using namespace std;
-
 class User 
 {
 	private:
 		int _id; 
-		string _username;
-		string _password;
+		std::string _username;
+		std::string _password;
 		Mail* _mail;			// ---[1]-> Mail
  
 	public:                
-		User(const int id, const string& username, const string& password, Mail* mail);
+		User(const int id, const std::string& username, const std::string& password, Mail* mail);
 
-		int id();
-		void id(int id);
+		int id(void) const;
+		void id(const int id);
 		
-		string username(void);
-		void username(const string& username);
+		std::string username(void) const;
+		void username(const std::string& username);
 		
-		string password();
-		void password(const string& password);
+		string password() const;
+		void password(const std::string& password);
 		
 		// ---[1]-> Mail
-		Mail* mail();
+		Mail* mail(void) const;
 		void mail(Mail* mail);
  };
 

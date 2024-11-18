@@ -7,6 +7,7 @@ using namespace std;
 TEST(BookTest, Constructor) 
 {
     // Setup
+    // int i = 7;
     Book book("978-0131103627", "Brian W. Kernighan and Dennis Ritchie", "The C Programming Language");                         
     
     // Exercise + Verify
@@ -23,6 +24,7 @@ TEST(BookTest, ConstructorWithNew)
     Book *book = new Book("978-0131103627", "Brian W. Kernighan and Dennis Ritchie", "The C Programming Language");                         
     
     // Exercise + Verify 
+    // (*book).isbn() is equivalent to book->isbn()
     EXPECT_EQ("978-0131103627", book->isbn());
     EXPECT_EQ("Brian W. Kernighan and Dennis Ritchie", book->author());
     EXPECT_EQ("The C Programming Language", book->title());

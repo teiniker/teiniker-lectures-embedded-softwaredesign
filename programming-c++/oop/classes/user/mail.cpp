@@ -6,7 +6,7 @@ Mail::Mail(const string& address) : _address{address}
 {
 }
     
-string Mail::address()
+string Mail::address() const
 {
     return _address;
 }

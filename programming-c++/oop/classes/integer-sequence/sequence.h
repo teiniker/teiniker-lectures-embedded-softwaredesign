@@ -8,6 +8,7 @@ class IntegerSequence
 		int _id;
 
 	public:
+		// Constructor
 		IntegerSequence(void); 
 
 		// Static class methods

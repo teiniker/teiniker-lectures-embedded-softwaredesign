@@ -3,19 +3,17 @@
 
 #include <string>
 
-using namespace std;
-
 class Mail 
 {
 	private:
-		string _address; 
+		std::string _address; 
  
 	public:
-		Mail(const string& address);
+		Mail(const std::string& address);
 		//~Mail(void) {}
     
-		string address();
-		void address(const string& address);
+		std::string address() const;
+		void address(const std::string& address);
  };
 
 #endif /*_MAIL_H_ */
