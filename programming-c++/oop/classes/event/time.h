@@ -11,9 +11,9 @@ class Time
 	public:
 		Time(int hh, int min, int sec);
     
-		int hours(void);
-		int minutes(void);
-		int seconds(void);
+		int hours(void) const;
+		int minutes(void) const;
+		int seconds(void) const;
  };
 
 #endif /*_TIME_H_ */

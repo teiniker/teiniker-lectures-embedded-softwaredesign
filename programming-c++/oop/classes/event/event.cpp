@@ -10,18 +10,14 @@ Event::Event(string name, int dd, int mm, int yyyy, int hh, int min, int sec)
 {
 }
 
-string Event::str(void)
+string Event::to_string(void) const
 {
-    ostringstream oss;
-    oss << "Event{'" << _name << "': ";
-    oss << "Date[";
-    oss << setfill('0') << setw(2) << _date.day() << '.';
-    oss << setfill('0') << setw(2) << _date.month() << '.';
-    oss << _date.year() << "] ";
-    oss << "Time[";
-    oss << setfill('0') << setw(2) << _time.hours() << ':' ;
-    oss << setfill('0') << setw(2) << _time.minutes() << ':';
-    oss << setfill('0') << setw(2) << _time.seconds() << ']';
-    oss << '}';
-    return oss.str();
+    // Event{'SW Design Lecture': Date[01.04.2020] Time[08:45:00]}
+
+    char buffer[80];
+    sprintf(buffer, "Event{'%s': Date[%02d.%02d.%4d] Time[%02d:%02d:%02d]}",
+        _name.c_str(), _date.day(), _date.month(), _date.year(),
+        _time.hours(), _time.minutes(), _time.seconds());  
+
+    return string(buffer);
 }

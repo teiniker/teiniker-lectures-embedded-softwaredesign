@@ -18,8 +18,7 @@ class Event
 		// hh=0, min=0, sec=0 are default values for parameters
 		Event(std::string name, int dd, int mm, int yyy, int hh = 0, int min = 0, int sec = 0);
 		
-		std::string str(void);
-		 
+		std::string to_string(void) const;
  };
 
 #endif /*_EVENT_H_ */

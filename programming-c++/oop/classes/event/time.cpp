@@ -6,19 +6,19 @@ Time::Time(int hh, int min, int sec)
 }
 
 
-int Time::hours(void)
+int Time::hours(void) const
 {
 	return _hh;
 }
 
 
-int Time::minutes(void)
+int Time::minutes(void) const
 {
 	return _min;
 }
 
 
-int Time::seconds(void)
+int Time::seconds(void) const
 {
 	return _sec;
 }

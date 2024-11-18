@@ -5,17 +5,17 @@ Date::Date(int dd, int mm, int yyyy)
 {
 }
 
-int Date::day(void)
+int Date::day(void) const
 {
     return _dd;
 }
 
-int Date::month(void)
+int Date::month(void) const
 {
     return _mm;
 }
 
-int Date::year(void)
+int Date::year(void) const
 {
     return _yyyy;
 }
