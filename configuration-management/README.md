@@ -103,6 +103,7 @@ Successful configuration management includes at least the following activities:
     people have seen the value of the technique.
 
 * [**Debugging**](debugging/README.md)
+
     Debugging is the **systematic process of identifying, analyzing, and resolving 
     defects** or "bugs" which employs various tools and techniques within the 
     software development. 
