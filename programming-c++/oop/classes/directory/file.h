@@ -14,14 +14,14 @@ class File
 	public:
 		File(const std::string& name, size_t size);
     
-		std::string name(void);
+		std::string name(void) const;
 		void name(const std::string& name);
 		
-		size_t size(void);
-		void size(size_t size);
+		size_t size(void) const;
+		void size(const size_t size);
 		
 		// Association: File ---[1]-> Directory
-		Directory* directory(void);
+		Directory* directory(void) const;
 		void directory(Directory* directory);
  };
 

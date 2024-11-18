@@ -8,7 +8,7 @@ Directory::Directory(const string& name)
 {
 }
 
-string Directory::name(void)
+string Directory::name(void) const
 {
 	return _name;
 }

@@ -19,7 +19,7 @@ class Directory
 	public:
 		Directory(const std::string& name);
 		
-		std::string name(void);
+		std::string name(void) const;
 		void name(const std::string& name);
 		
 		// ---[*]-> File
