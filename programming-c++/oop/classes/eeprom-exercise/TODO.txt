@@ -1,0 +1,9 @@
+Exercise: Classes and Objects
+--------------------------------------------------------------------------------
+
+Create the missing "eeprom.cpp" file and implement the methods declared
+in "eeprom.h".
+
+Use "test.cpp" to verify your implementations.
+
+

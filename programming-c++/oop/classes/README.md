@@ -104,14 +104,14 @@ Date::~Date()
 {
 }
 
-int Date::getDay() const { return _day; }
-void Date::setDay(const int day) { _day = day; }
+int Date::day() const { return _day; }
+void Date::day(const int day) { _day = day; }
 
-int Date::getMonth() const { return _month; }
-void Date::setMonth(const int month) { _month = month; }
+int Date::month() const { return _month; }
+void Date::month(const int month) { _month = month; }
 
-int Date::getYear() const { return _year; }
-void Date::setYear(const int year) { _year = year; }
+int Date::year() const { return _year; }
+void Date::year(const int year) { _year = year; }
 
 bool Date::isLeapYear()
 {
@@ -119,13 +119,31 @@ bool Date::isLeapYear()
 }
 ```
 
-When we implement methods outside a class we use the **scope resolution :: operator**.
+When we implement methods outside a class declaration we use the 
+**scope resolution :: operator**.
 
 All the member functions defined inside the class declaration are by default 
 **inline**, but we can also make any non-class function inline by using keyword 
 `inline` with them. 
-Inline functions are actual functions, which are copied everywhere during compilation, 
-like pre-processor macro, so the overhead of function calling is reduced.
+Inline functions are actual functions, which are copied everywhere during compilation, like pre-processor macro, so the overhead of function calling 
+is reduced.
+
+
+The **const keyword** can be used in various contexts in C++, but in the 
+context of member functions, it serves a specific purpose related to
+const-correctness. 
+**Const-correctness** ensures that functions that are not supposed to modify 
+the state of an object are explicitly marked, enhancing code safety and readability.
+
+* `int Date::day() const`: Indicates that the `day()` member function is 
+    a **constant member function**. Specifically, it promises not to modify 
+    any member variables of the `Date` object (unless those members are marked 
+    as mutable).
+
+* `void Date::day(const int day)`: This marks the parameter day as a constant 
+    within the function, meaning that within the function body, **we cannot 
+    modify the value of `day`**.
+
 
 To create **Objects** (instances of a class), we define variables of this type. 
 Note that the methods can be called directly on these instances using the 
@@ -136,9 +154,9 @@ TEST(DateTest, Constructor)
 {
     Date birthday(23, 6, 1912); // Alan Turing's date of birth
 
-    EXPECT_EQ(23, birthday.getDay());
-    EXPECT_EQ(6, birthday.getMonth());
-    EXPECT_EQ(1912, birthday.getYear());
+    EXPECT_EQ(23, birthday.day());
+    EXPECT_EQ(6, birthday.month());
+    EXPECT_EQ(1912, birthday.year());
 }
 ``` 
 These objects are also created on the stack and go out of scope at the end of a method 
@@ -153,9 +171,9 @@ TEST(DateTest, ConstructorWithNew)
 {
     Date* birthday = new Date(23, 6, 1912);
 
-    EXPECT_EQ(23, birthday->getDay());
-    EXPECT_EQ(6, birthday->getMonth());
-    EXPECT_EQ(1912, birthday->getYear());
+    EXPECT_EQ(23, birthday->day());
+    EXPECT_EQ(6, birthday->month());
+    EXPECT_EQ(1912, birthday->year());
 
     delete birthday;
 }
@@ -163,6 +181,8 @@ TEST(DateTest, ConstructorWithNew)
 
 The new operator returns a pointer to the created object, thus, 
 the members of an object are accessed with the **arrow operator**.
+
+
 
 ## Examples and Exercises
 
@@ -173,6 +193,10 @@ The following examples and exercises are intended to further clarify the concept
     * Example: [book](book/)
     * Exercise: [resistor](resistor-exercise/) ([Model Solution](resistor/))
     * Exercise: [can-message](can-message-exercise/) ([Model Solution](can-message/))
+
+* **Constructor and Destructor**
+    * Exercise: [eeprom](eeprom-exercise/) ([Model Solution](eeprom/))
+    * Exercise: [lcd](lcd-exercise/) ([Model Solution](lcd/))
 
 * **Static Members**
     * Example: [integer-sequence](integer-sequence/)
@@ -186,6 +210,7 @@ The following examples and exercises are intended to further clarify the concept
 
 * **Composition**
     * Example: [event](event/)
+
 
 ## References
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
