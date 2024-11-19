@@ -43,12 +43,11 @@ void Book::title(const string& title)
 // Method to convert the object to JSON
 string Book::toJson() const
 {
-    ostringstream json;
-    json << "{"
-         << "\"isbn\":\"" << _isbn << "\","
-         << "\"author\":\"" << _author << "\","
-         << "\"title\":\"" << _title << "\""
-         << "}";
-    return json.str();
+    char buffer[120];
+
+    snprintf(buffer, sizeof(buffer), "{\"isbn\":\"%s\",\"author\":\"%s\",\"title\":\"%s\"}",
+             _isbn.c_str(), _author.c_str(), _title.c_str());
+    
+    return string(buffer);
 }
 

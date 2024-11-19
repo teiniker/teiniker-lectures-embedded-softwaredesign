@@ -12,20 +12,19 @@ data handling scenarios:
 
 * **Sequence Containers**
 
-    Sequence containers **store elements in a linear order**, allowing sequential 
-    access and insertion. 
+    Sequence containers **store elements in a linear order**, allowing sequential access and insertion. 
 
     * [std::vector](vector/): 
         A dynamic array that can grow and shrink in size. 
         Accessing elements by index is fast, but inserting elements anywhere 
         other than the end may be costly.
 
-
     * `std::deque`: A double-ended queue that allows efficient insertion 
         and deletion at both the front and the back. It provides random 
         access to elements, similar to a vector.
 
-    * [std::list](list/): A doubly linked list that allows efficient insertion 
+    * [std::list](list/): A doubly linked list that allows efficient    
+        insertion 
         and deletion at any position but does not support random access, 
         meaning accessing elements by index is slower.
 
@@ -60,8 +59,11 @@ data handling scenarios:
 
     * `std::unordered_set`: Similar to std::set, but elements are not ordered, 
         and lookup is faster due to hashing.
+
     * `std::unordered_multiset`: Similar to std::multiset but unordered.
+
     * `std::unordered_map`: Similar to std::map, with key-value pairs but no ordering.
+
     * `std::unordered_multimap`: Similar to std::multimap, allowing multiple values for 
         a key, but without ordering.
 
