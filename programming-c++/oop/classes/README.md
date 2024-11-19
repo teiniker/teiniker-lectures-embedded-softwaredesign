@@ -36,7 +36,7 @@ class Date
 ``` 
 All members of a class (attributes and methods) are **private per default**.
 
-## Constructor
+### Constructor
 
 **Constructors** are special class members which are called by the compiler 
 every time an object of that class is instantiated. Constructors have the 
@@ -69,7 +69,7 @@ There are three different types of constructurs in C++:
     _Example_: `Date(const Date &date)`
     
     
-## Destructor
+### Destructor
 Destructor is another special member function that is called when the 
 **scope of the object ends** or the **delete operator** is called.
 
@@ -89,9 +89,35 @@ write a destructor to release memory before the class instance is destroyed.
 This must be done to avoid memory leak.
 
 
+### Getter and Setter Methods
+
+Getter and setter methods are fundamental components in object-oriented 
+programming (OOP). They provide controlled access to an object's internal 
+data (its attributes or member variables) while maintaining the principles 
+of **encapsulation** and **data hiding**.
+
+The **const keyword** can be used in various contexts in C++, but in the 
+context of member functions, it serves a specific purpose related to
+const-correctness. 
+
+**Const-correctness** ensures that functions that are not supposed to modify 
+the state of an object are explicitly marked, enhancing code safety and readability.
+
+* `int Date::day() const`: Indicates that the `day()` member function is 
+    a **constant member function**. Specifically, it promises not to modify 
+    any member variables of the `Date` object (unless those members are marked 
+    as mutable).
+
+* `void Date::day(const int day)`: This marks the parameter day as a constant 
+    within the function, meaning that within the function body, **we cannot 
+    modify the value of `day`**.
+
+
 ## Class Implementation
 
-We separate the declaration and the implementation of methods (header 
+### Header vs. Source Files
+
+We **separate the declaration and the implementation of methods** (header 
 and source file).
 
 _Example_: C++ class implementation
@@ -125,25 +151,19 @@ When we implement methods outside a class declaration we use the
 All the member functions defined inside the class declaration are by default 
 **inline**, but we can also make any non-class function inline by using keyword 
 `inline` with them. 
-Inline functions are actual functions, which are copied everywhere during compilation, like pre-processor macro, so the overhead of function calling 
+
+Inline functions are actual functions, which are copied everywhere during 
+compilation, like pre-processor macro, so the overhead of function calling 
 is reduced.
 
 
-The **const keyword** can be used in various contexts in C++, but in the 
-context of member functions, it serves a specific purpose related to
-const-correctness. 
-**Const-correctness** ensures that functions that are not supposed to modify 
-the state of an object are explicitly marked, enhancing code safety and readability.
+## Class Instances (Objects)
 
-* `int Date::day() const`: Indicates that the `day()` member function is 
-    a **constant member function**. Specifically, it promises not to modify 
-    any member variables of the `Date` object (unless those members are marked 
-    as mutable).
+At runtime, programs consist of instances of classes, the so-called objects. 
+The functionality of an application is created through the interaction of 
+these objects.
 
-* `void Date::day(const int day)`: This marks the parameter day as a constant 
-    within the function, meaning that within the function body, **we cannot 
-    modify the value of `day`**.
-
+### Objects on the Stack
 
 To create **Objects** (instances of a class), we define variables of this type. 
 Note that the methods can be called directly on these instances using the 
@@ -159,12 +179,15 @@ TEST(DateTest, Constructor)
     EXPECT_EQ(1912, birthday.year());
 }
 ``` 
-These objects are also created on the stack and go out of scope at the end of a method 
+These objects are created on the stack and go out of scope at the end of a method 
 or function.
 
-To objects on the heap we use the **new** operator. To delete objects from the heap, 
-we use the **delete operator**. 
-Note that all objects on the heap must be deleted manually using delete.
+### Objects on the Heap
+
+To create objects on the heap we use the **new** operator. 
+To delete objects from the heap, we use the **delete operator**. 
+
+Note that **all objects on the heap must be deleted manually** using delete.
 
 ```C++
 TEST(DateTest, ConstructorWithNew) 
@@ -179,7 +202,7 @@ TEST(DateTest, ConstructorWithNew)
 }
 ``` 
 
-The new operator returns a pointer to the created object, thus, 
+The `new` operator returns a pointer to the created object, thus, 
 the members of an object are accessed with the **arrow operator**.
 
 
