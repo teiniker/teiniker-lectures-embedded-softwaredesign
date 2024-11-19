@@ -1,24 +1,24 @@
-#include <mail.h>
+#include "mail.h"
 
 using namespace std;
 
 Mail::Mail(const string& address) 
-    : address_{address} 
+    : _address{address} 
 {
 }
 
 // Copy Constructor
 Mail::Mail(const Mail& old)
 {
-    address_ = old.address_;
+    _address = old._address;
 }
     
-string Mail::address(void)
+string Mail::address(void) const
 {
-    return address_;
+    return _address;
 }
 
 void Mail::address(const std::string& address)
 {
-    address_ = address;
+    _address = address;
 }

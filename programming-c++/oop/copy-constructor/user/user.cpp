@@ -1,44 +1,44 @@
-#include <user.h>
+#include "user.h"
 
 using namespace std;
 
 User::User(const int id, const string& username, const string& password, Mail* mail)
-	: id_{id}, username_{username}, password_{password}, mail_{mail}
+	: _id{id}, _username{username}, _password{password}, _mail{mail}
 {
 }
 
 // Copy Constructor
 User::User(const User& old)
 {
-	id_ = old.id_;
-	username_ = old.username_;
-	password_ = old.password_;
-	mail_ = new Mail(*old.mail_);	// Deep Copy
-	//mail_ = old.mail_;	// Shallow copy
+	_id = old._id;
+	_username = old._username;
+	_password = old._password;
+	_mail = new Mail(*old._mail);	// Deep Copy
+	//_mail = old._mail;			// Shallow copy
 }
 	
 	
-int User::id()
+int User::id() const
 {
-	return id_;
+	return _id;
 }
 		
-string User::username(void)
+string User::username(void) const
 {
-	return username_;
+	return _username;
 }
 		
-string User::password()
+string User::password() const
 {
-	return password_;
+	return _password;
 }
 
 // ---[1]-> Mail		
 Mail* User::mail()
 {
-	return mail_;
+	return _mail;
 }
 void User::mail(Mail* mail)
 {
-	mail_ = mail;
+	_mail = mail;
 }		
