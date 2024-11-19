@@ -2,22 +2,22 @@
 #define _ORDERLINE_H_
 
 #include <string>
-#include <product.h>
+#include "product.h"
 
 class OrderLine 
 {
 	private:
-		int id_; 
-		int quantity_;
-		Product* product_; // ---[0..1]-> Product
+		int _id; 
+		int _quantity;
+		Product* _product; // ---[0..1]-> Product
  
 	public:
 		OrderLine(int id, int quantity, Product* product);
 		OrderLine(const OrderLine& old);	// Copy Constructor
 
-		int id(void);
-		int quantity(void);
-		Product* product(void);
+		int id(void) const;
+		int quantity(void) const;
+		Product* product(void) const;
 		void product(Product* product);
 };
 

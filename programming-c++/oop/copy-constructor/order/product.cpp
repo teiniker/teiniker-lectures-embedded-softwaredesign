@@ -1,32 +1,32 @@
-#include <product.h>
+#include "product.h"
 
 using namespace std;
 
 Product::Product(int id, const string& description, long price) 
-	: id_{id}, description_{description}, price_{price}
+	: _id{id}, _description{description}, _price{price}
 {
 }
 
 // Copy Constructor
 Product::Product(const Product& old)
 {
-	id_ = old.id_;
-	description_ = old.description_;
-	price_ = old.price_;
+	_id = old._id;
+	_description = old._description;
+	_price = old._price;
 }	
 
 
-int Product::id(void)
+int Product::id(void) const
 {
-	return id_;
+	return _id;
 }
 
-string Product::description(void)
+string Product::description(void) const
 {
-	return description_;
+	return _description;
 }
 
-long Product::price(void)
+long Product::price(void) const
 {
-	return price_;
-} 
+	return _price;
+}

@@ -1,44 +1,44 @@
-#include <order.h>
+#include "order.h"
 
 using namespace std;
 
 Order::Order(int id, const string& name)
-	: id_{id}, name_{name}
+	: _id{id}, _name{name}
 {
 }
 
 // Copy Constrcutor
 Order::Order(const Order& old)
 {
-	id_ = old.id_;
-	name_ = old.name_;
-	for(OrderLine* line : old.lines_)
+	_id = old._id;
+	_name = old._name;
+	for(OrderLine* line : old._lines)
 	{
-		lines_.push_back(new OrderLine(*line));
+		_lines.push_back(new OrderLine(*line));
 	}
 }
 
-int Order::id(void)
+int Order::id(void) const
 {
-	return id_;	
+	return _id;	
 }
 
-string Order::name(void)
+string Order::name(void) const
 {
-	return name_;
+	return _name;
 }
 
 void Order::addLine(OrderLine* line)
 {
-	lines_.push_back(line);
+	_lines.push_back(line);
 }
 
 OrderLine* Order::line(int index)
 {
-	return lines_[index];
+	return _lines[index];
 }
 
 int Order::numberOfLines(void)
 {
-	return lines_.size();
+	return _lines.size();
 }	

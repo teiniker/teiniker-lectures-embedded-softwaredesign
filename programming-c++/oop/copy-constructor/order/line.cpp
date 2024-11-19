@@ -1,36 +1,36 @@
-#include <line.h>
+#include "line.h"
 
 using namespace std;
 
 OrderLine::OrderLine(int id, int quantity, Product* product)
-	: id_{id}, quantity_{quantity}, product_{product}
+	: _id{id}, _quantity{quantity}, _product{product}
 {
 }
 
 // Copy Constructor
 OrderLine::OrderLine(const OrderLine& old)
 {
-	id_ = old.id_;
-	quantity_ = old.quantity_;
-	product_ = new Product(*old.product_);	
+	_id= old._id;
+	_quantity = old._quantity;
+	_product = new Product(*old._product);	
 }
 
 
-int OrderLine::id(void)
+int OrderLine::id(void) const
 {
-	return id_;
+	return _id;
 }
 
-int OrderLine::quantity(void)
+int OrderLine::quantity(void) const
 {
-	return quantity_;
+	return _quantity;
 }
 
-Product* OrderLine::product(void)
+Product* OrderLine::product(void) const
 {
-	return product_;
+	return _product;
 }
 void OrderLine::product(Product* product)
 {
-	product_ = product;
+	_product = product;
 }

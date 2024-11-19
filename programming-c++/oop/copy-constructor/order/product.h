@@ -6,17 +6,17 @@
 class Product 
 {
 	private:
-		int id_;
-		std::string description_; 
-		long price_;
+		int _id;
+		std::string _description; 
+		long _price;
  
 	public:
 		Product(int id, const std::string& description, long price); 
 		Product(const Product& old);	// Copy Constructor
 		
-		int id(void);		
-		std::string description(void);
-		long price(void);
+		int id(void) const;		
+		std::string description(void) const;
+		long price(void) const;
  };
 
 #endif /*_PRODUCT_H_ */
