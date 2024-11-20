@@ -98,7 +98,12 @@ There are three different types of constructurs in C++:
     
     _Example_: `Date(const Date &date)`
     
-    
+Like functions, **constructors can be overloaded** if they differ in their 
+parameter lists.    
+
+**Default arguments** are also allowed for constructors.
+
+
 ### Destructor
 Destructor is another special member function that is called when the 
 **scope of the object ends** or the **delete operator** is called.
