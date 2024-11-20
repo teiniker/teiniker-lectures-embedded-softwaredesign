@@ -1,7 +1,8 @@
 #include <cstring>
 #include "lcd.h"
 
-LCD::LCD(size_t cols, size_t rows) : _cols{cols}, _rows{rows}
+LCD::LCD(size_t cols, size_t rows) 
+	: _cols{cols}, _rows{rows}
 {	
 	_buffer = new char[_cols * _rows]; // malloc(cols_*rows_*sizeof(char))
 	_index = 0;

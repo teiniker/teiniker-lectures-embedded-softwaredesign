@@ -3,7 +3,7 @@
 using namespace std;
 
 EEPROM::EEPROM(const string& type, const size_t size)
-	: _type(type), _size(size)
+	: _type{type}, _size{size}
 {
 	_memory = new uint8_t[_size]; // malloc(.. sizeof())
 }

@@ -6,7 +6,7 @@ using namespace std;
 
 // Constructor
 Book::Book(const string& isbn, const string& author, const string& title)
-    : _isbn(isbn), _author(author), _title(title)
+    : _isbn{isbn}, _author{author}, _title{title}
 {
 }
 

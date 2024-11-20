@@ -3,7 +3,8 @@
 /*
  * Constructor
  */
-Resistor::Resistor(uint32_t value, uint8_t tolerance) : _value(value), _tolerance(tolerance)
+Resistor::Resistor(uint32_t value, uint8_t tolerance) 
+    : _value{value}, _tolerance{tolerance}
 {
 }
 

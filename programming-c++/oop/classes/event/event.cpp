@@ -6,7 +6,7 @@
 using namespace std;
 
 Event::Event(string name, int dd, int mm, int yyyy, int hh, int min, int sec)
-    : _name{name}, _time(hh, min, sec), _date(dd,mm,yyyy) 
+    : _name{name}, _time{hh, min, sec}, _date{dd,mm,yyyy} 
 {
 }
 
