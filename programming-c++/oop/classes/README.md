@@ -154,7 +154,7 @@ and source file).
 _Example_: C++ class implementation (`date.cpp`)
 ```C++
 Date::Date(int day, int month, int year) 
-    : _day(day), _month(month), _year(year)   
+    : _day{day}, _month{month}, _year{year}   
 {
 }
 
