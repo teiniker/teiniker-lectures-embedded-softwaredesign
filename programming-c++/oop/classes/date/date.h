@@ -14,15 +14,17 @@ class Date
         Date(int d, int m, int y);  // Constructor   
         ~Date();                    // Destructor
 
-        int day() const;
-        void day(const int d);
-        
+        // Getter and Setter Methods
+        int Date::day() const { return _day; }          // inline function
+        void Date::day(const int day) { _day = day; }   // inline function
+
         int month() const; 
         void month(const int m);
         
         int year() const;
         void year(const int y);
 
+        // Operations
         bool isLeapYear();
 };
 

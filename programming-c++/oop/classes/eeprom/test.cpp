@@ -12,4 +12,6 @@ TEST(EEPROMTest, ReadWriteTest)
     
     // Verify
     EXPECT_EQ(0xaa, eeprom.read(0x0100));
+
+    // Teardown
 }

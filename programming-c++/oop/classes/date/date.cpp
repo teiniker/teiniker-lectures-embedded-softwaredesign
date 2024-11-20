@@ -9,8 +9,6 @@ Date::~Date()
 {
 }
 
-int Date::day() const { return _day; }
-void Date::day(const int day) { _day = day; }
 
 int Date::month() const { return _month; }
 void Date::month(const int month) { _month = month; }
