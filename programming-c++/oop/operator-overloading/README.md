@@ -187,6 +187,7 @@ There are two primary ways to overload operators:
         ([Model Solution](operator-arithmetic/counter/))
 
 * **Assignment Operator**:
+    * [Introduction](operator-assignment/README.md)
     * Demo: [mail](operator-assignment/mail/)
     * Demo: [user-mail](operator-assignment/user-mail/)
 
