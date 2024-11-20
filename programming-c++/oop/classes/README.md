@@ -34,18 +34,20 @@ class Date
         int _year;
 
     public:
-        Date(int d, int m, int y);   
-        ~Date();
+        Date(int d, int m, int y);  // Constructor   
+        ~Date();                    // Destructor
 
-        int getDay() const;
-        void setDay(const int d);
-        
-        int getMonth() const; 
-        void setMonth(const int m);
-        
-        int getYear() const;
-        void setYear(const int y);
+        // Getter and Setter Methods
+        int Date::day() const { return _day; }          // inline function
+        void Date::day(const int day) { _day = day; }   // inline function
 
+        int month() const; 
+        void month(const int m);
+        
+        int year() const;
+        void year(const int y);
+
+        // Operations
         bool isLeapYear();
 };
 ``` 
@@ -166,9 +168,6 @@ Date::Date(int day, int month, int year)
 Date::~Date() 
 {
 }
-
-int Date::day() const { return _day; }
-void Date::day(const int day) { _day = day; }
 
 int Date::month() const { return _month; }
 void Date::month(const int month) { _month = month; }
