@@ -2,17 +2,37 @@
 
 Classes are the central feature of an **object oriented language**. 
 
+* A class is a **user-defined type**.
+
+* A class consists of a **set of members**. The most common kinds of members are data members and member functions.
+
+* A **class is a namespace** containing its members.
+
+* The **public members provide the class’s interface** and the **private members provide implementation details**.
+
+* A **struct** is a class where **members are by default public**.
+
+* Members are accessed using **. (dot) for objects** and **–> (arrow) for pointers**.
+
+* Member functions can define the meaning of **initialization (creation)**, **copy**, **move**, and **cleanup (destruction)**.
+
+* **Operators**, such as `+`, `!`, and `[]`, can be defined for a class.
+
 
 ## Class Declaration
 
-In C++ a **class** is a user-defined type that has **attributes** (data members) and 
-**methods** (member functions). Both of them can be visible (public) or invisible
-(private) to the code that uses instances of that class.
+In C++ a **class** is a user-defined type that has **attributes** 
+(data members) and **methods** (member functions). 
 
-_Example_: C++ class declaration
+_Example_: C++ class declaration (`date.h`)
 ```C++
 class Date 
 {
+    private:
+        int _day;
+        int _month;
+        int _year;
+
     public:
         Date(int d, int m, int y);   
         ~Date();
@@ -27,34 +47,43 @@ class Date
         void setYear(const int y);
 
         bool isLeapYear();
-
-    private:
-        int _day;
-        int _month;
-        int _year;
 };
 ``` 
-All members of a class (attributes and methods) are **private per default**.
+
+### Access Control
+
+The **public** keyword is an access specifier. It specifies the access
+level of the members of the class. The public members of a class are 
+**accessible from outside** the class.
+
+The **private** keyword is also an access specifier. The private members 
+of a class are **only accessible within the class**. They are not accessible 
+from outside the class.
+
+All **members of a class** (attributes and methods) are **private per default**.
+
 
 ### Constructor
 
 **Constructors** are special class members which are called by the compiler 
 every time an object of that class is instantiated. Constructors have the 
-same name as the class and may be defined inside or outside the class 
-definition.
+**same name as the class**.
  
 There are three different types of constructurs in C++:
+
 * **Default Constructors:** 
     The default constructor is the constructor which doesn’t take any 
     argument (it has no parameters).
     If we do not define any constructor explicitly, the compiler will 
     automatically provide a default constructor implicitly.    
+
     _Example_: `Date()`
     
 * **Parameterized Constrcutors:**
     It is possible to pass arguments to constructors. These arguments 
     help initialize an object when it is created. Note that constructors 
     also can be overloaded.        
+
     _Example_: `Date(int d, int m, int y)`
 
 * **Copy Constructors:**
@@ -66,6 +95,7 @@ There are three different types of constructurs in C++:
     We need to define our own copy constructor only if an object has 
     pointers or any runtime allocation of the resource like file handle, 
     a network connection etc. (**deep copy**).        
+    
     _Example_: `Date(const Date &date)`
     
     
@@ -101,7 +131,8 @@ context of member functions, it serves a specific purpose related to
 const-correctness. 
 
 **Const-correctness** ensures that functions that are not supposed to modify 
-the state of an object are explicitly marked, enhancing code safety and readability.
+the state of an object are explicitly marked, enhancing code safety and 
+readability.
 
 * `int Date::day() const`: Indicates that the `day()` member function is 
     a **constant member function**. Specifically, it promises not to modify 
@@ -120,9 +151,10 @@ the state of an object are explicitly marked, enhancing code safety and readabil
 We **separate the declaration and the implementation of methods** (header 
 and source file).
 
-_Example_: C++ class implementation
+_Example_: C++ class implementation (`date.cpp`)
 ```C++
-Date::Date(int day, int month, int year) : _day(day), _month(month), _year(year)   
+Date::Date(int day, int month, int year) 
+    : _day(day), _month(month), _year(year)   
 {
 }
 
@@ -148,26 +180,26 @@ bool Date::isLeapYear()
 When we implement methods outside a class declaration we use the 
 **scope resolution :: operator**.
 
-All the member functions defined inside the class declaration are by default 
-**inline**, but we can also make any non-class function inline by using keyword 
-`inline` with them. 
+All the member functions defined inside the class declaration are 
+by default **inline**, but we can also make any non-class function 
+inline by using keyword `inline` with them. 
 
-Inline functions are actual functions, which are copied everywhere during 
-compilation, like pre-processor macro, so the overhead of function calling 
-is reduced.
+Inline functions are actual functions, which are copied everywhere 
+during compilation, like pre-processor macro, so the overhead of 
+function calling is reduced.
 
 
-## Class Instances (Objects)
+## Objects (Class Instances)
 
-At runtime, programs consist of instances of classes, the so-called objects. 
-The functionality of an application is created through the interaction of 
-these objects.
+At runtime, programs consist of instances of classes, the so-called 
+objects. The functionality of an application is created through the 
+interaction of these objects.
 
 ### Objects on the Stack
 
-To create **Objects** (instances of a class), we define variables of this type. 
-Note that the methods can be called directly on these instances using the 
-dot notation.
+To create **Objects** (instances of a class), we define variables of this 
+type. Note that the methods can be called directly on these instances using 
+the **dot notation**.
 
 ```C++
 TEST(DateTest, Constructor) 
@@ -179,8 +211,9 @@ TEST(DateTest, Constructor)
     EXPECT_EQ(1912, birthday.year());
 }
 ``` 
-These objects are created on the stack and go out of scope at the end of a method 
-or function.
+These objects are created on the stack and go out of scope at the end of 
+a method or function.
+
 
 ### Objects on the Heap
 
