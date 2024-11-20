@@ -9,6 +9,6 @@ add_compile_options(-Wall -Wextra -Wpedantic)
 set(CMAKE_BUILD_TYPE Debug)
 find_package(GTest REQUIRED)
 
-add_executable(test test.cpp user.cpp mail.cpp)
+add_executable(test test.cpp mail.cpp)
 
 target_link_libraries(test PRIVATE gtest gtest_main pthread)
