@@ -6,15 +6,15 @@
 class Mail 
 {
 	private:
-		std::string address_; 
+		std::string _address; 
  
 	public:
 		Mail(); // Default Constructor
 		Mail(const std::string& address);
-		Mail(const Mail& old);	// Copy Constructor   
+		Mail(const Mail& old);				// Copy Constructor   
 		Mail& operator= (const Mail &orig);	// Assigment Operator
 			 
-		std::string address(void);
+		std::string address(void) const;
 		void address(const std::string& address);
  };
 

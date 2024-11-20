@@ -1,37 +1,37 @@
-#include <Mail.h>
+#include "mail.h"
 
 using namespace std;
 
 Mail::Mail(const string& address) 
-    : address_{address} 
+    : _address(address) 
 {
 }
 
 // Default Constructor
 Mail::Mail() 
 {
-    address_ = "";
+    _address = "";
 }
 
 // Copy Constructor
 Mail::Mail(const Mail& old)
 {
-    address_ = old.address_;
+    _address = old._address;
 }
     
 // Assigment Operator    
 Mail& Mail::operator= (const Mail &orig)
 {
-    address_ = orig.address_;    
+    _address = orig._address;    
     return *this;
 }	
     
-string Mail::address(void)
+string Mail::address(void) const
 {
-    return address_;
+    return _address;
 }
 
-void Mail::address(const std::string& address)
+void Mail::address(const string& address)
 {
-    address_ = address;
+    _address = address;
 }

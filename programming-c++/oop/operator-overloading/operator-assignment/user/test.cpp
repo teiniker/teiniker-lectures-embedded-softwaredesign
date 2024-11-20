@@ -1,19 +1,10 @@
-#include <CppUTest/TestHarness.h>
-#include <CppUTest/CommandLineTestRunner.h>
-
-#include <User.h>
-#include <Mail.h>
+#include <gtest/gtest.h>
+#include "user.h"
+#include "mail.h"
 
 using namespace std;
 
-User* user = NULL;
-
-TEST_GROUP(UserTestGroup)
-{
-};
-
-
-TEST(UserTestGroup, AssignmentOperatorMailTest)
+TEST(UserTest, AssignmentOperatorMailTest)
 {
     // Setup
     Mail* original = new Mail("homer.simpson@springfield.com");
@@ -24,14 +15,14 @@ TEST(UserTestGroup, AssignmentOperatorMailTest)
     delete original;   
     
     // Verify
-    CHECK_EQUAL("homer.simpson@springfield.com", copy->address());
+     EXPECT_EQ("homer.simpson@springfield.com", copy->address());
     
     // Teardown
     delete copy;
 }
 
 
-TEST(UserTestGroup, AssignemntOperatorUserTest)
+TEST(UserTest, AssignemntOperatorUserTest)
 {
     // Setup
     User* original = new User(7, "homer", "c3R1ZGVudA", new Mail("homer.simpson@springfield.com"));
@@ -43,18 +34,12 @@ TEST(UserTestGroup, AssignemntOperatorUserTest)
     delete original;
             
     // Verify
-    CHECK_EQUAL(7, copy->id());
-    CHECK_EQUAL("homer", copy->username());
-    CHECK_EQUAL("c3R1ZGVudA", copy->password());    
-    CHECK_EQUAL("homer.simpson@springfield.com", copy->mail()->address());    
+    EXPECT_EQ(7, copy->id());
+    EXPECT_EQ("homer", copy->username());
+    EXPECT_EQ("c3R1ZGVudA", copy->password());    
+    EXPECT_EQ("homer.simpson@springfield.com", copy->mail()->address());    
 
     // Teardown
     delete copy->mail();
     delete copy;
-}
-
-
-int main(int ac, char** av)
-{
-    return CommandLineTestRunner::RunAllTests(ac, av);
 }

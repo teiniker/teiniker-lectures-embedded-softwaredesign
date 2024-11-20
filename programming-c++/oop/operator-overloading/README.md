@@ -186,15 +186,15 @@ There are two primary ways to overload operators:
     * Exercise: [counter](operator-arithmetic/counter-exercise/) 
         ([Model Solution](operator-arithmetic/counter/))
 
+* **Assignment Operator**:
+    * Demo: [user](operator-assignment/user/)
 
-
-## References
 
 ## References
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 * Chapter 18: Operator Overloading
 
-[Operator Overloading in C++](https://www.geeksforgeeks.org/operator-overloading-c/)
+* [Operator Overloading in C++](https://www.geeksforgeeks.org/operator-overloading-c/)
 
 
 *Egon Teiniker, 2020-2024, GPL v3.0*
