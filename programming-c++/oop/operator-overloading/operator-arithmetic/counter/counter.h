@@ -5,20 +5,19 @@
 class Counter 
 {
 	private:
-		int value_;
-		int min_;
-		int max_;
+		int _value;
+		int _min;
+		int _max;
 	
 	public:       
 		// Constructor
 		Counter(int value, int min, int max);
 		
 		// Getter 
-		int value(void);
+		int value(void) const;
 		
 		// Operator Overloading
 		void operator ++(int);	// postfix increment operator
-		
 		void operator --(int);	// postfix decrement operator
  };
 

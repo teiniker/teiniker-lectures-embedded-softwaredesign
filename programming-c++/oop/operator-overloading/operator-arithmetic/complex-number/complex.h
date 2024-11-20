@@ -1,20 +1,19 @@
 #ifndef _COMPLEX_H_
 #define _COMPLEX_H_
 
-
 class Complex 
 {
 	private:
-		double real_;
-		double imag_;
+		double _re;
+		double _im;
 	
 	public:       
 		// Constructor
-		Complex(double real, double imag);
+		Complex(double re, double im);
 		
 		// Getter 
-		double real(void);
-		double imag(void);
+		double real(void) const;
+		double imag(void) const;
 		
 		// Operator Overloading
 		Complex operator +(const Complex& c);
