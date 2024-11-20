@@ -1,7 +1,7 @@
 #include "counter.h"
 
 Counter::Counter(int value, int min, int max) 
-	: _value(value), _min(min), _max(max)
+	: _value{value}, _min{min}, _max{max}
 {
 }
 
