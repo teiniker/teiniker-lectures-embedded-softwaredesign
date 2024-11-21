@@ -42,5 +42,3 @@ TEST(ResistorTest, ParallelConnection)
     EXPECT_EQ(270 * 120 / (270 + 120), r1.value());
     EXPECT_EQ(5, r1.tolerance());
 }
-
-// Use gtest_main library

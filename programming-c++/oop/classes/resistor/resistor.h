@@ -5,6 +5,11 @@
 
 class Resistor 
 {   
+    private:
+        uint32_t _value;
+        uint8_t _tolerance;
+        int _max(const uint8_t t1, const uint8_t t2);
+
     public:
         Resistor(uint32_t value, uint8_t tolerance = 1);
         
@@ -15,11 +20,6 @@ class Resistor
         // Methods 
         void serial(const Resistor& r);
         void parallel(const Resistor& r);
-
-    private:
-        uint32_t _value;
-        uint8_t _tolerance;
-        int _max(const uint8_t t1, const uint8_t t2);
 };
 
 #endif 

@@ -43,4 +43,3 @@ TEST(ResistorTest, ParallelConnection)
     EXPECT_EQ(5, r1.tolerance());
 }
 
-// Use gtest_main library
