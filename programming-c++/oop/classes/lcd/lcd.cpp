@@ -31,10 +31,7 @@ void LCD::print(const char* c_ptr)
 	_index += sizeof(c_ptr);
 }
 
-/*
-// Alternative to the inline implementation
-char* LCD::buffer(void)
+char* LCD::buffer(void) const
 {
 	return _buffer;
 }
-*/
