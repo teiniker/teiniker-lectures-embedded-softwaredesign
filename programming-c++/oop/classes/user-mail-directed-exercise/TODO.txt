@@ -1,15 +1,13 @@
-Exercise: Classes and Objects 
+Exercise: Directed Association: User - Mail
 --------------------------------------------------------------------------------
 
-User --[1]-> Mail
+Extend the classes "User" to add a directed association to "Mail". 
 
-Given a class diagram, implement the classes "User" and "Mail" as well as the
-directed association with multiplicity 1 between them.
+A) User ---[1]-> Mail
+    Add a pointer to "Mail" in the "User" class.
+    Extend the constructor of "User" to store the "Mail" pointer.
+    Add accessor methods for the "Mail" pointer in the "User" class.
 
-1) Define the header files "user.h" and "mail.h"
-
-2) Implement the classes in "user.cpp" and "mail.cpp"
-
-3) Test your implementation using the "test.cpp" class.
+Run the test cases implemented in "test.cpp" to verify their implementations.
 
 
