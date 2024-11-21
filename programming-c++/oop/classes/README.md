@@ -262,11 +262,12 @@ The following examples and exercises are intended to further clarify the concept
     * Example: [integer-sequence](integer-sequence/)
 
 * **Directed Associations**
-    * Example: [order](order/)
-    * Exercise: [user](user-exercise/) ([Model Solution](user/))
+    * Example: [order-directed](order-directed/)
+    * Exercise: [user-mail-directed](user-mail-directed-exercise/) ([Model Solution](user-mail-directed/))
 
 * **Bidirectional Associations**
-    * Example: [directory](directory/)
+    * Example: [directory-bidirectional](directory-bidirectional/)
+    * Exercise: [user-mail-bidirectional](user-mail-bidirectional-exercise//) ([Model Solution](user-mail-bidirectional/))
 
 * **Composition**
     * Example: [event](event/)
