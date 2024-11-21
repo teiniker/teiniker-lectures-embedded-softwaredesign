@@ -22,7 +22,7 @@ class User
 		std::string username(void) const;
 		void username(const std::string& username);
 		
-		string password() const;
+		std::string password() const;
 		void password(const std::string& password);
 		
 		// ---[1]-> Mail
