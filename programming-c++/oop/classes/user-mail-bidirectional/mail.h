@@ -19,7 +19,7 @@ class Mail
 
 		// Association
 		// ---[1]-> User
-		User* user(void);
+		User* user(void) const;
 		void user(User* user);
  };
 

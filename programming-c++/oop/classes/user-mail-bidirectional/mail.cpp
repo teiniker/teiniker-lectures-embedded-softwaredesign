@@ -14,7 +14,7 @@ string Mail::address() const
     return _address;
 }
 
-User* Mail::user()
+User* Mail::user() const
 {
     return _user;
 }
