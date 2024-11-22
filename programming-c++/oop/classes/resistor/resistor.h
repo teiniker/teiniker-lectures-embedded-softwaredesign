@@ -22,4 +22,4 @@ class Resistor
         void parallel(const Resistor& r);
 };
 
-#endif 
+#endif // _RESISTOR_H_
