@@ -1,0 +1,17 @@
+Exercise: Inheritance - User and Admin
+--------------------------------------------------------------------------------
+
+Given a class diagram:
+
+A) Implement the classes "Admin" which inherits from "User" and adds a new 
+	attribute "password" of type string. 
+	Define the header file "admin.h"
+	Implement the classes in "admin.cpp" 
+
+B) implement the constrctor and the following methods:
+	string password(); 						// getter
+	void password(const string& password); 	// setter
+
+Test your implementation using the "test.cpp" class.
+
+
