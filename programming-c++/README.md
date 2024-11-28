@@ -13,7 +13,7 @@
 
   * [Operator Overloading](oop/operator-overloading/)
 
-  * Inheritance and Abstract Classes
+  * [Inheritance and Abstract Classes](oop/inheritance/)
 
   * Exception Handling
 
