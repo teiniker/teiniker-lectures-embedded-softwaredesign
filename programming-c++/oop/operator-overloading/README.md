@@ -186,6 +186,9 @@ There are two primary ways to overload operators:
     * Exercise: [counter](operator-arithmetic/counter-exercise/) 
         ([Model Solution](operator-arithmetic/counter/))
 
+* **Relational and Logical Operators**:
+    * Demo: [range](operator-relational/range/)
+
 * **Assignment Operator**:
     * [Introduction](operator-assignment/README.md)
     * Demo: [mail](operator-assignment/mail/)
