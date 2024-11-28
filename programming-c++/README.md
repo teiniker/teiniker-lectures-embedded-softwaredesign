@@ -13,13 +13,11 @@
 
   * [Operator Overloading](oop/operator-overloading/)
 
-  * Inheritance
-
-  * Abstract Classes
-
-  * Smart Pointers
+  * Inheritance and Abstract Classes
 
   * Exception Handling
+
+  * Smart Pointers
   
 * **Templates**
 
