@@ -27,14 +27,3 @@ Complex Complex::operator -(const Complex& c)
 	return result;
 }
 
-// Friend Functions
-
-bool operator== (const Complex &c1, const Complex &c2)
-{
-	return (c1._re == c2._re && c1._im == c2._im);
-}
-
-bool operator!= (const Complex &c1, const Complex &c2)			 
-{
-	return !(c1==c2);
-}

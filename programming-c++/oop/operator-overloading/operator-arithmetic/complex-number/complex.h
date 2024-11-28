@@ -18,9 +18,6 @@ class Complex
 		// Operator Overloading
 		Complex operator +(const Complex& c);
 		Complex operator -(const Complex& c);
-		
-		friend bool operator== (const Complex &c1, const Complex &c2);
-		friend bool operator!= (const Complex &c1, const Complex &c2);				 
  };
 
 #endif /*_COMPLEX_H_ */

@@ -29,24 +29,3 @@ TEST(ComplexNumberTest, SubOperatorTest)
     EXPECT_DOUBLE_EQ(2.0 - 4.0, result.imag());
 }
 
-TEST(ComplexNumberTest, EqualsOperatorTest)
-{
-    // Setup
-    Complex a(1.0, 2.0);
-    Complex b(1.0, 2.0);
-
-    // Verify
-    EXPECT_TRUE(a == b);
-    EXPECT_FALSE(a != b);
-}
-
-TEST(ComplexNumberTest, NotEqualsOperatorTest)
-{
-    // Setup
-    Complex a(1.0, 2.0);
-    Complex b(2.0, 1.0);
-
-    // Verify
-    EXPECT_FALSE(a == b);
-    EXPECT_TRUE(a != b);
-}
