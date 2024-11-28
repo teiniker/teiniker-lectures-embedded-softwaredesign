@@ -9,7 +9,7 @@ class Mail
 		std::string _address; 
  
 	public:
-		Mail(); // Default Constructor
+		Mail(); 							// Default Constructor
 		Mail(const std::string& address);
 		Mail(const Mail& old);				// Copy Constructor   
 		Mail& operator= (const Mail &orig);	// Assigment Operator

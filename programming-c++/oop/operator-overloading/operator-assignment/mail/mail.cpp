@@ -8,15 +8,15 @@ Mail::Mail(const string& address)
 }
 
 // Default Constructor
-Mail::Mail() 
+Mail::Mail()
+    : _address{""}
 {
-    _address = "";
 }
 
 // Copy Constructor
-Mail::Mail(const Mail& old)
+Mail::Mail(const Mail& old) 
+    : _address{old._address}
 {
-    _address = old._address;
 }
     
 // Assigment Operator    

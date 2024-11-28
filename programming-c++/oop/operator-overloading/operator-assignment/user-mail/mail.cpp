@@ -9,8 +9,8 @@ Mail::Mail(const string& address)
 
 // Default Constructor
 Mail::Mail() 
+    : _address{""}
 {
-    _address = "";
 }
 
 // Copy Constructor
