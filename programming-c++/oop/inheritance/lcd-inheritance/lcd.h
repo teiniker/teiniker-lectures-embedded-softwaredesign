@@ -20,7 +20,7 @@ class LCD : public Display
 		char* buffer(void) const;
 
 		// Methods
-		void clear(void);
+		void clear(void) override;
 		void print(char c) override;
 		void print(const char * c_ptr) override;
  };
