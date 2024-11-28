@@ -181,6 +181,11 @@ There are two primary ways to overload operators:
 
 ## Examples and Exercises
 
+* **Assignment Operator**:
+    * [Introduction](operator-assignment/README.md)
+    * Demo: [mail](operator-assignment/mail/)
+    * Demo: [user-mail](operator-assignment/user-mail/)
+
 * **Arithmetic Operators**:
     * Demo: [complex-number](operator-arithmetic/complex-number/)
     * Exercise: [counter](operator-arithmetic/counter-exercise/) 
@@ -189,10 +194,15 @@ There are two primary ways to overload operators:
 * **Relational and Logical Operators**:
     * Demo: [range](operator-relational/range/)
 
-* **Assignment Operator**:
-    * [Introduction](operator-assignment/README.md)
-    * Demo: [mail](operator-assignment/mail/)
-    * Demo: [user-mail](operator-assignment/user-mail/)
+* **Subscript Operators**
+    * Exercise: [eeprom](operator-subscript/eeprom-exercise/) 
+        ([Model Solution](operator-subscript/eeprom))
+
+Also review the **operators** of the following **standard library classes**:
+
+* [std::string](https://en.cppreference.com/w/cpp/string/basic_string)
+
+* [std::vector](https://en.cppreference.com/w/cpp/container/vector)
 
 
 ## References
