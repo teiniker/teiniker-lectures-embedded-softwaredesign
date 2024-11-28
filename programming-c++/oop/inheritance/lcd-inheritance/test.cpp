@@ -62,19 +62,21 @@ TEST(LCDTestGroup, PrintTest)
     EXPECT_STREQ("Hello Graz!", display.buffer());    
 }
 
-TEST(LCDTestGroup, HeapTest) 
+TEST(LCDTestGroup, PolymorphismTest) 
 {
     // Setup
-    LCD* disp = new LCD(40, 2); // Heap    
-    disp->clear();
+    LCD* lcd = new LCD(40, 2);  // Pointer to derived class 
+    Display* display = lcd;     // Pointer to base class
+    
+    display->clear();
     
     // Exercise
-    disp->print("Hallo!");
-    char* buffer = disp->buffer();
+    display->print("Hallo!");
+    char* buffer = lcd->buffer(); // display->buffer(); does not work!
     
     // Verify
     EXPECT_STREQ("Hallo!", buffer);
     
     // Teardown
-    delete disp;
+    delete lcd;
 }

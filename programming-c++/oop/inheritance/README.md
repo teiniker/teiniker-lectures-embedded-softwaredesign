@@ -14,47 +14,30 @@ The C++ language features support building new classes from existing ones:
     facilities provided by a base class 
     
 * **Interface inheritance**: to allow different derived classes to be used 
-    interchangeably through the interface provided by a common base class 
-    Interface inheritance is often referred to as run-time polymorphism (or 
-    dynamic polymorphism).
+    interchangeably through the interface provided by a common base class. 
+    Interface inheritance is often referred to as run-time polymorphism 
+    (or dynamic polymorphism).
 
 
-## Class Members
+## Inheritance Access Specifiers
 
-A member of a derived class can use the **public** and **protected** members 
-of a base class as if they were declared in the derived class itself.
+These specifiers determine how members of the base class are accessed 
+in the derived class:
 
-**A derived class cannot access private members of a base class**.
-
-
-## Constructors and Destructors
-
-Constructors and destructors are as essential: 
-
-* When a derived class object is created, the **base class constructor is called first**, 
-    followed by the derived class constructor.
-
-* **Destructors are called in reverse order**: derived class destructor is called first, 
-    followed by the base class destructor.
-
-
-## Types of Inheritance
-
-Determine how members of the base class are accessed in the derived class.
-* **Public Inheritance**: Public and protected members of the base class retain 
+* **public**: Public and protected members of the base class retain 
     their access levels in the derived class.
 
-* **Protected Inheritance**: Public and protected members of the base class become 
+* **protected**: Public and protected members of the base class become 
     protected in the derived class.
 
-* **Private Inheritance**: Public and protected members of the base class become 
+* **private**: Public and protected members of the base class become 
     private in the derived class.
 
+In the following examples and explanations we focus on public inheritance.
 
-_Example:_ Public inheritance of classes
+_Example:_ Base class
 
 ```C++  
-// Base class
 class Entity 
 {
 	private:
@@ -67,8 +50,9 @@ class Entity
  };
 ```
 
+_Example:_ Derived class 
+
 ```C++ 
-// Derived class
 class Product : public Entity
 {
 	private:
@@ -83,16 +67,33 @@ class Product : public Entity
 };
 ```
 
+**Members of a (public) derived class** can use the public and protected 
+members of a base class as if they were declared in the derived class itself.
+
+**A derived class cannot access private members of a base class**.
+
+
+Constructors and destructors are also essential: 
+
+* When a derived class object is created, the **base class constructor is called first**, 
+    followed by the derived class constructor.
+
+* **Destructors are called in reverse order**: derived class destructor is called first, 
+    followed by the base class destructor.
+
+
+_Example:_ Constructor implementation of the derived class
+
 ```C++
-// Constructor implementation
 Product::Product(int id, const string& description, long price) 
 	: Entity(id), _description{description}, _price{price}
 {
 }
 ```
 
-The **member initialization list** initializes the base class and the member 
-variables of the derived class before the body of the constructor is executed.
+IN the given example, the **member initialization list** initializes the base 
+class and the member variables of the derived class before the body of the 
+constructor is executed.
 
 * `Entity(id)`:
     **Calls the constructor of the base class** `Entity` with id as an argument.
@@ -105,38 +106,124 @@ variables of the derived class before the body of the constructor is executed.
 
 ## Virtual Functions
 
-In the context of inheritance in C++, virtual functions are **member functions 
-in a base class that can be overridden** in a derived class to provide specific 
-behavior for objects of the derived class. 
+A virtual function is a **member function in a base class that we expect 
+to override in derived classes**. Declaring a function as `virtual` ensures 
+that **the most-derived version of the function is called**, even when using 
+base class pointers or references.
 
-**Virtual functions enable polymorphism**, allowing a program to decide at runtime 
-which function to call, depending on the type of the object being referred to, 
-rather than the type of the pointer or reference used to refer to the object.
+Characteristics of virtual functions:
+* **Dynamic Binding**: Virtual functions support dynamic binding, meaning 
+    the call to the function is resolved at runtime based on the actual 
+    object type, not the pointer/reference type.
 
-Key Characteristics of Virtual Functions:
+* **Overriding**: Derived classes can override virtual functions to provide 
+    specific implementations.
 
-* **Declared with the virtual Keyword**: A function is made virtual in the base 
-    class by prefixing it with the `virtual` keyword.
-    
-* **Overriding**: A derived class can provide its own implementation of a virtual 
-    function, overriding the behavior of the base class function.
+* **Optional Override**: It's not mandatory for derived classes to override 
+    virtual functions. If not overridden, the base class's implementation is 
+    used.
 
-* **Polymorphism**: Virtual functions support runtime polymorphism (or dynamic dispatch) 
-    by determining the actual type of the object being pointed to and calling the 
-    corresponding function.
-
-* **Function Resolution at Runtime**: Virtual functions use a mechanism called the 
-    **virtual table** (vtable), which stores pointers to virtual functions for the class.
-
-* **Base Class Pointer or Reference**: When a base class pointer or reference points 
-    to a derived class object, the derived class's version of the function is called.
+* **Polymorphism**: Enables polymorphic behavior, allowing objects of different 
+    derived classes to be treated uniformly through base class pointers or 
+    references.
 
 * **Virtual Destructors**: If a class has virtual functions, its destructor should 
     also be declared virtual to ensure proper cleanup of derived class objects.
 
 
+## Pure Virtual Functions
 
-## References  
+A pure virtual function is a virtual function that **must be overridden by 
+derived classes**. It **does not provide an implementation in the base class** 
+and makes the **base class abstract**, meaning we cannot instantiate objects 
+of that class.
+
+_Syntax:_ Abstract class containing pure virtual functions:
+
+```C++
+    class Base 
+    {
+    public:
+        virtual void display() = 0; // Pure virtual function
+    };
+```
+
+Characteristics of abstract classes:
+* **Abstract Class**: A class containing at least one pure virtual function 
+    becomes an abstract class and cannot be instantiated.
+
+* **Mandatory Override**: Derived classes are required to provide an 
+    implementation for pure virtual functions unless they are also abstract.
+
+* **Interface Specification**: Pure virtual functions are often used to define 
+    an interface that derived classes must adhere to.
+
+![Virtual vs. Pure Virtual](figures/VirtualvsPureVirtual.png)
+
+_Example:_ Abstract base class with pure virtual functions
+
+```C++
+class Display 
+{
+	public:
+		virtual ~Display(void) {}; 	// Destructor
+
+		// Pure virtual Methods
+		virtual void print(char c) = 0;
+		virtual void print(const char * c_ptr) = 0;
+ };
+```
+
+_Example:_ Derived class with overridden pure virtual functions
+
+```C++
+class LCD : public Display
+{
+	private:
+		size_t _cols;
+		size_t _rows; 		
+		size_t _index;
+		char* _buffer;
+ 
+	public:
+		LCD(size_t cols, size_t rows); 	// Constructor
+		~LCD(void); 					// Destructor
+
+		// Accessors
+		char* buffer(void) const;
+
+		// Methods
+		void clear(void);
+		void print(char c) override;
+		void print(const char * c_ptr) override;
+ };
+```
+
+The **override keyword** (introduced in C++11) plays a crucial role 
+in enhancing code safety and readability when dealing with virtual 
+and pure virtual functions.
+
+`override` is used in a derived class to indicate that a member function 
+is intended to **override a virtual function in the base class**. 
+It serves as a form of documentation and, more importantly, as a tool 
+for the compiler to enforce correct overriding behavior.
+
+C++11 also introduced the `final` keyword, which can be used in conjunction 
+with override to **prevent further overriding** in derived classes.
+
+
+
+## Examples and Exercises
+
+* **Implementation inheritance** 
+    * Demo: [order-inheritance](order-inheritance/)
+    * Exercise: [user-inheritance](user-inheritance-exercise/)
+        ([Model Solution](user-inheritance))
+
+* **Interface inheritance**
+    * Demo: [lcd-inheritance](lcd-inheritance/)
+
+
 
 ## References
 Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
