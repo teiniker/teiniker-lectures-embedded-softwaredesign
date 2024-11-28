@@ -1,11 +1,12 @@
-#include <EEPROM.h>
+#include "eeprom.h"
+
+#include <stdexcept>
 
 using namespace std;
 
 EEPROM::EEPROM(const string& type, const size_t size)
+	: type_(type), size_(size)
 {
-	type_ = type;
-	size_ = size;
 	memory_ = new uint8_t[size];
 }
 
@@ -28,3 +29,4 @@ void EEPROM::write(uint32_t address, uint8_t value)
 {
 	memory_[address] = value;
 }
+

@@ -1,35 +1,10 @@
-Exercise: Operator Overloading - EEPROM
+Exercise: Operator Overloading - Counter (++, --)
 --------------------------------------------------------------------------------
 
-Given the following project structure:
+Given the implementation of a "EEPROM" class.
 
-.
-├── Makefile
-├── include
-│   └── EEPROM.h
-├── src
-├── test
-│   └── EEPROMTest.cpp
-└── TODO.txt
+Add the following subscript operator to this class: 
 
-Extend the following operations to use a propper input validation:
-> uint8_t read(uint32_t address);
-Pre-condition: address < size
-If there are invalid arguments throw the "std::invalid_argument" exception.
+    uint8_t& operator[](const uint32_t address);
 
-> void write(uint32_t address, uint8_t value);
-Pre-condition: address < size
-If there are invalid arguments throw the "std::invalid_argument" exception.
-
-
-Implement the missing operations found in the class declaration "EEPROM.h":
-
-> uint8_t& operator[]( const uint32_t address );
-Return the value stort in memory_ at the given address. 
-
-> friend bool operator== (const EEPROM &eep1, const EEPROM &eep2);
-Compare the memories of both EEPROM objects. First check the size and then 
-compare the memory arrays.
-
-> friend bool operator!= (const EEPROM &eep1, const EEPROM &eep2);
-
+Test your implementation withe the test cases implemented in test.cpp.
