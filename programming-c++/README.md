@@ -29,4 +29,8 @@
  
   * Algorithms
 
+## References
+
+* [YouTube: Bjarne Stroustrup: Why I Created C++ ](https://youtu.be/JBjjnqG0BP8?si=ZFvZpu5uKGs23bGe)
+
 *Egon Teiniker, 2020-2024, GPL v3.0*
