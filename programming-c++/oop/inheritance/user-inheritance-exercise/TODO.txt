@@ -3,7 +3,7 @@ Exercise: Inheritance - User and Admin
 
 Given a class diagram:
 
-A) Implement the classes "Admin" which inherits from "User" and adds a new 
+A) Implement the classe "Admin" which inherits from "User" and adds a new 
 	attribute "password" of type string. 
 	Define the header file "admin.h"
 	Implement the classes in "admin.cpp" 
