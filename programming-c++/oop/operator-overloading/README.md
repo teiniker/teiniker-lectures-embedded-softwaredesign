@@ -1,8 +1,10 @@
 # Operator Overloading
 
 Operator overloading allows C++ operators to have user-defined 
-meanings on custom types. Essentially, it provides a way to specify 
-how operators behave when applied to objects of classes you define.
+meanings on custom types. Essentially, it **provides a way to specify 
+how operators behave when applied to objects of classes we define**.
+
+Benefits of using operator overloading:
 
 * **Intuitiveness**: Makes the use of user-defined types as natural 
     as built-in types.
@@ -16,8 +18,14 @@ how operators behave when applied to objects of classes you define.
 
 ## Types of Operators
 
-C++ allows overloading most operators, but some have restrictions. 
+C++ allows the overloading of most operators, but some have restrictions. 
 Operators can be categorized based on their functionality.
+
+* **Assignment Operators**
+
+    * **Basic Assignment**: `=`
+
+    * **Compound Assignments**: `+=`, `-=`, `*=`, `/=`, `%=`, etc.
 
 * **Arithmetic Operators**
 
@@ -31,21 +39,15 @@ Operators can be categorized based on their functionality.
     
     * **Logical**: `&&`, `||`, `!` 
         
-* **Assignment Operators**
-
-    * **Basic Assignment**: `=`
-
-    * **Compound Assignments**: `+=`, `-=`, `*=`, `/=`, `%=`, etc.
+* **Subscript Operator**
+    
+    * **Access elements** like in arrays: `[]` 
 
 * **Stream Insertion and Extraction Operators**
 
     * **Insertion**: `<<`
 
     * **Extraction**: `>>`
-
-* **Subscript Operator**
-    
-    * **Access elements** like in arrays: `[]` 
 
 * **Function Call Operator**
  
@@ -60,14 +62,17 @@ Operators can be categorized based on their functionality.
 
 ## Friend Functions
 
+Operators can be implemented as member or friend functions.
+
 A friend function is a **non-member function** that has been granted special 
 **access privileges to the private and protected members of a class**. 
 
 Unlike member functions, friend functions are not invoked on objects of the 
-class using the dot (`.`) or arrow (`->`) operators. Instead, they operate
+class using the dot `.` or arrow `->` operators. Instead, they operate
 independently but can still manipulate the class's internal state directly.
 
 Key characteristics of friend functions:
+
 * **Non-Member**: Friend functions are not part of the class's public interface 
     and do not have a this pointer.
 
@@ -156,7 +161,8 @@ There are two primary ways to overload operators:
     built-in types can lead to ambiguous or undefined behavior. 
     Stick to user-defined types.
 
-* **Use Member Functions vs. Non-Member Functions Appropriately**
+* **Use Member Functions vs. Non-Member Functions Appropriately**:
+
     * **Member Functions**: Suitable for operators that modify the object 
         or require access to its internal state.
 
@@ -167,7 +173,8 @@ There are two primary ways to overload operators:
 
     _Example_: `operator==`, `operator<<`
 
-* **Return Types Should Be Appropriate**
+* **Return Types Should Be Appropriate**:
+
     * **Binary Operators**: Typically **return a new object** 
     
         _Example:_ `Complex operator+(const Complex& other) const;`

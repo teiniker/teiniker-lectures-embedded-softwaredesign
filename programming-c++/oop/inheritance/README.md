@@ -91,7 +91,7 @@ Product::Product(int id, const string& description, long price)
 }
 ```
 
-IN the given example, the **member initialization list** initializes the base 
+In the given example, the **member initialization list** initializes the base 
 class and the member variables of the derived class before the body of the 
 constructor is executed.
 
@@ -112,6 +112,7 @@ that **the most-derived version of the function is called**, even when using
 base class pointers or references.
 
 Characteristics of virtual functions:
+
 * **Dynamic Binding**: Virtual functions support dynamic binding, meaning 
     the call to the function is resolved at runtime based on the actual 
     object type, not the pointer/reference type.
@@ -149,6 +150,7 @@ _Syntax:_ Abstract class containing pure virtual functions:
 ```
 
 Characteristics of abstract classes:
+
 * **Abstract Class**: A class containing at least one pure virtual function 
     becomes an abstract class and cannot be instantiated.
 

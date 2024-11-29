@@ -27,14 +27,14 @@ between objects.
 Default constructor does only **Shallow Copy**.
 	 
 We need to define our own copy constructor only if an object has pointers 
-or any runtime allocation of the resource.
+or any runtime allocation of resources.
 
 ![Shallow Copy vs. Deep Copy](figures/DeepCopy.png)
 
 _Figure: Shallow Copy vs. Deep Copy_
 
-**Deep Copy** is possible only with user defined copy constructor. 
-In user defined copy constructor, we make sure that pointers (or references) 
+**Deep Copy** is possible only with a user defined copy constructor. 
+In a user defined copy constructor, we make sure that pointers (or references) 
 of copied object point to new memory locations.
 	
 
