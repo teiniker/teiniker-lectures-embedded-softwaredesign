@@ -1,4 +1,4 @@
-#include <User.h>
+#include "user.h"
 
 #include <stdexcept>
 
@@ -6,7 +6,7 @@ using namespace std;
 
 User::User(const int id, const string& username, const string& password)
 {
-	// Input Validation (Pre-Conditions)
+	// Input Validation (Pre-Condition Checks)
 	if(id < 0)
 		throw invalid_argument("Invalid id!");
 		
@@ -16,23 +16,23 @@ User::User(const int id, const string& username, const string& password)
 	if(password.length() < 10)
 		throw invalid_argument("Invalid password!");
 		
-	// Implementation	
-	id_ = id;	
-	username_ = username;
-	password_ = password;
+	// Object initialization	
+	_id = id;	
+	_username = username;
+	_password = password;
 }
 	
 int User::id()
 {
-	return id_;
+	return _id;
 }
 		
 string User::username(void)
 {
-	return username_;
+	return _username;
 }
 		
 string User::password()
 {
-	return password_;
+	return _password;
 }
