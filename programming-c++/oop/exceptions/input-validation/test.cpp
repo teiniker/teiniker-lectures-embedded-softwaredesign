@@ -35,7 +35,7 @@ TEST_F(UserTest, InvalidIdTest)
     EXPECT_THROW(User(-1, "homer", "c3R1ZGVudA"), std::invalid_argument);
 }
 
-TEST_F(UserTest, InvalidUsernameTooShortTest) 
+TEST_F(UserTest, InvalidUsernameTooLongTest) 
 {
     // Verify
     string username = "1234567890123456789012345678901234567890X";

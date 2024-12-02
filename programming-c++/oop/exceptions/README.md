@@ -10,7 +10,8 @@ robust and easier to maintain.
 
 ## Introduction
 
-A C++ exception is a response to an exceptional circumstance that arises while a program is running.
+A C++ exception is a response to an exceptional circumstance that arises 
+while a program is running.
 
 Exceptions provide a way to transfer control from one part of a program to another. 
 C++ exception handling is built upon three keywords: try, catch, and throw:
@@ -48,6 +49,7 @@ raises more than one exception in different situations.
 
 
 ## Throwing Exceptions
+
 Exceptions can be thrown anywhere within a code block using throw statement. 
 The operand of the throw statement determines a type for the exception and can be any expression and 
 the type of the result of the expression determines the type of exception thrown.
@@ -59,6 +61,7 @@ the type of the result of the expression determines the type of exception thrown
 
 
 ## Catching Exceptions
+
 The catch block following the try block catches any exception. You can specify what 
 type of exception you want to catch and this is determined by the exception declaration 
 that appears in parentheses following the keyword catch.
@@ -76,6 +79,7 @@ that appears in parentheses following the keyword catch.
 
 
 ## Standard Exceptions
+
 C++ provides a list of [standard exceptions](https://en.cppreference.com/w/cpp/error/exception) 
 defined in <stdexcept> which we can use in our programs.
 
@@ -115,20 +119,25 @@ public:
 }
 ```
 
-By declaring a function, a method as **noexcept**, we specify that these does not throw an exception and 
-if they throw, we do not care and let the program just crash.
+By declaring a function or a method as **noexcept**, we specify that these 
+does not throw an exception and if they throw, we do not care and let the 
+program just crash.
 			
 The `noexcept` specification is equivalent to the `noexcept(true)` specification. 
-**throw()** is equivalent to `noexcept(true)` but was deprecated with C++11 and will be removed with C++20. 
+**throw()** is equivalent to `noexcept(true)` but was deprecated with C++11 and 
+will be removed with C++20. 
+
 In contrast, `noexcept(false)` means that the function may throw an exception. 
-The `noexcept` specification is part of the function type but can not be used for function overloading. 
+The `noexcept` specification is part of the function type but can not be used 
+for function overloading. 
 
 			
 ## Defining Exceptions
 
 We can define our own exceptions by inheriting and overriding exception class functionality. 
 
-The simplest way of defining an exception is to define a class specifically for a kind of error and throw that.
+The simplest way of defining an exception is to define a class specifically for 
+a kind of error and throw that.
 
 ```C++
 	class RangeError 
@@ -144,26 +153,28 @@ The simplest way of defining an exception is to define a class specifically for 
 ```
 
 An exception can carry information about the error it represents. 
-Its type represents the kind of error, and whatever data it holds represents the particular occurrence of that error.
+Its type represents the kind of error, and whatever data it holds represents the 
+particular occurrence of that error.
 
 ```C++
 class FileNotFound : public std::exception 
 {
 	private:
-		std::string cause_;
+		std::string _cause;
 		
 	public:
-		FileNotFound(const std::string& cause) : cause_{cause} {}
+		FileNotFound(const std::string& cause) : _cause{cause} {}
 		
 		const char* what() const noexcept
 		{
-			return cause_.c_str();
+			return _cause.c_str();
 		}
 };
 ```
 
-**what()** is a public method provided by **exception** class and it has been overridden 
-by all the child exception classes. This returns the cause of an exception.
+**what()** is a public method provided by **exception** class and it has been 
+overridden by all the child exception classes. 
+This returns the cause of an exception.
 		
 
 ## Examples and Exercises
@@ -171,6 +182,7 @@ by all the child exception classes. This returns the cause of an exception.
 * Example: [input-validation](input-validation/)
 
 * Example: [Exception-DataService](Exception-DataService)  
+
 * Exercise: [Exception-Controller](Exception-Controller-Exercise) ([Model Solution](Exception-Controller))
 
 
