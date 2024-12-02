@@ -1,30 +1,32 @@
-#ifndef _DATASERVICE_H_
-#define _DATASERVICE_H_
-
-#include <FileService.h>
+#ifndef _DATA_SERVICE_H_
+#define _DATA_SERVICE_H_
 
 #include <string>
 #include <vector>
 
+#include "file_service.h"
 
 class DataProcessingException : public std::exception 
 {
 	private:
-		std::string cause_;
+		std::string _cause;
 		
 	public:
-		DataProcessingException(const std::string& cause) : cause_{cause} {}
+		DataProcessingException(const std::string& cause) 
+		: _cause{cause} 
+		{
+		}
 		
 		const char* what() const noexcept
 		{
-			return cause_.c_str();
+			return _cause.c_str();
 		}
 };
 
 class DataService 
 {
 	private:
-		FileService* fservice_;
+		FileService* _fservice;
 		std::vector<std::string> split(const std::string &s, char delim);
  
 	public:                

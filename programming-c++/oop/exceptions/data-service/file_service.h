@@ -1,28 +1,27 @@
-#ifndef _FILESERVICE_H_
-#define _FILESERVICE_H_
+#ifndef _FILE_SERVICE_H_
+#define _FILE_SERVICE_H_
 
 #include <string>
 #include <fstream> 
 
-
 class FileNotFound : public std::exception 
 {
 	private:
-		std::string cause_;
+		std::string _cause;
 		
 	public:
-		FileNotFound(const std::string& cause) : cause_{cause} {}
+		FileNotFound(const std::string& cause) : _cause{cause} {}
 		
 		const char* what() const noexcept
 		{
-			return cause_.c_str();
+			return _cause.c_str();
 		}
 };
 
 class FileService 
 {
 	private:
-		std::string filename_;
+		std::string _filename;
  
 	public:                
 		FileService(const std::string& filename);
@@ -31,4 +30,4 @@ class FileService
 		void writeFile(const std::string& content);
  };
 
-#endif /*_FILESERVICE_H_ */
+#endif /*_FILE_SERVICE_H_ */

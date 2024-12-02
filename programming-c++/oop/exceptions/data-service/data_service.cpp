@@ -1,17 +1,20 @@
-#include <DataService.h>
-
 #include <string>
 #include <sstream>
 
+#include "data_service.h"
+
 using namespace std;
 
-DataService::DataService(FileService* fservice) : fservice_{fservice} {}
+DataService::DataService(FileService* fservice) 
+: _fservice{fservice} 
+{
+}
 
 vector<int> DataService::readData()
 {
 	try
 	{
-		string content = fservice_->readFile();
+		string content = _fservice->readFile();
 		vector<string> string_values = split(content,',');
 		vector<int> data;
 		for(string value : string_values)
@@ -38,7 +41,8 @@ vector<string> DataService::split (const string &s, char delim)
     stringstream ss (s);
     string item;
 
-    while (getline (ss, item, delim)) {
+    while (getline (ss, item, delim)) 
+	{
         result.push_back (item);
     }
 

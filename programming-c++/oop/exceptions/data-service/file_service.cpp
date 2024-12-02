@@ -1,9 +1,9 @@
-#include <FileService.h>
-
 #include <string>
 #include <stdexcept>
 #include <fstream>
 #include <iostream>
+
+#include "file_service.h"
 
 using namespace std;
 
@@ -12,15 +12,14 @@ FileService::FileService(const string& filename)
 	if(filename.length() == 0)
 		throw invalid_argument("Invalid filename!");
 	
-	filename_ = filename;	
+	_filename = filename;	
 }
-
 
 string FileService::readFile()
 {
-	ifstream file(filename_.c_str());	
+	ifstream file(_filename.c_str());	
 	if(!file)
-		throw FileNotFound("File " + filename_ + " not found!"); 
+		throw FileNotFound("File " + _filename + " not found!"); 
 	
 	string content;
 	while(file) 
@@ -32,9 +31,7 @@ string FileService::readFile()
     return content;
 }
 
-
 void FileService::writeFile(const string& content)
 {
-	// TODO	
-	
+	// TODO		
 }
