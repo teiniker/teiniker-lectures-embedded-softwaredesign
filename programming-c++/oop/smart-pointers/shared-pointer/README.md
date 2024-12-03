@@ -44,4 +44,4 @@ Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 
 [std::shared_ptr](http://www.cplusplus.com/reference/memory/shared_ptr/)
 
-*Egon Teiniker, 2020, GPL v3.0*
+*Egon Teiniker, 2020-2024, GPL v3.0*

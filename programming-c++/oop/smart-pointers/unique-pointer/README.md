@@ -46,10 +46,11 @@ TEST(MailTestGroup, UniquePointerTest)
 ```
 
 ## References
-Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
-* Chapter 34.3: Resource Management Pointers
+* Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
+	* Chapter 34.3: Resource Management Pointers
 
-[std::unique_ptr](http://www.cplusplus.com/reference/memory/unique_ptr/)
-[C++11 Smart Pointer – Part 6 : unique_ptr<> Tutorial and Examples](https://thispointer.com/c11-unique_ptr-tutorial-and-examples/)
+* [std::unique_ptr](http://www.cplusplus.com/reference/memory/unique_ptr/)
 
-*Egon Teiniker, 2020, GPL v3.0*
+* [C++11 Smart Pointer – Part 6 : unique_ptr<> Tutorial and Examples](https://thispointer.com/c11-unique_ptr-tutorial-and-examples/)
+
+*Egon Teiniker, 2020-2024, GPL v3.0*

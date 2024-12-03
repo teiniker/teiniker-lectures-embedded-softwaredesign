@@ -23,7 +23,7 @@ TEST(MailTestGroup, PointerTest)
 TEST(MailTestGroup, UniquePointerTest) 
 {
     // Setup
-    std::unique_ptr<Mail> mail(new Mail("homer.simpson@springfield.com"));
+    std::unique_ptr<Mail> mail = std::make_unique<Mail>("homer.simpson@springfield.com");
     
     // Verify
     EXPECT_EQ("homer.simpson@springfield.com", mail->address());
