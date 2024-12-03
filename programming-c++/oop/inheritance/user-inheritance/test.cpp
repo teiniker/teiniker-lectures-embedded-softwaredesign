@@ -49,8 +49,11 @@ TEST(AdminTestGroup, PolymorphTest)
     // Exercise + Verify
     EXPECT_EQ(7, admin->id());
     EXPECT_EQ("burns", admin->username());
-    //EXPECT_EQ("c3R1ZGVudA", static_cast<Admin*>(admin)->password());
     EXPECT_EQ("monti.burns@springfield.com", admin->mail()->address());
+
+    // For dynamic_cast<> to work correctly: The base class (User) must be polymorphic 
+    // (i.e., have at least one virtual function).
+    EXPECT_EQ("c3R1ZGVudA", static_cast<Admin*>(admin)->password());
 
     // Teardown
     delete admin->mail();
@@ -73,7 +76,7 @@ TEST(PolymorphTestGroup, PolymorphVectorTest)
     EXPECT_EQ("burns", users[1]->username());
     EXPECT_EQ("monti.burns@springfield.com", users[1]->mail()->address());
     
-    Admin* admin = static_cast<Admin*>(users[1]); // like (Admin*) cast 
+    Admin* admin = static_cast<Admin*>(users[1]); // Admin "is a" User
     EXPECT_EQ("c3R1ZGVudA", admin->password());
     
     // Teardown 

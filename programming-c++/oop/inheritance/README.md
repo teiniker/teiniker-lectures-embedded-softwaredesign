@@ -214,6 +214,28 @@ C++11 also introduced the `final` keyword, which can be used in conjunction
 with override to **prevent further overriding** in derived classes.
 
 
+## Casting Operators
+
+In C++, casting operators are tools that allow us to convert a value from 
+one type to another. While C++ supports traditional C-style casts, it also 
+provides a set of four distinct and more explicit casting operators introduced 
+to enhance type safety and code clarity:
+
+* **static_cast<>**: Performs compile-time type conversions, ensuring type 
+    safety for related types.
+
+* **dynamic_cast<>**: Enables runtime type checking, primarily used for safe 
+    downcasting in polymorphic hierarchies.
+
+* **const_cast<>**: Adds or removes const and volatile qualifiers from a type, 
+    allowing for const-correctness adjustments.
+
+* **reinterpret_cast<>**: Converts between unrelated types, such as pointers 
+    and integers, without changing the underlying bit pattern.
+
+Each casting operator serves a specific purpose, enhancing code clarity and 
+reducing the likelihood of errors associated with type conversions.
+
 
 ## Examples and Exercises
 
