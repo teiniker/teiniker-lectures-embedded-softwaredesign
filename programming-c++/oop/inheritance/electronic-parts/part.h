@@ -21,7 +21,7 @@ class Part // abstract class
 		std::string unit() const;	
 
 		// Operations
-		virtual std::string to_csv(void) const = 0;
+		virtual std::string to_csv(void) const;
  };
 
 #endif /*_PART_H_ */
