@@ -1,0 +1,41 @@
+LabExam 2024-12-04: OOP - Electronic Parts Exercise (Simulation)
+-------------------------------------------------------------------------------
+
+Given a base class "Part" which has the following attributes:
+- id:int
+- value:double
+- unit:string
+Part also declares a pure virtual function: std::string to_csv(void).
+
+A) Resistor 
+Implement a class "Resistor" (resistor.h, resistor.cpp) that inherits from 
+"Part" and overrides the "to_csv()" function. 
+Example: "Resistor,1,1.000E+03,Ohm"
+
+B) Capacitor
+Implement a class "Capacitor" (capacitor.h, capacitor.cpp) that inherits from 
+"Part" and overrides the "to_csv()" function.
+Example: "Capacitor,2,4.700E-06,Farad"
+
+C) Refactoring 
+Implement the common "to_csv()" functionality in the virual function of the
+base class "Part" to reduce code redandancy.
+
+Tip: Test your implementation using the "test.cpp" class.
+
+
+General Rules
+-------------
+1. Project name: Rename the project (and the submitted ZIP file) so 
+that instead of "MyName" your name is used. 
+Please note that projects that do not comply with the naming 
+convention will be deducted 50% of the points!
+
+2. Manual review: A manual code review is performed for each solution 
+when grading. 
+
+3. Syntax errors: Implementation artifacts that contain syntax errors 
+won't count.
+
+4. Solutions that are obviously copied or copied will be assessed 
+negatively (with 0 points).
