@@ -38,7 +38,7 @@ semantics**:
 
 ## Best Practices
 
-* Choose the Right Smart Pointer:
+* Choose the right Smart Pointer:
 
     * Use `std::unique_ptr` when you need exclusive ownership.
 
@@ -58,5 +58,8 @@ semantics**:
 
 
 ## References
+
+* Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
+    * Chapter 34. Memory and Resources
 
 _Egon Teiniker, 2020-2024, GPL v3.0_
