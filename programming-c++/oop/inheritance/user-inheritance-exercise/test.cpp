@@ -7,75 +7,70 @@
 
 using namespace std;
 
-
-class UserTestGroup : public ::testing::Test 
+TEST(UserTestGroup, UserTest) 
 {
-protected:
-    void SetUp() override 
-    {
-        mail = new Mail("homer.simpson@springfield.com");
-        user = new User(7, "homer", mail);
-    }
+    // Setup 
+    Mail* mail = new Mail("homer.simpson@springfield.com");
+    User* user = new User(7, "homer", mail);
 
-    void TearDown() override 
-    {
-        delete user->mail();
-        delete user;
-    }
-
-    Mail* mail;
-    User* user;
-};
-
-TEST_F(UserTestGroup, UserTest) 
-{
-    // Verify
+    // Exercise + Verify
     EXPECT_EQ(7, user->id());
     EXPECT_EQ("homer", user->username());
     EXPECT_EQ("homer.simpson@springfield.com", user->mail()->address());
+
+    // Teardown
+    delete user->mail();
+    delete user;
 }
 
-
-class AdminTestGroup : public ::testing::Test 
+TEST(AdminTestGroup, AdminTest) 
 {
-protected:
-    void SetUp() override 
-    {
-        mail = new Mail("monti.burns@springfield.com");
-        admin = new Admin(7, "burns", "c3R1ZGVudA", mail);
-    }
-
-    void TearDown() override 
-    {
-        delete admin->mail();
-        delete admin;
-    }
-
-    Mail* mail;
-    Admin* admin;
-};
-
-TEST_F(AdminTestGroup, AdminTest) 
-{
-    // Verify
+    // Setup 
+    Mail* mail = new Mail("monti.burns@springfield.com");
+    Admin* admin = new Admin(7, "burns", "c3R1ZGVudA", mail);
+    
+    // Exercise + Verify
     EXPECT_EQ(7, admin->id());
     EXPECT_EQ("burns", admin->username());
+    EXPECT_EQ("c3R1ZGVudA", admin->password());
     EXPECT_EQ("monti.burns@springfield.com", admin->mail()->address());
+
+    // Teardown
+    delete admin->mail();
+    delete admin;
 }
 
-TEST(PolymorphTestGroup, PolymorphTest) 
+TEST(AdminTestGroup, PolymorphTest) 
+{
+    // Setup 
+    Mail* mail = new Mail("monti.burns@springfield.com");
+    User* admin = new Admin(7, "burns", "c3R1ZGVudA", mail); // Admin "is a" User
+    
+    // Exercise + Verify
+    EXPECT_EQ(7, admin->id());
+    EXPECT_EQ("burns", admin->username());
+    //EXPECT_EQ("c3R1ZGVudA", static_cast<Admin*>(admin)->password());
+    EXPECT_EQ("monti.burns@springfield.com", admin->mail()->address());
+
+    // Teardown
+    delete admin->mail();
+    delete admin;
+}
+
+TEST(PolymorphTestGroup, PolymorphVectorTest) 
 {
     // Setup
-    vector<User*> users;
+    vector<User*> users;    // Admin "is a" User
     users.push_back(new User(3, "homer", new Mail("homer.simpson@springfield.com"))); 
     users.push_back(new Admin(7, "burns", "c3R1ZGVudA", new Mail("monti.burns@springfield.com")));
     
-    // Verify
+    // Exercise + Verify
     EXPECT_EQ(3, users[0]->id());
-    EXPECT_EQ(7, users[1]->id());
     EXPECT_EQ("homer", users[0]->username());
-    EXPECT_EQ("burns", users[1]->username());
     EXPECT_EQ("homer.simpson@springfield.com", users[0]->mail()->address());
+
+    EXPECT_EQ(7, users[1]->id());
+    EXPECT_EQ("burns", users[1]->username());
     EXPECT_EQ("monti.burns@springfield.com", users[1]->mail()->address());
     
     Admin* admin = static_cast<Admin*>(users[1]); // like (Admin*) cast 

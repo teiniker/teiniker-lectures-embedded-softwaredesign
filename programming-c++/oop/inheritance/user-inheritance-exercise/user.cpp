@@ -8,16 +8,16 @@ User::User(const int id, const string& username, Mail* mail)
 {
 }
 	
-int User::id()
+int User::id() const
 {
 	return _id;
 }
-void User::id(int id)
+void User::id(const int id)
 {
 	_id = id;
 }
 		
-string User::username(void)
+string User::username(void) const
 {
 	return _username;
 }
@@ -26,7 +26,7 @@ void User::username(const string& username)
 	_username = username;	
 }
 		
-Mail* User::mail()
+Mail* User::mail() const
 {
 	return _mail;
 }

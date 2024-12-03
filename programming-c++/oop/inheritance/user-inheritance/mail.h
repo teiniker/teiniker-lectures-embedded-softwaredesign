@@ -12,7 +12,7 @@ class Mail
 		Mail(const std::string& address);
 		//~Mail(void) {}
     
-		std::string address();
+		std::string address() const;
 		void address(const std::string& address);
  };
 

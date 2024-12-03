@@ -12,15 +12,15 @@ class User
 		Mail* _mail;
  
 	public:                
-		User(int id, const std::string& username, Mail* mail);
+		User(const int id, const std::string& username, Mail* mail);
 
-		int id();
-		void id(int id);
+		int id() const;
+		void id(const int id);
 		
-		std::string username(void);
+		std::string username(void) const;
 		void username(const std::string& username);
 
-		Mail* mail();
+		Mail* mail() const;
 		void maild(Mail* mail);		
  };
 
