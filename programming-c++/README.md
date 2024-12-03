@@ -15,12 +15,12 @@
 
   * [Inheritance and Abstract Classes](oop/inheritance/)
 
-  * Exception Handling
+  * [Exception Handling](oop/exceptions/)
 
-  * Smart Pointers
-  
+  * [Smart Pointers](oop/smart-pointers/)
+
+
 * **Templates**
-
 
 * **Standard Template Library (STL)**
   * [Strings](stl/string/)
