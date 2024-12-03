@@ -4,18 +4,20 @@
 #include <GPIO.h>
 #include <iostream>
 
-
 class ControllerException : public std::exception 
 {
 	private:
-		std::string cause_;
+		std::string _cause;
 		
 	public:
-		ControllerException(const std::string& cause) : cause_{cause} {}
+		ControllerException(const std::string& cause) 
+		: _cause{cause} 
+		{
+		}
 		
 		const char* what() const noexcept
 		{
-			return cause_.c_str();
+			return _cause.c_str();
 		}
 };
 
@@ -23,7 +25,7 @@ class ControllerException : public std::exception
 class Controller 
 {
 	private:
-		GPIO* io_ = NULL;
+		GPIO* _io = nullptr;
 		
 	public:                
 		Controller();		

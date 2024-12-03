@@ -1,4 +1,4 @@
-#include <Controller.h>
+#include "controller.h"
 
 #include <iostream>
 
@@ -8,7 +8,7 @@ Controller::Controller()
 {
 	try
 	{
-		io_ = new GPIO();
+		_io = new GPIO();
 		
 	}
 	catch(std::runtime_error& e)
@@ -23,6 +23,6 @@ Controller::Controller()
 
 Controller::~Controller()
 {
-	if(io_ != NULL)
-		delete io_; 
+	if(_io != NULL)
+		delete _io; 
 }

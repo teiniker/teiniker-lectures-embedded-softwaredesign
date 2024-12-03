@@ -1,0 +1,21 @@
+Exercise: Exception Handling - Controller
+--------------------------------------------------------------------------------
+
+This example simulates an error case where instantiation of an object is not 
+possible. The "GPIO()" constructor throws a "std::runtime_error exception".
+
+A) Implement a custom exception type "ControllerException" in the 
+    "controller.h" file. 
+    Use the given declarations:
+        ControllerException(const std::string& cause);
+        const char* what() const noexcep;
+
+B) Implement the missing "controller.cpp" file.
+    Controller()
+    Try to create an instance of "GPIO" on the heap. 
+    If that fails, throw an "ControllerException". 
+
+    ~Controller()
+    Remove the "GPIO" object from memory.
+
+Use the file "test.cpp" to test your implementations.

@@ -48,36 +48,6 @@ raises more than one exception in different situations.
 ```		
 
 
-## Throwing Exceptions
-
-Exceptions can be thrown anywhere within a code block using throw statement. 
-The operand of the throw statement determines a type for the exception and can be any expression and 
-the type of the result of the expression determines the type of exception thrown.
-
-```C++
-	if(id < 0)
-		throw invalid_argument("Invalid id!");
-```
-
-
-## Catching Exceptions
-
-The catch block following the try block catches any exception. You can specify what 
-type of exception you want to catch and this is determined by the exception declaration 
-that appears in parentheses following the keyword catch.
-
-```C++
-	try 
-	{
-	   // protected code
-	} 
-	catch( ExceptionName e ) 
-	{
-	  // code to handle ExceptionName exception
-	}
-```
-
-
 ## Standard Exceptions
 
 C++ provides a list of [standard exceptions](https://en.cppreference.com/w/cpp/error/exception) 
@@ -175,15 +145,46 @@ class FileNotFound : public std::exception
 **what()** is a public method provided by **exception** class and it has been 
 overridden by all the child exception classes. 
 This returns the cause of an exception.
-		
+
+
+## Throwing Exceptions
+
+Exceptions can be thrown anywhere within a code block using throw statement. 
+The operand of the throw statement determines a type for the exception and can be any expression and 
+the type of the result of the expression determines the type of exception thrown.
+
+```C++
+	if(id < 0)
+		throw invalid_argument("Invalid id!");
+```
+
+
+## Catching Exceptions
+
+The catch block following the try block catches any exception. You can specify what 
+type of exception you want to catch and this is determined by the exception declaration 
+that appears in parentheses following the keyword catch.
+
+```C++
+	try 
+	{
+	   // protected code
+	} 
+	catch( ExceptionName e ) 
+	{
+	  // code to handle ExceptionName exception
+	}
+```
+
 
 ## Examples and Exercises
 
-* Example: [input-validation](input-validation/)
+* Throwing Exceptions:
+	* Example: [input-validation](input-validation/)
 
-* Example: [Exception-DataService](Exception-DataService)  
-
-* Exercise: [Exception-Controller](Exception-Controller-Exercise) ([Model Solution](Exception-Controller))
+* Catching Exceptions:
+	* Example: [data-service](data-service/)  
+	* Exercise: [controller](controller-exercise/) ([Model Solution](controller/))
 
 
 ## References
