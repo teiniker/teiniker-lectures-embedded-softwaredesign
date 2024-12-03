@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
 #include "lcd.h"
 
-LCD display(8, 2);
 
 TEST(LCDTestGroup, ClearTest) 
 {
     // Setup
+    LCD display(8, 2);
     display.clear();
 
     // Verify
@@ -19,6 +19,7 @@ TEST(LCDTestGroup, ClearTest)
 TEST(LCDTestGroup, PrintCharTest) 
 {
     // Setup
+    LCD display(8, 2);
     display.clear();
 
     // Exercise
@@ -35,6 +36,7 @@ TEST(LCDTestGroup, PrintCharTest)
 TEST(LCDTestGroup, PrintCharPtrTest) 
 {
     // Setup
+    LCD display(8, 2);
     display.clear();
 
     // Exercise
@@ -47,6 +49,7 @@ TEST(LCDTestGroup, PrintCharPtrTest)
 TEST(LCDTestGroup, PrintTest) 
 {
     // Setup
+    LCD display(8, 2);
     display.clear();
 
     // Exercise
@@ -65,18 +68,18 @@ TEST(LCDTestGroup, PrintTest)
 TEST(LCDTestGroup, PolymorphismTest) 
 {
     // Setup
-    LCD* lcd = new LCD(40, 2);  // Pointer to derived class 
-    Display* display = lcd;     // Pointer to base class
-    
+    Display* display = new LCD(40, 2);  // LCD "is a" Display (Upcast: inherently safe) 
     display->clear();
     
     // Exercise
     display->print("Hallo!");
-    char* buffer = lcd->buffer(); // display->buffer(); does not work!
+
+    LCD* lcd = dynamic_cast<LCD*>(display); // Explicit Downcast
     
     // Verify
-    EXPECT_STREQ("Hallo!", buffer);
+    ASSERT_NE(nullptr, lcd);
+    EXPECT_STREQ("Hallo!", lcd->buffer());
     
     // Teardown
-    delete lcd;
+    delete display;
 }

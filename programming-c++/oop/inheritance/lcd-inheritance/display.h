@@ -10,6 +10,6 @@ class Display
 		virtual void clear(void) = 0;
 		virtual void print(char c) = 0;
 		virtual void print(const char * c_ptr) = 0;
- };
+};
 
 #endif /*_DISPLAY_H_ */
