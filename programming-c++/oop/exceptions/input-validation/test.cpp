@@ -5,45 +5,35 @@
 
 using namespace std;
 
-class UserTest : public ::testing::Test 
+TEST(UserTest, ConstructorTest) 
 {
-protected:
-    User* user;
-
-    void SetUp() override 
-    {
-        user = new User(7, "homer", "c3R1ZGVudA");
-    }
-
-    void TearDown() override 
-    {
-        delete user;
-    }
-};
-
-TEST_F(UserTest, ConstructorTest) 
-{
+    // Setup
+    User* user = new User(7, "homer", "c3R1ZGVudA");
+    
     // Verify
     EXPECT_EQ(7, user->id());
     EXPECT_EQ("homer", user->username());
     EXPECT_EQ("c3R1ZGVudA", user->password());
+
+    // Teardown
+    delete user;
 }
 
-TEST_F(UserTest, InvalidIdTest) 
+TEST(UserTest, InvalidIdTest) 
 {
     // Verify
     EXPECT_THROW(User(-1, "homer", "c3R1ZGVudA"), std::invalid_argument);
 }
 
-TEST_F(UserTest, InvalidUsernameTooLongTest) 
+TEST(UserTest, InvalidUsernameTooLongTest) 
 {
     // Verify
     string username = "1234567890123456789012345678901234567890X";
     EXPECT_THROW(User(1, username, "c3R1ZGVudA"), std::invalid_argument);
 }
 
-TEST_F(UserTest, InvalidPasswordTest) 
+TEST(UserTest, InvalidPasswordTest) 
 {
     // Verify
-    EXPECT_THROW(User(1, "homer", "c3R1ZGVud"), std::invalid_argument);
+    EXPECT_THROW(User(1, "homer", "123456789"), std::invalid_argument);
 }

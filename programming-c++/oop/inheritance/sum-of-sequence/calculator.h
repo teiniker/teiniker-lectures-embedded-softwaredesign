@@ -1,7 +1,7 @@
 #ifndef _CALCULATOR_H_
 #define _CALCULATOR_H_
 
-class Calculator // Abstract base class 
+class Calculator // Interface 
 {
 	public:  
 		virtual ~Calculator(void) {}

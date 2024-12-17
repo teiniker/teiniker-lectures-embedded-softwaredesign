@@ -8,8 +8,7 @@ Controller::Controller()
 {
 	try
 	{
-		_io = new GPIO();
-		
+		_io = new GPIO();	
 	}
 	catch(std::runtime_error& e)
 	{
