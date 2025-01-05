@@ -43,7 +43,10 @@
     * Use a registry of singletons.
 
 
-## Examples
+## Examples and Exercises
+
+* Demo: [Logger](logger/)
+
 
 
 
@@ -51,6 +54,8 @@
 
 * E. Gamma, R. Helm, R. Johnson, J. Vlissides. **Design Patterns, Elements of Reusable Object-Oriented Software**. Addison-Wesley, 1995
     * Chapter 3: Creational Patterns
+
+* [10 Singletons in C++](https://softwarepatterns.com/cpp/singleton-software-pattern-cpp-example)
 
 *Egon Teiniker, 2020-2025, GPL v3.0*
     
