@@ -8,13 +8,13 @@ using namespace std;
 class Mail 
 {
 	private:
-		string address_; 
+		string _address; 
  
 	public:
 		Mail(const string& address);
 		~Mail(void);
     
-		string address(void);
+		string address(void) const;
 		void address(const string& address);
  };
 

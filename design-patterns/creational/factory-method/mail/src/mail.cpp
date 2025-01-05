@@ -1,10 +1,10 @@
-#include <Mail.h>
 #include <iostream>
+#include <mail.h>
 
 using namespace std;
 
 Mail::Mail(const string& address) 
-    : address_{address} 
+    : _address{address} 
 {
     cout << "Mail - constructor" << endl;
 }
@@ -14,12 +14,12 @@ Mail::~Mail(void)
     cout << "Mail - destructor" << endl;
 }
     
-string Mail::address()
+string Mail::address() const
 {
-    return address_;
+    return _address;
 }
 
 void Mail::address(const string& address)
 {
-    address_ = address;
+    _address = address;
 }

@@ -1,9 +1,9 @@
 #ifndef _FACTORY_H_
 #define _FACTORY_H_
 
-#include <Mail.h>
 #include <string>
 #include <memory>
+#include <mail.h>
 
 class Factory 
 {
