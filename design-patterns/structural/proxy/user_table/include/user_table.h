@@ -1,8 +1,8 @@
 #ifndef _USERTABLE_H_
 #define _USERTABLE_H_
 
-#include <User.h>
 #include <memory>
+#include <user.h>
 
 // Interface (API)
 class UserTable 

@@ -1,13 +1,13 @@
-#include <UserTableProxy.h>
 #include <stdexcept>
 #include <iostream>
+#include <user_table_proxy.h>
 
 using namespace std;
 
 
 UserTableProxy::UserTableProxy(std::shared_ptr<UserTable> table)
 {
-	table_ = table;
+	_table = table;
 }
 	
 void UserTableProxy::insert(shared_ptr<User> user)
@@ -19,7 +19,7 @@ void UserTableProxy::insert(shared_ptr<User> user)
 		throw invalid_argument("Invalid User (NULL)!");
 		
 	// Delegation" 
-	table_->insert(user);	
+	_table->insert(user);	
 	
 	// Post-Processing
 }
@@ -33,7 +33,7 @@ shared_ptr<User> UserTableProxy::findUserById(int id)
 		throw invalid_argument("Invalid id (negative)!");
 
 	// Delegation
-	shared_ptr<User> user = table_->findUserById(id);
+	shared_ptr<User> user = _table->findUserById(id);
 
 	// Post-Processing	
 	return user;

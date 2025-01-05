@@ -6,16 +6,16 @@
 class User 
 {
 	private:
-		int id_; 
-		std::string username_;
-		std::string password_;
+		int _id; 
+		std::string _username;
+		std::string _password;
  
 	public:                
 		User(const int id, const std::string& username, const std::string& password);
 
-		int id();	
-		std::string username(void);		
-		std::string password(void);
+		int id() const;	
+		std::string username(void) const;		
+		std::string password(void) const;
  };
 
 #endif /*_USER_H_ */
