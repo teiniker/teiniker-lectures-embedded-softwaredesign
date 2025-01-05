@@ -3,16 +3,11 @@
 
 using namespace std;
 
-Logger* Logger::_INSTANCE= nullptr;;
-
 // Return the static instance of Logger
-Logger* Logger::getInstance()
+Logger& Logger::getInstance()
 {
-	if(_INSTANCE == nullptr)
-	{
-		_INSTANCE = new Logger();
-	}
-	return _INSTANCE;
+	static Logger instance;  
+	return instance;
 }
 
 // Log an error message

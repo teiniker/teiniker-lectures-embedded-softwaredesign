@@ -2,12 +2,13 @@
 #define _LOGGER_
 
 #include <string>
+#include <memory>
 
 class Logger
 {
 public:
     // Static method to get the single instance (Singleton)
-    static Logger* getInstance();
+    static Logger& getInstance();
 
     // Operations
     void error(const std::string& msg);
@@ -16,8 +17,6 @@ public:
     void debug(const std::string& msg);
 
 private:
-	static Logger* _INSTANCE; 
-
     // Private constructor to prevent direct instantiation
     Logger() {};
 
