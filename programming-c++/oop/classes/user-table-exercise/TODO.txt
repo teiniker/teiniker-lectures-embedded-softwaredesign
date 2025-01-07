@@ -1,0 +1,14 @@
+Exercise: UserTable
+--------------------------------------------------------------------------------
+
+Create a class "UserTable" that stores a collection of "User" objects:
+
+    UserTable ---[*]->User
+
+
+A) Implement the "UserTable" class:
+    Given the "table.h" file, implement the "UserTable" class in a 
+    "table.cpp" file.
+
+Run the test cases implemented in "test.cpp" to verify your implementations.
+
