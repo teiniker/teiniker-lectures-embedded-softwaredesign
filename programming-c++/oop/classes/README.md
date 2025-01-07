@@ -265,6 +265,7 @@ The following examples and exercises are intended to further clarify the concept
     * Example: [order-directed](order-directed/)
     * Exercise: [user-mail-directed](user-mail-directed-exercise/) ([Model Solution](user-mail-directed/))
     * Exercise: [user-table](user-table-exercise/) ([Model Solution](user-table/))
+    * Exercise: [linked-stack](linked-stack-exercise/) ([Model Solution](linked-stack/))
 
 
 * **Bidirectional Associations**
@@ -288,4 +289,4 @@ Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
 
 [Destructors in C++](https://www.geeksforgeeks.org/destructors-c/)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+*Egon Teiniker, 2020-2025, GPL v3.0*

@@ -12,7 +12,7 @@ A) Implement the "UserTable" class:
 
 B) UML Diagrams
     Draw the UML Class Diagram for the "UserTable" class.    
-    Draw the UML Object Diagram after test setup
+    Draw the UML Object Diagram after test setup.
 
 Run the test cases implemented in "test.cpp" to verify your implementations.
 
