@@ -264,6 +264,8 @@ The following examples and exercises are intended to further clarify the concept
 * **Directed Associations**
     * Example: [order-directed](order-directed/)
     * Exercise: [user-mail-directed](user-mail-directed-exercise/) ([Model Solution](user-mail-directed/))
+    * Exercise: [user-table](user-table-exercise/) ([Model Solution](user-table/))
+
 
 * **Bidirectional Associations**
     * Example: [directory-bidirectional](directory-bidirectional/)

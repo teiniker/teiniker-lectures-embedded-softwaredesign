@@ -10,5 +10,9 @@ A) Implement the "UserTable" class:
     Given the "table.h" file, implement the "UserTable" class in a 
     "table.cpp" file.
 
+B) UML Diagrams
+    Draw the UML Class Diagram for the "UserTable" class.    
+    Draw the UML Object Diagram after test setup
+
 Run the test cases implemented in "test.cpp" to verify your implementations.
 
