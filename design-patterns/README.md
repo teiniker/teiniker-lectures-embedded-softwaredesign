@@ -1,27 +1,12 @@
 # Design Patterns
 
-The following examples give a first look into the GoF design patterns 
-in C++. These patterns are organized in three chapters:
+* [Introduction](introduction/README.md)
 
-* Creational Patterns
-	* **Factory Method**
-		* [FactoryMethod-Mail](creational/factory-method/FactoryMethod-Mail/)
+* [Creational Patterns](creational/)
 
-* Structural Patterns
-	* **Proxy**
-		* [Proxy-UserTable](structural/proxy/Proxy-UserTable/)
-		* [Exercise: Proxy-FileService](structural/proxy/Proxy-FileService-Exercise/)
-			([Model Solution](structural/proxy/Proxy-FileService/))
-	* **Composite**
-		* [Composite-FileSystem](structural/composite/Composite-FileSystem/)
-		* [Exercise: Composite-Packaging](structural/composite/Composite-Packaging-Exercise/)
-			([Model Solution](structural/composite/Composite-Packaging/))
+* [Structural Patterns](structural/)
 
-* Behavioral Patterns 
-	* **Strategy**
-		* [Strategy-BubbleSort](behavioral/strategy/Strategy-BubbleSort/)
-		
-	* **Template Method**
-		* [TemplateMethod-BubbleSort](behavioral/template-method/TemplateMethod-BubbleSort/)
+* [Behavioral Patterns](behavioral/)
 
-*Egon Teiniker, 2020-2024, GPL v3.0*
+
+*Egon Teiniker, 2020-2025, GPL v3.0*
