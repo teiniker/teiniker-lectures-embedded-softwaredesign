@@ -7,22 +7,23 @@
 class Node
 {
 	private:
-		std::string name_;
+		std::string _name;
 		
 	public:                
 		virtual ~Node(void) {}
 		
-		Node(const std::string& name) : name_{name} {}
+		Node(const std::string& name) : _name{name} {}
 	
 		std::string name(void)
 		{
-			return name_;
+			return _name;
 		}
 
 		// Navigation
 		virtual void addNode(std::shared_ptr<Node> node) 
 		{
 			// Default implementation
+			(void)node; // Suppress unused parameter warning
 		};	
 		
 		// Abstract Operations
