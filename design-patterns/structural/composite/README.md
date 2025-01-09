@@ -84,9 +84,9 @@
         because any attempt to add or remove objects from leaves will be 
         caught at compile-time.
 
-## Examples
+## Examples and Exercises
 
-
+* Example: [file-system](file-system/)
 
 ## References 
 
