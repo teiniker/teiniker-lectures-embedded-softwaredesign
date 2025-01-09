@@ -23,13 +23,13 @@ protected:
 TEST_F(ProxyTestGroup, UserTableTest)
 {
     // Setup
-    shared_ptr<User> homer = make_shared<User>(7, "homer", "c3R1ZGVudA");
-    shared_ptr<User> marge = make_shared<User>(13, "marge", "Ljd667bb%4");
+    auto homer = make_shared<User>(7, "homer", "c3R1ZGVudA");
+    auto marge = make_shared<User>(13, "marge", "Ljd667bb%4");
     impl->insert(homer);
     impl->insert(marge);
 
     // Exercise
-    shared_ptr<User> user = impl->findUserById(7);
+    auto user = impl->findUserById(7);
     
     // Verify
     EXPECT_EQ(7, user->id());
@@ -40,8 +40,8 @@ TEST_F(ProxyTestGroup, UserTableTest)
 TEST_F(ProxyTestGroup, UserTableProxyTest)
 {
     // Setup
-    shared_ptr<User> homer = make_shared<User>(7, "homer", "c3R1ZGVudA");
-    shared_ptr<User> marge = make_shared<User>(13, "marge", "Ljd667bb%4");
+    auto homer = make_shared<User>(7, "homer", "c3R1ZGVudA");
+    auto marge = make_shared<User>(13, "marge", "Ljd667bb%4");
     proxy->insert(homer);
     proxy->insert(marge);
 
@@ -62,8 +62,6 @@ TEST_F(ProxyTestGroup, ValidateUserTest)
 
 TEST_F(ProxyTestGroup, ValidateIdTest)
 {
-    shared_ptr<User> homer(new User(7, "homer", "c3R1ZGVudA"));
-
     // Verify
     EXPECT_THROW(proxy->findUserById(-1), invalid_argument);
 }
