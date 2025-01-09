@@ -22,12 +22,13 @@ protected:
 
 TEST_F(ProxyTestGroup, UserTableTest)
 {
-    shared_ptr<User> homer(new User(7, "homer", "c3R1ZGVudA"));
-    shared_ptr<User> marge(new User(13, "marge", "Ljd667bb%4"));
-
+    // Setup
+    shared_ptr<User> homer = make_shared<User>(7, "homer", "c3R1ZGVudA");
+    shared_ptr<User> marge = make_shared<User>(13, "marge", "Ljd667bb%4");
     impl->insert(homer);
     impl->insert(marge);
 
+    // Exercise
     shared_ptr<User> user = impl->findUserById(7);
     
     // Verify
@@ -38,11 +39,13 @@ TEST_F(ProxyTestGroup, UserTableTest)
 
 TEST_F(ProxyTestGroup, UserTableProxyTest)
 {
-    shared_ptr<User> homer(new User(7, "homer", "c3R1ZGVudA"));
-    shared_ptr<User> marge(new User(13, "marge", "Ljd667bb%4"));
-
+    // Setup
+    shared_ptr<User> homer = make_shared<User>(7, "homer", "c3R1ZGVudA");
+    shared_ptr<User> marge = make_shared<User>(13, "marge", "Ljd667bb%4");
     proxy->insert(homer);
     proxy->insert(marge);
+
+    // Exercise
     shared_ptr<User> user = proxy->findUserById(7);
     
     // Verify
