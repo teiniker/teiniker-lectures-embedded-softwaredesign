@@ -11,7 +11,7 @@ shared_ptr<Logger> Logger::getInstance()
 {
     if(instance == nullptr) 
     {
-        instance = std::shared_ptr<Logger>(new Logger());
+        instance = shared_ptr<Logger>(new Logger());
     }
     return instance;
 }
@@ -40,5 +40,5 @@ void Logger::debug(const string& msg)
 
 void Logger::print(const string& s)
 {
-    std::cout << s << std::endl;
+    cout << s << endl;
 }
