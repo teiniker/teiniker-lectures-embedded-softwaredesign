@@ -1,5 +1,5 @@
-#ifndef _LOGGER_
-#define _LOGGER_
+#ifndef _LOGGER_H_
+#define _LOGGER_H_
 
 #include <string>
 #include <memory>
@@ -7,8 +7,9 @@
 class Logger
 {
 public:
-    // Static method to get the single instance (Singleton)
-    static Logger& getInstance();
+    // Singleton
+    static std::shared_ptr<Logger> instance;
+    static std::shared_ptr<Logger> getInstance();
 
     // Operations
     void error(const std::string& msg);
@@ -30,4 +31,4 @@ private:
     void operator=(const Logger &) = delete;
 };
 
-#endif // _LOGGER_
+#endif // _LOGGER_H_

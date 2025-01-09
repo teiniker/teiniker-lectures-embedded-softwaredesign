@@ -3,39 +3,42 @@
 
 using namespace std;
 
-// Return the static instance of Logger
-Logger& Logger::getInstance()
+// Singleton  
+
+shared_ptr<Logger> Logger::instance = nullptr;
+
+shared_ptr<Logger> Logger::getInstance()
 {
-	static Logger instance;  
-	return instance;
+    if(instance == nullptr) 
+    {
+        instance = std::shared_ptr<Logger>(new Logger());
+    }
+    return instance;
 }
 
-// Log an error message
-void Logger::error(const std::string& msg)
+// Logger Methods 
+
+void Logger::error(const string& msg)
 {
     print("ERROR: " + msg);
 }
 
-// Log a warning message
-void Logger::warning(const std::string& msg)
+void Logger::warning(const string& msg)
 {
     print("WARNING: " + msg);
 }
 
-// Log an info message
-void Logger::info(const std::string& msg)
+void Logger::info(const string& msg)
 {
     print("INFO: " + msg);
 }
 
-// Log a debug message
-void Logger::debug(const std::string& msg)
+void Logger::debug(const string& msg)
 {
     print("DEBUG: " + msg);
 }
 
-// Print the message to standard output
-void Logger::print(const std::string& s)
+void Logger::print(const string& s)
 {
     std::cout << s << std::endl;
 }
