@@ -45,7 +45,7 @@
 
 ## Examples and Exercises
 
-* Demo: [Logger](logger/)
+* Example: [Logger](logger/)
 
 
 
