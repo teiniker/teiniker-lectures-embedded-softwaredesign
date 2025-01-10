@@ -59,7 +59,7 @@ semantics**:
 
 ## References
 
-* [YouTube: Modern C++: Upgrade Your Skills with Shared Pointers!](https://youtu.be/Tp5-f9YAzNk?si=vT_uuKNPBPj90sM5)
+* [YouTube: Smart Pointers in C++ (Stop Using new?)](https://youtu.be/x_eHJmdGQ_4?si=6_vY5GiLl6P03rg8)
 
 * [C++ Reference: std::shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr)
 * [C++ Reference: std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr)
