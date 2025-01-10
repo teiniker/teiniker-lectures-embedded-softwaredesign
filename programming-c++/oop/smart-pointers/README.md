@@ -61,6 +61,9 @@ semantics**:
 
 * [YouTube: Modern C++: Upgrade Your Skills with Shared Pointers!](https://youtu.be/Tp5-f9YAzNk?si=vT_uuKNPBPj90sM5)
 
+* [C++ Reference: std::shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr)
+* [C++ Reference: std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr)
+
 * Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
     * Chapter 34. Memory and Resources
 
