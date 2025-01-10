@@ -59,6 +59,8 @@ semantics**:
 
 ## References
 
+* [YouTube: Modern C++: Upgrade Your Skills with Shared Pointers!](https://youtu.be/Tp5-f9YAzNk?si=vT_uuKNPBPj90sM5)
+
 * Bjarne Stroustrup. **The C++ Programming Language.** Pearson 4th Edition 2017
     * Chapter 34. Memory and Resources
 
