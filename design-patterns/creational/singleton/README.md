@@ -45,9 +45,9 @@
 
 ## Examples and Exercises
 
-* Example: [Logger](logger/)
+* Example: [logger](logger/)
 
-
+* Exercise: [display](display-exercise/) [(Model solution:](display/))
 
 
 ## References 
