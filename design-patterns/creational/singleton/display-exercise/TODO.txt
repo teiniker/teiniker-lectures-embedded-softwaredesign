@@ -1,0 +1,20 @@
+Exercise: Singleton - Display
+-------------------------------------------------------------------------------
+
+Implement a Display class as a Singleton (there is only one display in the system). 
+
+A) Singleton
+Implement a class Display as a Singleton in "display.h" and "display.cpp" files. 
+
+
+B) Display 
+Add the following methods to the Display class:
+    void print(const std::string& msg);
+    void print(const int i);
+    void print(const double d);
+    
+    std::vector<std::string>& getBuffer(void);
+All printed data will be converted to strings and stored in a private buffer 
+(std::vector<std::string> buffer).
+
+Tip: Use the test.cpp file to test your implementations.
