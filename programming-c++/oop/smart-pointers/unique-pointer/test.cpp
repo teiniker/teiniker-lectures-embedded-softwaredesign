@@ -31,3 +31,16 @@ TEST(MailTestGroup, UniquePointerTest)
     // Teardown
     // std::unique_ptr automatically cleans up when it goes out of scope.
 }
+
+// Unique Pointer Test for Mail
+TEST(MailTestGroup, UniquePointerTest) 
+{
+    // Setup
+    auto mail = std::make_unique<Mail>("homer.simpson@springfield.com");
+    
+    // Verify
+    EXPECT_EQ("homer.simpson@springfield.com", mail->address());
+
+    // Teardown
+    // std::unique_ptr automatically cleans up when it goes out of scope.
+}

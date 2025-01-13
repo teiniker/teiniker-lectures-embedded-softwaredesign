@@ -1,5 +1,8 @@
 # Creational Patterns
 
+The classic way of object instantiation has some 
+[limitations and disadvantages](replace-constructor/).
+
 Creational patterns are design patterns that focus on the process of 
 object creation. They **abstract the instantiation process** and help 
 make a system independent of how its objects are created, composed, 
