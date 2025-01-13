@@ -23,12 +23,14 @@ The following topics will be covered:
   * Functional Programming
      
 * **Software Architectures** 
-  * Package Design Principles
-  * Architectural Patterns
+ 
+  * [Introduction](architectural-patterns/introduction/README.md)
+  * [Layered Architectures](architectural-patterns/layered/README.md)
+  * [Client-Servcer Architectures](architectural-patterns/client-server/README.md)
+  * [Message-Oriented Architectures](architectural-patterns/message-oriented/README.md)
+  * [Microservices](architectural-patterns/microservices/README.md)
 
 As a development environment, you can use a pre-configured Linux VM image:
 [Virtual Lab](https://drive.google.com/drive/folders/1AzsF4Mvh1HJ8k6OW5W5hQ5CF0HdqA51l)
-
-
 
 *Egon Teiniker, 2020-2025, GPL v3.0*
