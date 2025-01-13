@@ -46,7 +46,9 @@
     factory method lets you easily and selectively extend or change the products that `Creator` produces.
 
 
-## Examples
+## Examples and Exercises
+
+* Example: [mail-factory](mail-factory/)
 
 
 
