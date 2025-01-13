@@ -1,0 +1,22 @@
+Exercise: Builder - ListBuilder
+-------------------------------------------------------------------------------
+
+Given a "ListBuilder" interface, which declares an "item()" method that can be
+used to add items to a list.
+
+Implement two concrete "ListBuilder" classes, one for JSON and one for XML 
+representation of the list. 
+
+A) ListBuilderJson (list-builder-json.h and list-builder-json.cpp files)
+    Extend the "ListBuilder" interface and implement the "item()" method to
+    add items to a list (a private std::vector instance).
+    Implemnt a toJson() method that returns the JSON representation of the 
+    list as a string.
+
+B) ListBuilderXml (list-builder-xml.h and list-builder-xmlcpp files)
+    Extend the "ListBuilder" interface and implement the "item()" method to
+    add items to a list (a private std::vector instance).
+    Implemnt a toXml() method that returns the XML representation of the 
+    list as a string.
+
+Tip: Use the "test.cpp" file to test your implementations.
