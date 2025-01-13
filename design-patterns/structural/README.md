@@ -19,7 +19,7 @@ Overview of some key structural patterns described by the GoF:
   Decorators provide a flexible alternative to subclassing for extending
   functionality.
 
-* [**Adapter**](adapter/README.md):
+* **Adapter**:
   This pattern allows incompatible interfaces to work together. It acts 
   as a bridge between two incompatible interfaces by converting one interface 
   to another that a client expects.
