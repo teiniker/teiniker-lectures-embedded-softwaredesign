@@ -46,9 +46,44 @@ ensuring high cohesion and low coupling within the system.
     organization and responsibility allocation.
 
 
+## Practical Example
+
+A **RESTful API** is a widely used approach for implementing microservices. 
+These services communicate over HTTP/HTTPS using RESTful APIs to achieve loosely 
+coupled, scalable, and flexible systems.
+
+**Representational State Transfer (REST)** is an architectural style for designing 
+distributed systems, particularly web services, and was introduced by **Roy Fielding** 
+in his doctoral dissertation in 2000.
+
+![REST](figures/REST.png)
+
+Concepts of RESTful APIs:
+
+* **Stateless Communication**: 
+    * Each request from a client to a server contains all the information 
+    needed to process the request.
+    * The server does not store client session information.
+
+* **Resource-Based Design**:
+    Resources are identified by **URIs (Uniform Resource Identifiers)**, e.g., `/users`, 
+    `/orders/123`.
+
+* **HTTP Methods**:
+    * **GET**: Retrieve a resource.
+    * **POST**: Create a resource.
+    * **PUT**: Update a resource.
+    * **DELETE**: Remove a resource.
+
+* **Data Representation**: Data is typically exchanged in **JSON** or **XML** format.
+
+
+
 ## References
 
-* Martin Fowler: [**Microservices**](https://martinfowler.com/articles/microservices.html) 
+* Martin Fowler: [Microservices](https://martinfowler.com/articles/microservices.html) 
+
+* Martin Fowler: [Richardson Maturity Model - Steps toward the glory of REST](http://martinfowler.com/articles/richardsonMaturityModel.html)
 
 * Sam Newman. 
     **Building Microservices: Designing Fine-Grained Systems**.

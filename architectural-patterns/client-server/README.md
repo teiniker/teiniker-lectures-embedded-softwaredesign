@@ -54,10 +54,31 @@ while servers manage data processing, storage, and business logic.
         tasks.
 
 
+## Practical Example
+
+The **Hypertext Transfer Protocol (HTTP) protocol** is a classic example of 
+client-server architecture, used widely for web applications. Below is an 
+example based on a web browser (client) interacting with a web server to 
+retrieve and display a webpage.
+
+![HTTP Protocol](figures/HTTPProtocol.png)
+
+* **Client**: Sends HTTP requests and processes server responses.
+
+    _Example_: Web browsers like Google Chrome, Mozilla Firefox, or a REST client.
+
+* **Server**: Listens for incoming client requests, processes them, and sends responses.
+
+    _Example_: Web servers like Apache or Nginx.
+
+
+
 ## References
 
 * Martin Fowler. 
     **Patterns of Enterprise Application Architecture**. 
     Addison Wesley, 2003
+
+* [RFC2616: Hypertext Transfer Protocol -- HTTP/1.1](https://datatracker.ietf.org/doc/html/rfc2616)
 
 *Egon Teiniker, 2020-2025, GPL v3.0*

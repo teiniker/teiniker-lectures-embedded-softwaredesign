@@ -44,11 +44,46 @@ or middleware like **message queues** or **brokers**.
     workflows and business processes through event chaining and orchestration.
 
 
+## Practical Example
+
+**Message Queuing Telemetry Transport (MQTT)** is a lightweight, 
+publish-subscribe messaging protocol widely used in Message-Oriented 
+Architectures, particularly for IoT (Internet of Things) applications. 
+
+It enables communication between devices and systems in a decoupled 
+manner by using a broker to mediate messages. 
+
+![MQTT](figures/MQTT-Publish-Subscribe.png)
+
+* **Publisher**: Sends messages to a specific topic.
+
+    _Example_: A temperature sensor publishes data like `{"temperature": 24.5}` 
+    to a topic such as `home/livingroom/temperature`.
+
+* **Subscriber**: Subscribes to topics to receive messages.
+
+    _Example_: A mobile app subscribes to the `home/livingroom/temperature` 
+    topic to display real-time temperature data.
+
+* **Broker**: Acts as an intermediary between publishers and subscribers.
+    * Receives messages from publishers.
+    * Filters messages by topics.
+    * Distributes messages to subscribers interested in specific topics.
+
+    _Example_: Mosquitto, HiveMQ, or EMQX.
+
+* **Topic**: A hierarchical string that identifies the subject of a message.
+
+    _Example_: `home/livingroom/temperature` or `factory/machine1/status`.
+
+
 
 ## References
 
 * Gregor Hohpe, Bobby Woolf. 
     **Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions**.
     Addison Wesley, 2003
+
+* [MQTT: The Standard for IoT Messaging](https://mqtt.org/)
 
 *Egon Teiniker, 2020-2025, GPL v3.0*

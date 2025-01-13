@@ -13,17 +13,13 @@ The following topics will be covered:
 
 * **Software Design** 
   * [Class Design Principles (SOLID)](solid-principles/README.md)
-  
   * Design Patterns
     * [Introduction](design-patterns/introduction/README.md)
     * [Creational Patterns](design-patterns/creational/)
     * [Structural Patterns](design-patterns/structural/)
     * [Behavioral Patterns](design-patterns/behavioral/)
-
-  * Functional Programming
      
-* **Software Architectures** 
- 
+* **Software Architectures**  
   * [Introduction](architectural-patterns/introduction/README.md)
   * [Layered Architectures](architectural-patterns/layered/README.md)
   * [Client-Servcer Architectures](architectural-patterns/client-server/README.md)
