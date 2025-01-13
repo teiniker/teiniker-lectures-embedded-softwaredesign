@@ -47,7 +47,7 @@
 
 * Example: [logger](logger/)
 
-* Exercise: [display](display-exercise/) [(Model solution:](display/))
+* Exercise: [display](display-exercise/) [(Model Solution](display/))
 
 
 ## References 
