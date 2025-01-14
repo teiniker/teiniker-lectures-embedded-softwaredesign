@@ -1,24 +1,18 @@
-#include <CppUTest/TestHarness.h>
-#include <CppUTest/CommandLineTestRunner.h>
+#include <gtest/gtest.h>
 
-#include <Article.h>
-#include <Box.h>
+#include <article.h>
+#include <box.h>
 
 using namespace std;
-
-TEST_GROUP(CompositeTestGroup)
-{
-};
 
 TEST(CompositeTestGroup, ArticleTest)
 {
     shared_ptr<Article> book(new Article("Design Patterns", 5, 350));
 
     // Verify
-    CHECK_EQUAL("Design Patterns", book->name());
-    CHECK_EQUAL(5*350, book->totalWeight());
+    EXPECT_EQ("Design Patterns", book->name());
+    EXPECT_EQ(5 * 350, book->totalWeight());
 }
-
 
 TEST(CompositeTestGroup, DirectoryTest)
 {
@@ -31,9 +25,8 @@ TEST(CompositeTestGroup, DirectoryTest)
     box->addNode(tee);
         
     // Verify
-    CHECK_EQUAL(100 + 2*250 + 3*80, box->totalWeight());
+    EXPECT_EQ(100 + 2 * 250 + 3 * 80, box->totalWeight());
 }
-
 
 TEST(CompositeTestGroup, OrderTest)
 {
@@ -53,11 +46,5 @@ TEST(CompositeTestGroup, OrderTest)
     box2->addNode(book);
     
     // Verify
-    CHECK_EQUAL(200 + 50 + 100 + 5*80 + 5*10 + 1*250, package->totalWeight());
-}
-
-
-int main(int ac, char** av)
-{
-    return CommandLineTestRunner::RunAllTests(ac, av);
+    EXPECT_EQ(200 + 50 + 100 + 5 * 80 + 5 * 10 + 1 * 250, package->totalWeight());
 }

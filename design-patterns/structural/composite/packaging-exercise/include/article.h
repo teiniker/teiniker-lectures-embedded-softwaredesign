@@ -1,13 +1,13 @@
 #ifndef _ARTICLE_H_
 #define _ARTICLE_H_
 
-#include <Node.h>
+#include <node.h>
 
 class Article : public Node
 {
 	private:
-		std::string name_;
-		int quantity_;
+		std::string _name;
+		int _quantity;
 		
 	public:                
 		Article(const std::string& name, const int quantity, const int weight); 
@@ -15,7 +15,7 @@ class Article : public Node
 		
 		std::string name(void);
 		
-		virtual int totalWeight(void);
+		virtual int totalWeight();
 };
 
 #endif /*ARTICLE_H*/
