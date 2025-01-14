@@ -1,15 +1,15 @@
 #ifndef _DIRECTORY_H_
 #define _DIRECTORY_H_
 
-#include <Node.h>
 #include <string>
 #include <vector>
 #include <memory>
+#include <node.h>
 
 class Box : public Node
 {	
 	private:
-		std::vector<std::shared_ptr<Node>> nodes_;
+		std::vector<std::shared_ptr<Node>> _nodes;
 	
 	public:                
 		Box(const int weight);

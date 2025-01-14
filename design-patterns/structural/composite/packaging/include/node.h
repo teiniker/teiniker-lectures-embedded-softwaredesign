@@ -7,22 +7,23 @@
 class Node
 {
 	private:
-		int weight_;
+		int _weight;
 		
 	public:                
 		virtual ~Node(void) {}
 		
-		Node(const int weight) : weight_{weight} {}
+		Node(const int weight) : _weight{weight} {}
 	
 		int weight(void)
 		{
-			return weight_;
+			return _weight;
 		}
 
 		// Navigation
 		virtual void addNode(std::shared_ptr<Node> node) 
 		{
 			// Default implementation
+			(void)node; // Suppress unused parameter warning
 		};	
 		
 		// Abstract Operations
