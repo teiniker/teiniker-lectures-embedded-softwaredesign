@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(file-service-proxy LANGUAGES CXX)
+project(file-service LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
