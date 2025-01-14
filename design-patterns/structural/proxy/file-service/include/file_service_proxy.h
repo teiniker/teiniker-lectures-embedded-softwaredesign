@@ -13,7 +13,7 @@ class FileServiceProxy : public FileService
 	public:                
 		FileServiceProxy(std::shared_ptr<FileService> service);
 
-		std::string readFile(const std::string& filename) override;
+		std::string readFile(const std::string& filename);
 		//...
 		
 	private:
