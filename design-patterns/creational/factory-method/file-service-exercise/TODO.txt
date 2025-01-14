@@ -1,0 +1,13 @@
+Exercise: FactoryMethod - FileService
+-------------------------------------------------------------------------------
+
+Given a "FileService" interface, and its implementation "FileServiceImpl".
+
+Implement a Factory Method which creates an instance of "FileServiceImpl". 
+
+A) FactoryImpl (factory_impl.h and factory_impl.cpp)
+Implement a FactoryImpl class which implements the "Factoty" interface.
+"createFileService()" returns an instance of "FileServiceImpl".
+Use Smart Pointers to manage the memory.
+
+Tip: Use the "test.cpp" file to test your implementations.

@@ -7,7 +7,7 @@
 class FactoryImpl : public Factory 
 {
     public:
-	virtual std::shared_ptr<FileService> createFileService() override;
+	virtual std::shared_ptr<FileService> createFileService(void);
  };
 
 #endif /*_FACTORY_IMPL_H_ */

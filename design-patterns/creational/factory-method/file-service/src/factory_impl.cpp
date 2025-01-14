@@ -5,7 +5,7 @@
 
 using namespace std;
 
-shared_ptr<FileService> FactoryImpl::createFileService()
+shared_ptr<FileService> FactoryImpl::createFileService(void)
 {
 	// Instantiantion logic
 	shared_ptr<FileService> service(new FileServiceImpl());
