@@ -43,12 +43,12 @@
     an object.
 
 * The additional indirection hay many uses:
-    * A **remote proxy** can hide the fact that an object resides in 
-        a different address space.
-    * A **virtual proxy** can perform optimizations such as creating 
-        an object on demand.
     * Both **protection proxies** and **smart references** allow additional
         housekeeping tasks when an object is accessed.
+    * A **virtual proxy** can perform optimizations such as creating 
+        an object on demand.
+    * A **remote proxy** can hide the fact that an object resides in 
+        a different address space.
 
 
 ## Implementation Issues
