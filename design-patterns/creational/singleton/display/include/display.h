@@ -7,9 +7,18 @@
 
 class Display
 {
+private: 
+    // Display buffer
+    std::vector<std::string> _buffer;
+
+    // Private static member for singleton
+    static std::shared_ptr<Display> instance;
+
+    // Private constructor to prevent direct instantiation
+    Display() {};
+
 public:
     // Singleton
-    static std::shared_ptr<Display> instance;
     static std::shared_ptr<Display> getInstance();
 
     // Operations
@@ -20,11 +29,6 @@ public:
     std::vector<std::string>& getBuffer(void);
 
 private:
-    std::vector<std::string> _buffer;
-
-    // Private constructor to prevent direct instantiation
-    Display() {};
-
     // Singletons should not be cloneable.
     Display(Display &other) = delete;
 
