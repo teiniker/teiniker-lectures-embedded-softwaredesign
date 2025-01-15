@@ -63,8 +63,11 @@
     the private interface is just for subsystem extenders. The facade 
     class is part of the public interface. 
 
-## Examples 
+## Examples and Exercises
 
+* Example: [wrapper-facade](wrapper-facade/)
+
+* Example: [calculator-service](calculator-service)
 
 
 ## Related Patterns
