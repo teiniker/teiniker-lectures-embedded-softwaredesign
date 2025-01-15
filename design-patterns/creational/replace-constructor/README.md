@@ -3,16 +3,18 @@
 Using the **new operator** together with the **constructor** implies some 
 restrictions:
 
-* Since the constructor always bears the name of the class, the instantiation 
+* Since the **constructor** always bears the **name of the class**, the instantiation 
     is always linked to the specific implementation class. The implementation 
     class can only be exchanged by changing the instantiation.
 
-* Constructor overloading only works with different parameter lists.
+* Constructor **overloading** only works with **different parameter lists**.
 
-* Constructors are part of the implementation class and are not inherited. 
+* **Constructors** are part of the implementation class and are **not inherited**. 
     
-* It is also not possible to define a constructor in an interface.
+* It is also **not possible** to define a **constructor in an interface**.
 
+* Using the new operator, we have **no control about the number of instances**
+  created for a given class. 
 
 _Example:_ Complex number class 
 ```C++ 
