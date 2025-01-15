@@ -13,6 +13,8 @@ restrictions:
     
 * It is also **not possible** to define a **constructor in an interface**.
 
+* Using the new operator, we have **no control about the number of instances**
+  created for a given class. 
 
 _Example:_ Complex number class 
 ```C++ 
