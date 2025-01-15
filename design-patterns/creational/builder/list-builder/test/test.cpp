@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
-#include <list-builder-json.h>
-#include <list-builder-xml.h>
+#include <list_builder_json.h>
+#include <list_builder_xml.h>
 
 using namespace std;
 
@@ -35,4 +35,3 @@ TEST(BuilderTest, ListBuilderXml)
     cout << xml << endl;
     ASSERT_EQ("<list><item>one</item><item>two</item><item>three</item></list>", xml);
 }
-

@@ -1,2 +1,2 @@
 # Create a library 
-add_library(builder STATIC list-builder-json.cpp list-builder-xml.cpp) 
+add_library(builder STATIC list_builder_json.cpp list_builder_xml.cpp) 
