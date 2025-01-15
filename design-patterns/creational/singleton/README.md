@@ -39,7 +39,7 @@
 
 * **Subclassing** the Singleton class. The variable that refers to the singleton instance 
     must get initialized with an instance of the subclass.
-    * Code it in the singleton’s getInstance() method.
+    * Code it in the singleton’s `getInstance()` method.
     * Use a registry of singletons.
 
 
