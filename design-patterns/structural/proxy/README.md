@@ -61,11 +61,11 @@
 * If `Proxies` are going to **instantiate `RealSubjects`** (such as in a virtual 
     proxy), then they **have to know the concrete class**.
  
-## Examples
+## Examples and Exercises
 
-* Validation Proxy
-    * Example: [user_table](user_table/)
-     
+* Example: [user_table](user_table/)
+
+* Exercise: [file-service](file-service-exercise/) ([Model Solution](file-service/))
 
 ## References 
 
