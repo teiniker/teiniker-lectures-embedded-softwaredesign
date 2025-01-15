@@ -2,7 +2,7 @@
 #define _FACTORY_IMPL_H_
 
 #include <memory>
-#include <factory.h>
+#include <serializer_factory.h>
 #include <list_serializer.h>
 
 class FactoryImpl : public Factory 

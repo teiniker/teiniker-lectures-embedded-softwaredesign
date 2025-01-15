@@ -1,6 +1,6 @@
 #include <memory>
 
-#include <factory_impl.h>
+#include <serializer_factory_impl.h>
 #include <list_serializer_json.h>
 #include <list_serializer_xml.h>
 

@@ -2,7 +2,7 @@
 #include <memory>
 #include <list_serializer_json.h>
 #include <list_serializer_xml.h>
-#include <factory_impl.h>
+#include <serializer_factory_impl.h>
 
 using namespace std;
 
