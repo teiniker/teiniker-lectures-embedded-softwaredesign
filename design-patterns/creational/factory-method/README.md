@@ -48,8 +48,9 @@
 
 ## Examples and Exercises
 
-* Example: [mail-factory](mail-factory/)
+* Example: [list-serializer](list-serializer/)
 
+* Exercise: [file-service](file-service-exercise/) ([Model Solution](file-service/))
 
 
 ## References 
