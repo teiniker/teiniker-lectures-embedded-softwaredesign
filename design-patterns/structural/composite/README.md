@@ -88,6 +88,9 @@
 
 * Example: [file-system](file-system/)
 
+* Exercise: [packaging](packaging-exercise/) ([Model Solution](packaging/))
+
+
 ## References 
 
 * E. Gamma, R. Helm, R. Johnson, J. Vlissides. **Design Patterns, Elements of Reusable Object-Oriented Software**. Addison-Wesley, 1995
