@@ -7,7 +7,7 @@
 using namespace std;
 
 // Pointer Test for Mail
-TEST(MailTestGroup, PointerTest) 
+TEST(MailTestGroup, Pointer) 
 {
     // Setup
     Mail* mail = new Mail("homer.simpson@springfield.com");
@@ -19,7 +19,7 @@ TEST(MailTestGroup, PointerTest)
     delete mail;
 }
 
-TEST(MailTestGroup, SharedPointerTest) 
+TEST(MailTestGroup, SharedPointerNew) 
 {
     // Setup
     shared_ptr<Mail> mail(new Mail("homer.simpson@springfield.com"));  
@@ -31,7 +31,7 @@ TEST(MailTestGroup, SharedPointerTest)
     // shared_ptr goes out of scope and deletes the Mail instance.
 }
 
-TEST(MailTestGroup, MakeSharedTest) 
+TEST(MailTestGroup, SharedPointerMakeShared) 
 {
     // Setup
     shared_ptr<Mail> mail = make_shared<Mail>("homer.simpson@springfield.com");
@@ -43,7 +43,19 @@ TEST(MailTestGroup, MakeSharedTest)
     // shared_ptr goes out of scope and deletes the Mail instance.
 }
 
-TEST(MailTestGroup, SharedPointerCopyTest) 
+TEST(MailTestGroup, SharedPointerAuto) 
+{
+    // Setup
+    auto mail = make_shared<Mail>("homer.simpson@springfield.com");
+    
+    // Verify
+    EXPECT_EQ("homer.simpson@springfield.com", mail->address());
+
+    // Teardown
+    // shared_ptr goes out of scope and deletes the Mail instance.
+}
+
+TEST(MailTestGroup, SharedPointerCopy) 
 {
     // Setup
     shared_ptr<Mail>  mail = make_shared<Mail>("homer.simpson@springfield.com");   // use_count = 1

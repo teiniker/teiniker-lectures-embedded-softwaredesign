@@ -19,8 +19,19 @@ TEST(MailTestGroup, PointerTest)
     delete mail;
 }
 
-// Unique Pointer Test for Mail
-TEST(MailTestGroup, UniquePointerTest) 
+TEST(MailTestGroup, UniquePointerNew) 
+{
+    // Setup
+    std::unique_ptr<Mail> mail(new Mail("homer.simpson@springfield.com")); 
+    
+    // Verify
+    EXPECT_EQ("homer.simpson@springfield.com", mail->address());
+
+    // Teardown
+    // std::unique_ptr automatically cleans up when it goes out of scope.
+}
+
+TEST(MailTestGroup, UniquePointerMakeUnique) 
 {
     // Setup
     std::unique_ptr<Mail> mail = std::make_unique<Mail>("homer.simpson@springfield.com");
@@ -32,8 +43,7 @@ TEST(MailTestGroup, UniquePointerTest)
     // std::unique_ptr automatically cleans up when it goes out of scope.
 }
 
-// Unique Pointer Test for Mail
-TEST(MailTestGroup, UniquePointerTest) 
+TEST(MailTestGroup, UniquePointerAuto) 
 {
     // Setup
     auto mail = std::make_unique<Mail>("homer.simpson@springfield.com");
