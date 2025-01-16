@@ -1,0 +1,22 @@
+Exercise: Template Method - ListProcessor
+-------------------------------------------------------------------------------
+
+Given a "ListProcessor" declaration (list_processor.h).
+
+A) Template Method (list_processor.cpp)
+    Implement the "process" method using the template method pattern. The 
+    "process" method should iterate over the list and call the "modifyElement()" 
+    method for each item. 
+    The "printElement()" method should be invoked for each item.
+    Also provide an empty default implementation for "printElement()" so that 
+    it can be used as a hook operation.
+
+B) ListToUpper (list_to_upper.h and list_to_upper.cpp)
+    Implement the "modifyElement()" method in a sub-class named "ListToUpper" 
+    that converts the element to uppercase.
+
+C) ListToLower (list_to_lower.h and list_to_lower.cpp)
+    Implement the "modifyElement()" method in a sub-class named "ListToLower" 
+    that converts the element to lowercase.
+    
+Tip: Use the "test.cpp" file to test your implementations.
