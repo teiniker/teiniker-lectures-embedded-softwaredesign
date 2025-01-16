@@ -1,5 +1,4 @@
-#include <BubbleSortDes.h>
-#include <iostream>
+#include <bubble_sort_des.h>
 
 using namespace std;
 

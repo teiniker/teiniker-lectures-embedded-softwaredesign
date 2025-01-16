@@ -1,5 +1,4 @@
-#include <BubbleSortAsc.h>
-#include <iostream>
+#include <bubble_sort_asc.h>
 
 using namespace std;
 

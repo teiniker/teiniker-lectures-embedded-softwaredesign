@@ -1,7 +1,8 @@
-#ifndef _SORTALGORITHM_H_
-#define _SORTALGORITHM_H_
+#ifndef _SORT_ALGORITHM_H_
+#define _SORT_ALGORITHM_H_
 
 #include <memory>
+#include <vector>
 
 class SortAlgorithm
 {
@@ -9,11 +10,11 @@ class SortAlgorithm
 		virtual ~SortAlgorithm(void) {}
 
 		// Template Method
-		void sort(int data[], int len);
+		void sort(std::vector<int>& data);
 		
 	protected:	
 		// Primitve Operations
 		virtual bool compare(int a, int b) = 0;
  };
 
-#endif /*_SORTALGORITHM_H_ */
+#endif /*_SORT_ALGORITHM_H_ */

@@ -1,11 +1,11 @@
-#include <BubbleSortAsc.h>
-#include <iostream>
+#include <bubble_sort_asc.h>
+#include <vector>
 
 using namespace std;
 
-
-void SortAlgorithm::sort(int data[], int len)
+void SortAlgorithm::sort(vector<int>& data)
 {
+	int len = data.size();
 	int tmp = 0;
 	for (int i = 0; i < len; i++)
 	{
