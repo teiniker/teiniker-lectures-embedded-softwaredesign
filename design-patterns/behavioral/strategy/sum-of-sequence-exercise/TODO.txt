@@ -1,0 +1,21 @@
+Exercise: Strategy - Sum of Sequence
+-------------------------------------------------------------------------------
+
+Given a "SumOfSequence" interface, which declares an abstract method called 
+"calculateSum(const int n)".
+
+Implement two concrete implementations of that interface, using the following 
+algorithms:
+    - Loop strategy: Calculate the sum of the sequence using a loop.
+    - Little Gauß strategy: Calculate the sum of the sequence using the 
+      formula: n * (n + 1) / 2.
+
+A) SumOfSequenceLoop (loop.h and loop.cpp)
+    Implement the interface "SumOfSequence" in a sub-class named 
+    "SumOfSequenceLoop" using the loop strategy
+
+B) SumOfSequenceGauss (little_gauss.h and little_gauss.cpp)
+    Implement the interface "SumOfSequence" in a sub-class named 
+    "SumOfSequenceGauss" using the Little Gausß strategy.
+
+Tip: Use the "test.cpp" file to test your implementations.
