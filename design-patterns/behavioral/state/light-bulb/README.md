@@ -73,3 +73,5 @@ TEST(StateTest, testTurnOnAndTurnOn)
     EXPECT_TRUE(onState != nullptr);
 }
 ```
+
+*Egon Teiniker, 2020-2025, GPL v3.0*
