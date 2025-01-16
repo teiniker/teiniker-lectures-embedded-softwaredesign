@@ -1,5 +1,5 @@
-#ifndef _SORTALGORITHM_H_
-#define _SORTALGORITHM_H_
+#ifndef _SORT_ALGORITHM_H_
+#define _SORT_ALGORITHM_H_
 
 #include <memory>
 
@@ -11,4 +11,4 @@ class SortAlgorithm
 		virtual void sort(int data[], int len) = 0;
  };
 
-#endif /*_SORTALGORITHM_H_ */
+#endif /*_SORT_ALGORITHM_H_ */

@@ -1,7 +1,7 @@
-#ifndef _BUBBLESORT_DES_H_
-#define _BUBBLESORT_DES_H_
+#ifndef _BUBBLE_SORT_DES_H_
+#define _BUBBLE_SORT_DES_H_
 
-#include <SortAlgorithm.h>
+#include <sort_algorithm.h>
 
 class BubbleSortDes : public SortAlgorithm
 {
@@ -9,4 +9,4 @@ class BubbleSortDes : public SortAlgorithm
 		void sort(int data[], int len);
  };
 
-#endif /*BUBBLESORT_DES*/
+#endif /*BUBBLE_SORT_DES*/
