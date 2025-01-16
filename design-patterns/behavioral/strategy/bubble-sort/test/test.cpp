@@ -5,16 +5,20 @@
 
 using namespace std;
 
+// Common interface for all algorithms
+shared_ptr<SortAlgorithm> algorithm = nullptr;
+
 TEST(SortTestGroup, AscendingTest)
 {
-    shared_ptr<SortAlgorithm> algorithm(new BubbleSortAsc());
+    // Setup
+    algorithm = make_shared<BubbleSortAsc>();
+    vector<int> data = {7,3,9,1,4,2,8,0,5,6};
 
-    int data[10] = {7,3,9,1,4,2,8,0,5,6};
-
-    algorithm->sort(data, 10);
+    // Exercise
+    algorithm->sort(data);
     
     // Verify
-    int expected[] = {0,1,2,3,4,5,6,7,8,9};
+    vector<int> expected = {0,1,2,3,4,5,6,7,8,9};
     for(int i = 0; i < 10; i++)
     {
         EXPECT_EQ(expected[i], data[i]);
@@ -23,13 +27,15 @@ TEST(SortTestGroup, AscendingTest)
 
 TEST(SortTestGroup, DescendingTest)
 {
-    shared_ptr<SortAlgorithm> algorithm(new BubbleSortDes());
+    // Setup
+    algorithm = make_shared<BubbleSortDes>();
+    vector<int> data = {7,3,9,1,4,2,8,0,5,6};
 
-    int data[10] = {7,3,9,1,4,2,8,0,5,6};
-    algorithm->sort(data, 10);
+    // Exercise
+    algorithm->sort(data);
     
     // Verify
-    int expected[] = {9,8,7,6,5,4,3,2,1,0};
+    vector<int> expected = {9,8,7,6,5,4,3,2,1,0};
     for(int i = 0; i < 10; i++)
     {
         EXPECT_EQ(expected[i], data[i]);

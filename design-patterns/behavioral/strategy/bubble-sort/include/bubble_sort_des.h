@@ -6,7 +6,7 @@
 class BubbleSortDes : public SortAlgorithm
 {
 	public:                
-		void sort(int data[], int len);
+		void sort(std::vector<int>& data);
  };
 
 #endif /*BUBBLE_SORT_DES*/
