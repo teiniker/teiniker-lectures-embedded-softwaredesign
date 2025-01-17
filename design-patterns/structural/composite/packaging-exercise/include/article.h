@@ -3,19 +3,11 @@
 
 #include <node.h>
 
-class Article : public Node
+class Article 
 {
 	private:
-		std::string _name;
-		int _quantity;
 		
 	public:                
-		Article(const std::string& name, const int quantity, const int weight); 
-		virtual ~Article(void) {}
-		
-		std::string name(void);
-		
-		virtual int totalWeight();
 };
 
 #endif /*ARTICLE_H*/

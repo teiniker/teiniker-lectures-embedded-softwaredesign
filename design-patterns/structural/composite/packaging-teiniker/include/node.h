@@ -10,9 +10,10 @@ class Node
 		int _weight;
 		
 	public:                
-		Node(const int weight) : _weight{weight} {}
 		virtual ~Node(void) {}
 		
+		Node(const int weight) : _weight{weight} {}
+	
 		int weight(void)
 		{
 			return _weight;

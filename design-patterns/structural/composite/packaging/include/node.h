@@ -13,7 +13,7 @@ class Node
 		Node(const int weight) : _weight{weight} {}
 		virtual ~Node(void) {}
 		
-		int weight(void)
+		int weight(void) // inline method
 		{
 			return _weight;
 		}
