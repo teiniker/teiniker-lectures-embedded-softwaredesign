@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Template Method
 void ListProcessor::process(vector<std::string>& list)
 {
 	for (size_t i = 0; i < list.size(); ++i)
