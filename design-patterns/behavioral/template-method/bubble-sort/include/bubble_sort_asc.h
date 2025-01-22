@@ -6,7 +6,7 @@
 class BubbleSortAsc : public SortAlgorithm
 {
 	protected:                
-		bool compare(int a, int b);
+		bool compare(int a, int b) override;
  };
 
 #endif /*BUBBLE_SORT_ASC*/

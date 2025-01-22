@@ -1,4 +1,4 @@
-#include <bubble_sort_asc.h>
+#include <sort_algorithm.h>
 #include <vector>
 
 using namespace std;
