@@ -15,8 +15,12 @@ B) ListToUpper (list_to_upper.h and list_to_upper.cpp)
     Implement the "modifyElement()" method in a sub-class named "ListToUpper" 
     that converts the element to uppercase.
 
+    Tip: use transform(str.begin(), str.end(), str.begin(), ::toupper);
+
 C) ListToLower (list_to_lower.h and list_to_lower.cpp)
     Implement the "modifyElement()" method in a sub-class named "ListToLower" 
     that converts the element to lowercase.
     
+    Tip: use transform(str.begin(), str.end(), str.begin(), ::tolower);
+
 Tip: Use the "test.cpp" file to test your implementations.
