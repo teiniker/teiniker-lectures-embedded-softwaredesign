@@ -6,7 +6,7 @@
 class BubbleSortAsc : public SortAlgorithm
 {
 	public:                
-		void sort(std::vector<int>& data);
+		void sort(std::vector<int>& data) override;
  };
 
 #endif /*BUBBLE_SORT_ASC*/
