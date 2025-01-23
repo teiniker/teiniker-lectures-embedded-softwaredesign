@@ -6,7 +6,7 @@ using namespace std;
 
 LightBulb::LightBulb()
 {
-    state(LightBulbOff::getInstance());
+    state(StateOff::getInstance());
 }
 
 // Trigger methods
@@ -35,12 +35,12 @@ void LightBulb::currentOff()
 
 
 // Accessor methods
-void LightBulb::state(std::shared_ptr<LightBulbState> state)
+void LightBulb::state(std::shared_ptr<State> state)
 {
     _state = state;
 }
 
-std::shared_ptr<LightBulbState> LightBulb::state() const
+std::shared_ptr<State> LightBulb::state() const
 {
     return _state;
 }

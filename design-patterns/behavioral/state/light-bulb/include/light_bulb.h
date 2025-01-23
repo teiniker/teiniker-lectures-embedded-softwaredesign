@@ -3,8 +3,8 @@
 #include <memory>
 #include <stdexcept>
 
-#include "light_bulb_state.h"
-#include "light_bulb_off.h"
+#include <state_on.h>
+#include <state_off.h>
 
 class LightBulb
 {
@@ -21,13 +21,13 @@ public:
     void currentOff();
 
     // Accessor methods
-    void state(std::shared_ptr<LightBulbState> state);
-    std::shared_ptr<LightBulbState> state() const;
+    void state(std::shared_ptr<State> state);
+    std::shared_ptr<State> state() const;
 
     bool isCurrentOn() const;
 
 private:
     // We hold a pointer (often a smart pointer) to the current state
-    std::shared_ptr<LightBulbState> _state;
+    std::shared_ptr<State> _state;
     bool _isCurrentOn = false;
 };

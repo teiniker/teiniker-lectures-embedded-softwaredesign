@@ -1,19 +1,19 @@
 #pragma once
 
 #include <memory>
-#include "light_bulb_state.h"
+#include <state.h>
 
-class LightBulbOff : public LightBulbState
+class StateOn : public State
 {
 public:
     // Singleton
-    static std::shared_ptr<LightBulbOff> getInstance();
+    static std::shared_ptr<StateOn> getInstance();
     
-    // Handler methods for state OFF
+    // // Handler methods for state ON
     void handleSwitchOn(LightBulb& bulb) override;
     void handleSwitchOff(LightBulb& bulb) override;
     
 private:
     // Private constructor to enforce singleton usage
-    LightBulbOff() = default;
+    StateOn() = default;
 };

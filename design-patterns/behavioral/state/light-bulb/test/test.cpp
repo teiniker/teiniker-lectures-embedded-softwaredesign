@@ -2,8 +2,8 @@
 #include <memory>
 
 #include <light_bulb.h>
-#include <light_bulb_on.h>
-#include <light_bulb_off.h>
+#include <state_on.h>
+#include <state_off.h>
 
 using namespace std;
 
@@ -21,8 +21,7 @@ protected:
 
 TEST_F(StateTest, testInitialState)
 {
-    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOff>(sm.state());
-    EXPECT_TRUE(state != nullptr);
+    EXPECT_TRUE(dynamic_pointer_cast<StateOff>(sm.state()) != nullptr);
 }
 
 TEST_F(StateTest, testTurnOff)
@@ -31,11 +30,8 @@ TEST_F(StateTest, testTurnOff)
     sm.switchOff();
 
     // Verify
-    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOff>(sm.state());
-    EXPECT_TRUE(state != nullptr);
-
-    bool isCurrentOn = sm.isCurrentOn();
-    EXPECT_FALSE(isCurrentOn);
+    EXPECT_TRUE(dynamic_pointer_cast<StateOff>(sm.state()) != nullptr);
+    EXPECT_FALSE(sm.isCurrentOn());
 }
 
 TEST_F(StateTest, testTurnOn)
@@ -44,11 +40,8 @@ TEST_F(StateTest, testTurnOn)
     sm.switchOn();
 
     // Verify 
-    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state != nullptr);
-
-    bool isCurrentOn = sm.isCurrentOn();
-    EXPECT_TRUE(isCurrentOn);
+    EXPECT_TRUE(dynamic_pointer_cast<StateOn>(sm.state()) != nullptr);
+    EXPECT_TRUE(sm.isCurrentOn());
 }
 
 TEST_F(StateTest, testTurnOnAndTurnOn)
@@ -57,33 +50,30 @@ TEST_F(StateTest, testTurnOnAndTurnOn)
     sm.switchOn();
     
     // Verify
-    shared_ptr<LightBulbState> state1 = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state1 != nullptr);
-    bool isCurrentOn1 = sm.isCurrentOn();
-    EXPECT_TRUE(isCurrentOn1);
+    EXPECT_TRUE(dynamic_pointer_cast<StateOn>(sm.state()) != nullptr);
+    EXPECT_TRUE(sm.isCurrentOn());
         
     // Exercise - Turn on again
     sm.switchOn();
 
     // Verify 
-    shared_ptr<LightBulbState> state2 = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state2 != nullptr);
-
-    bool isCurrentOn2 = sm.isCurrentOn();
-    EXPECT_TRUE(isCurrentOn2);
+    EXPECT_TRUE(dynamic_pointer_cast<StateOn>(sm.state()) != nullptr);
+    EXPECT_TRUE(sm.isCurrentOn());
 }
 
 TEST_F(StateTest, testTurnOnAndTurnOff)
 {
     // Exercise - Turn on
     sm.switchOn();
+
     // Verify
-    shared_ptr<LightBulbState> state1 = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state1 != nullptr);
+    EXPECT_TRUE(dynamic_pointer_cast<StateOn>(sm.state()) != nullptr);
+    EXPECT_TRUE(sm.isCurrentOn());
 
     // Exercise - Turn off
     sm.switchOff();
+
     // Verify
-    shared_ptr<LightBulbState> state2 = dynamic_pointer_cast<LightBulbOff>(sm.state());
-    EXPECT_TRUE(state2 != nullptr);
+    EXPECT_TRUE(dynamic_pointer_cast<StateOff>(sm.state()) != nullptr);
+    EXPECT_FALSE(sm.isCurrentOn());
 }
