@@ -75,11 +75,15 @@ TEST_F(StateTest, testTurnOnAndTurnOn)
 
 TEST_F(StateTest, testTurnOnAndTurnOff)
 {
+    // Exercise - Turn on
     sm.switchOn();
+    // Verify
     shared_ptr<LightBulbState> state1 = dynamic_pointer_cast<LightBulbOn>(sm.state());
     EXPECT_TRUE(state1 != nullptr);
 
+    // Exercise - Turn off
     sm.switchOff();
+    // Verify
     shared_ptr<LightBulbState> state2 = dynamic_pointer_cast<LightBulbOff>(sm.state());
     EXPECT_TRUE(state2 != nullptr);
 }

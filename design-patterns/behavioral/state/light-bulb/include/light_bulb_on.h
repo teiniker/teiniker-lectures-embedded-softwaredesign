@@ -3,9 +3,6 @@
 #include <memory>
 #include "light_bulb_state.h"
 
-// Forward declaration of LightBulb so we can reference it here
-class LightBulb;
-
 class LightBulbOn : public LightBulbState
 {
 public:
