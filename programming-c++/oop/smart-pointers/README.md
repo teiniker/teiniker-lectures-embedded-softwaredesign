@@ -60,6 +60,7 @@ semantics**:
 ## References
 
 * [YouTube: Smart Pointers in C++ (Stop Using new?)](https://youtu.be/x_eHJmdGQ_4?si=6_vY5GiLl6P03rg8)
+* [YouTube: Never free memory yourself! Do this instead (in modern C++)](https://youtu.be/eHcdTytDZrI?si=TiZfRwAl-_XcSnwd)
 
 * [C++ Reference: std::shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr)
 * [C++ Reference: std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr)
