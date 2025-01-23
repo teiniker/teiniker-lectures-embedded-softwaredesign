@@ -142,4 +142,4 @@ a state diagram.
 * Martin Fowler. **UML Distilled**. Addison-Wesley, 3rd Edition, 2004
     * Chapter 10: State Machine Diagrams
 
-*Egon Teiniker, 2016-2023, GPL v3.0*
+*Egon Teiniker, 2020-2025, GPL v3.0*
