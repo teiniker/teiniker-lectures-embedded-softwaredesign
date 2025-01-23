@@ -64,13 +64,13 @@ TEST(StateTest, testTurnOnAndTurnOn)
 {
     // Turn on once
     sm.turnOn();
-    auto onState = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
-    EXPECT_TRUE(onState != nullptr);
+    shared_ptr<LightBulbState> state = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
+    EXPECT_TRUE(state != nullptr);
 
     // Turn on again
     sm.turnOn();
-    onState = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
-    EXPECT_TRUE(onState != nullptr);
+    state = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
+    EXPECT_TRUE(state != nullptr);
 }
 ```
 
