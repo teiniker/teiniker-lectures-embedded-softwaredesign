@@ -11,12 +11,13 @@ shared_ptr<StateBottom> StateBottom::getInstance()
     return instance;
 }
 
+
 // Implement handler methods for StateBottom
 
 void StateBottom::handlePushUpButton(Controller& controller)
 {
-    // Do nothing
-    (void) controller;
+    controller.state(StateUpward::getInstance());
+    controller.motorForward();
 }
 
 void StateBottom::handlePushDownButton(Controller& controller)

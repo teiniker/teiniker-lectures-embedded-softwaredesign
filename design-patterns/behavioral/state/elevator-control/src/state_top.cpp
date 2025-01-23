@@ -21,8 +21,8 @@ void StateTop::handlePushUpButton(Controller& controller)
 
 void StateTop::handlePushDownButton(Controller& controller)
 {
-    // Do nothing
-    (void) controller;
+    controller.state(StateDownward::getInstance());
+    controller.motorBackward();
 }
 
 void StateTop::handleEndSwitchTop(Controller& controller)

@@ -18,71 +18,65 @@ protected:
 
 TEST_F(ControllerTest, testInitialState)
 {
-    shared_ptr<State> state = dynamic_pointer_cast<StateBottom>(sm.state());
-    EXPECT_TRUE(state != nullptr);
+    EXPECT_TRUE(dynamic_pointer_cast<StateBottom>(sm.state()) != nullptr);
 }
 
-/*
-TEST_F(ControllerTest, testTurnOff)
+
+TEST_F(ControllerTest, testUpwardTopDownwardBottom)
 {
-    // Exercise
-    sm.switchOff();
+    // Exercise and Verify
+    sm.pushUpButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateUpward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::FORWARD);
 
-    // Verify
-    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOff>(sm.state());
-    EXPECT_TRUE(state != nullptr);
+    sm.endSwitchTop();
+    EXPECT_TRUE(dynamic_pointer_cast<StateTop>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::STOP);
 
-    bool isCurrentOn = sm.isCurrentOn();
-    EXPECT_FALSE(isCurrentOn);
+    sm.pushDownButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateDownward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::BACKWARD);
+
+    sm.endSwitchBottom();
+    EXPECT_TRUE(dynamic_pointer_cast<StateBottom>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::STOP);
 }
 
-TEST_F(ControllerTest, testTurnOn)
+
+TEST_F(ControllerTest, testUpwardDownwardUpwardTop)
 {
-    // Exercise 
-    sm.switchOn();
+    // Exercise and Verify
+    sm.pushUpButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateUpward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::FORWARD);
 
-    // Verify 
-    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state != nullptr);
+    sm.pushDownButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateDownward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::BACKWARD);
 
-    bool isCurrentOn = sm.isCurrentOn();
-    EXPECT_TRUE(isCurrentOn);
+    sm.pushUpButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateUpward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::FORWARD);
+
+    sm.endSwitchTop();
+    EXPECT_TRUE(dynamic_pointer_cast<StateTop>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::STOP);
+
+
+    // Exercise and Verify starting from TOP State
+    sm.pushDownButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateDownward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::BACKWARD);
+
+    sm.pushUpButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateUpward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::FORWARD);
+
+    sm.pushDownButton();
+    EXPECT_TRUE(dynamic_pointer_cast<StateDownward>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::BACKWARD);
+
+    sm.endSwitchBottom();
+    EXPECT_TRUE(dynamic_pointer_cast<StateBottom>(sm.state()) != nullptr);
+    EXPECT_EQ(sm.motor(), MotorDirection::STOP);
 }
-
-TEST_F(ControllerTest, testTurnOnAndTurnOn)
-{
-    // Exercise - Turn on once
-    sm.switchOn();
-    
-    // Verify
-    shared_ptr<LightBulbState> state1 = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state1 != nullptr);
-    bool isCurrentOn1 = sm.isCurrentOn();
-    EXPECT_TRUE(isCurrentOn1);
-        
-    // Exercise - Turn on again
-    sm.switchOn();
-
-    // Verify 
-    shared_ptr<LightBulbState> state2 = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state2 != nullptr);
-
-    bool isCurrentOn2 = sm.isCurrentOn();
-    EXPECT_TRUE(isCurrentOn2);
-}
-
-TEST_F(ControllerTest, testTurnOnAndTurnOff)
-{
-    // Exercise - Turn on
-    sm.switchOn();
-    // Verify
-    shared_ptr<LightBulbState> state1 = dynamic_pointer_cast<LightBulbOn>(sm.state());
-    EXPECT_TRUE(state1 != nullptr);
-
-    // Exercise - Turn off
-    sm.switchOff();
-    // Verify
-    shared_ptr<LightBulbState> state2 = dynamic_pointer_cast<LightBulbOff>(sm.state());
-    EXPECT_TRUE(state2 != nullptr);
-}
-*/
