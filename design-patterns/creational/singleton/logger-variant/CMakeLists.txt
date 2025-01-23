@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(logger LANGUAGES CXX)
+project(logger-variant LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
