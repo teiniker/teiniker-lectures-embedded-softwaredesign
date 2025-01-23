@@ -6,7 +6,6 @@
 #include "light_bulb_state.h"
 #include "light_bulb_off.h"
 
-// The C++ "LightBulb" class mirroring your Java version
 class LightBulb
 {
 public:
