@@ -47,23 +47,21 @@ UML 2 defines two kinds of state machines:
     behavior of a classifier**. States in behavioral state machines can **specify one 
     or more activities** that execute when the state is entered.
 
+    _Example_: Behavioral State Machine (Light Bulb)
+    
+    ![Behavioral State Machine](figures/SM-BehavioralSM.png)
+
+
 * **Protocol state machines** use states, transitions, and triggers to **define the 
     protocol of a classifier**. Protocol state machines say nothing about the 
     implementation of the behavior – they only define how the behavior appears to 
     an external client.
     States in protocol state machines **can’t specify activities**.  
 
-_Example_: Behavioral State Machine (Light Bulb)
+    _Example_: Protocol State Machine (Connection)
+    
+    ![Protocol State Machine](figures/PSM-Connection.png)
 
-![Behavioral State Machine](figures/SM-BehavioralSM.png)
-
-_Example_: Protocol State Machine (Light Bulb)
-
-![Protocol State Machine](figures/SM-ProtocolSM.png)
-
-_Example_: Protocol State Machine (Connection)
-
-![Protocol State Machine](figures/PSM-Connection.png)
 
 ## Internal Activities
 States can react to events without transition, using internal activities: 
