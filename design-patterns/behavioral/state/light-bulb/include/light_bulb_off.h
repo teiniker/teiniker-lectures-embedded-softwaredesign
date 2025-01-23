@@ -9,12 +9,12 @@ class LightBulb;
 class LightBulbOff : public LightBulbState
 {
 public:
-    // Static "singleton-like" instance accessor (similar to LightBulbOff.INSTANCE in Java)
+    // Singleton
     static std::shared_ptr<LightBulbOff> getInstance();
     
-    // Implement abstract methods
-    void handleTurnOn(LightBulb& bulb) override;
-    void handleTurnOff(LightBulb& bulb) override;
+    // Handler methods for state OFF
+    void handleSwitchOn(LightBulb& bulb) override;
+    void handleSwitchOff(LightBulb& bulb) override;
     
 private:
     // Private constructor to enforce singleton usage

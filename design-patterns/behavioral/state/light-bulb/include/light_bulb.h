@@ -14,15 +14,21 @@ public:
     LightBulb();
 
     // Trigger methods
-    void turnOn();
+    void switchOn();
+    void switchOff();
 
-    void turnOff();
+    // Activity methods
+    void currentOn();
+    void currentOff();
 
-    // Protect the setter/getter as in Java
-    void setState(std::shared_ptr<LightBulbState> state);
-    std::shared_ptr<LightBulbState> getState() const;
+    // Accessor methods
+    void state(std::shared_ptr<LightBulbState> state);
+    std::shared_ptr<LightBulbState> state() const;
+
+    bool isCurrentOn() const;
 
 private:
     // We hold a pointer (often a smart pointer) to the current state
     std::shared_ptr<LightBulbState> _state;
+    bool _isCurrentOn = false;
 };

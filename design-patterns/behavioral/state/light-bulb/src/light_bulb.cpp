@@ -2,31 +2,50 @@
 
 using namespace std;
 
-// Constructor sets initial state to "Off"
+// Constructor sets initial state to OFF
+
 LightBulb::LightBulb()
 {
-    setState(LightBulbOff::getInstance());
+    state(LightBulbOff::getInstance());
 }
 
 // Trigger methods
-void LightBulb::turnOn()
+
+void LightBulb::switchOn()
 {
-    _state->handleTurnOn(*this);
+    _state->handleSwitchOn(*this);
 }
 
-void LightBulb::turnOff()
+void LightBulb::switchOff()
 {
-    _state->handleTurnOff(*this);
+    _state->handleSwitchOff(*this);
+}
+
+// Activity methods
+
+void LightBulb::currentOn()
+{
+    _isCurrentOn = true;
+}
+
+void LightBulb::currentOff()
+{
+    _isCurrentOn = false;
 }
 
 
-// Protect the setter/getter as in Java
-void LightBulb::setState(std::shared_ptr<LightBulbState> state)
+// Accessor methods
+void LightBulb::state(std::shared_ptr<LightBulbState> state)
 {
     _state = state;
 }
 
-std::shared_ptr<LightBulbState> LightBulb::getState() const
+std::shared_ptr<LightBulbState> LightBulb::state() const
 {
     return _state;
+}
+
+bool LightBulb::isCurrentOn() const
+{
+    return _isCurrentOn;
 }

@@ -12,16 +12,14 @@ shared_ptr<LightBulbOn> LightBulbOn::getInstance()
 }
 
 // Implement abstract methods
-void LightBulbOn::handleTurnOn(LightBulb& bulb)
+void LightBulbOn::handleSwitchOn(LightBulb& bulb)
 {
     // do nothing
     (void) bulb;
 }
 
-void LightBulbOn::handleTurnOff(LightBulb& bulb) 
+void LightBulbOn::handleSwitchOff(LightBulb& bulb) 
 {
-    cout << "Turning the light off." << endl;
-    bulb.setState(LightBulbOff::getInstance());
+    bulb.currentOff();
+    bulb.state(LightBulbOff::getInstance());
 }
-
-    

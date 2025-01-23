@@ -5,6 +5,8 @@
 #include <light_bulb_on.h>
 #include <light_bulb_off.h>
 
+using namespace std;
+
 class StateTest : public ::testing::Test
 {
 protected:
@@ -19,44 +21,65 @@ protected:
 
 TEST_F(StateTest, testInitialState)
 {
-    auto offState = std::dynamic_pointer_cast<LightBulbOff>(sm.getState());
-    EXPECT_TRUE(offState != nullptr);
+    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOff>(sm.state());
+    EXPECT_TRUE(state != nullptr);
 }
 
 TEST_F(StateTest, testTurnOff)
 {
-    sm.turnOff();
-    auto offState = std::dynamic_pointer_cast<LightBulbOff>(sm.getState());
-    EXPECT_TRUE(offState != nullptr);
+    // Exercise
+    sm.switchOff();
+
+    // Verify
+    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOff>(sm.state());
+    EXPECT_TRUE(state != nullptr);
+
+    bool isCurrentOn = sm.isCurrentOn();
+    EXPECT_FALSE(isCurrentOn);
 }
 
 TEST_F(StateTest, testTurnOn)
 {
-    sm.turnOn();
-    auto onState = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
-    EXPECT_TRUE(onState != nullptr);
+    // Exercise 
+    sm.switchOn();
+
+    // Verify 
+    shared_ptr<LightBulbState> state = dynamic_pointer_cast<LightBulbOn>(sm.state());
+    EXPECT_TRUE(state != nullptr);
+
+    bool isCurrentOn = sm.isCurrentOn();
+    EXPECT_TRUE(isCurrentOn);
 }
 
 TEST_F(StateTest, testTurnOnAndTurnOn)
 {
-    // Turn on once
-    sm.turnOn();
-    auto onState = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
-    EXPECT_TRUE(onState != nullptr);
+    // Exercise - Turn on once
+    sm.switchOn();
+    
+    // Verify
+    shared_ptr<LightBulbState> state1 = dynamic_pointer_cast<LightBulbOn>(sm.state());
+    EXPECT_TRUE(state1 != nullptr);
+    bool isCurrentOn1 = sm.isCurrentOn();
+    EXPECT_TRUE(isCurrentOn1);
+        
+    // Exercise - Turn on again
+    sm.switchOn();
 
-    // Turn on again
-    sm.turnOn();
-    onState = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
-    EXPECT_TRUE(onState != nullptr);
+    // Verify 
+    shared_ptr<LightBulbState> state2 = dynamic_pointer_cast<LightBulbOn>(sm.state());
+    EXPECT_TRUE(state2 != nullptr);
+
+    bool isCurrentOn2 = sm.isCurrentOn();
+    EXPECT_TRUE(isCurrentOn2);
 }
 
 TEST_F(StateTest, testTurnOnAndTurnOff)
 {
-    sm.turnOn();
-    auto onState = std::dynamic_pointer_cast<LightBulbOn>(sm.getState());
-    EXPECT_TRUE(onState != nullptr);
+    sm.switchOn();
+    shared_ptr<LightBulbState> state1 = dynamic_pointer_cast<LightBulbOn>(sm.state());
+    EXPECT_TRUE(state1 != nullptr);
 
-    sm.turnOff();
-    auto offState = std::dynamic_pointer_cast<LightBulbOff>(sm.getState());
-    EXPECT_TRUE(offState != nullptr);
+    sm.switchOff();
+    shared_ptr<LightBulbState> state2 = dynamic_pointer_cast<LightBulbOff>(sm.state());
+    EXPECT_TRUE(state2 != nullptr);
 }

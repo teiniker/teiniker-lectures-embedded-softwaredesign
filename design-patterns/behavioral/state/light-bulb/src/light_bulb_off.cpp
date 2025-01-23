@@ -5,20 +5,22 @@
 
 using namespace std;
 
+// Singleton 
 shared_ptr<LightBulbOff> LightBulbOff::getInstance()
 {
     static shared_ptr<LightBulbOff> instance(new LightBulbOff());
     return instance;
 }
 
-// Implement abstract methods
-void LightBulbOff::handleTurnOn(LightBulb& bulb)
+// Implement handler methods for state OFF
+
+void LightBulbOff::handleSwitchOn(LightBulb& bulb)
 {
-    cout << "Turning the light on." << endl;
-    bulb.setState(LightBulbOn::getInstance());
+    bulb.currentOn();
+    bulb.state(LightBulbOn::getInstance());
 }
 
-void LightBulbOff::handleTurnOff(LightBulb& bulb) 
+void LightBulbOff::handleSwitchOff(LightBulb& bulb) 
 {
     // do nothing
     (void) bulb;
