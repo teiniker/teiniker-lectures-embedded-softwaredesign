@@ -1,0 +1,31 @@
+Exercise: State - Elevator Control
+-------------------------------------------------------------------------------
+
+Given the State Machine and Class Diagram of an elevator control.
+
+A) Controller (controller.cpp)
+    Implement the declarations specified in the given "controller.h" file.
+    This "Controller" class will be responsible for controlling the elevator
+    by delegating the trigger events to the right state object.
+
+B) StateBottom (state_bottom.cpp)
+    Implement the "StateBottom" class as a concrete State.
+    Make sure that the state transitions are implemented as shown in the State 
+    Machine diagram.
+
+C) StateUpward (state_upward.cpp)
+    Implement the "StateUpward" class as a concrete State.
+    Make sure that the state transitions are implemented as shown in the State 
+    Machine diagram.
+
+D) StateTop (state_top.cpp)
+    Implement the "StateTop" class as a concrete State.
+    Make sure that the state transitions are implemented as shown in the State 
+    Machine diagram.
+
+E) StateDownward (state_dowinward.cpp)
+    Implement the "StateDownward" class as a concrete State.
+    Make sure that the state transitions are implemented as shown in the State 
+    Machine diagram.
+
+Tip: Use the "test.cpp" file to test your implementations.
