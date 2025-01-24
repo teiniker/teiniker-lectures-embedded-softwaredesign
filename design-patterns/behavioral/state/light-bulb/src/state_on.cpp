@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Singleton 
 shared_ptr<StateOn> StateOn::getInstance()
 {
     static shared_ptr<StateOn> instance(new StateOn());
