@@ -75,6 +75,8 @@ complexity and improve maintainability.
         * Wireless communication modules (e.g., Wi-Fi, Zigbee).
         * APIs for mobile app or cloud integration.
 
+
+
 ## References 
 
 * Buschmann, Meunier, Rohnert, Sommerlad, Stal. 
