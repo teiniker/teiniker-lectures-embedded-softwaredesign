@@ -1,7 +1,8 @@
 # Software Design an Architectures
 
-This project collects examples, exercises and model solutions needed to 
-understand software design and architectures for embedded systems written in C++.
+This repository collects documentation, examples, exercises and model solutions 
+needed to understand software design and architectures for embedded systems 
+written in C++.
 
 The following topics will be covered:
 
