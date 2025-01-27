@@ -6,18 +6,22 @@ understand software design and architectures for embedded systems written in C++
 The following topics will be covered:
 
 * **Introduction**
+  * [Introduction to Software Design and Architectures](introduction/README.md)
+
+* **Configuration Management**
   * [Linux Environment](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux/README.md)    
   * [Configuration Management](configuration-management/README.md)
   * [C++ Programming](programming-c++/) 
   * [Software Modeling](modeling/)
 
 * **Software Design** 
-  * [Class Design Principles (SOLID)](solid-principles/README.md)
   * Design Patterns
     * [Introduction](design-patterns/introduction/README.md)
     * [Creational Patterns](design-patterns/creational/)
     * [Structural Patterns](design-patterns/structural/)
     * [Behavioral Patterns](design-patterns/behavioral/)
+    
+  * [Class Design Principles (SOLID)](solid-principles/README.md)
      
 * **Software Architectures**  
   * [Introduction](architectures/introduction/README.md)
