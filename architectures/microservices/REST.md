@@ -8,7 +8,7 @@ These architectural principles are defined as:
 * A uniform, constrained interface
 * Representation-oriented
 * Communicate statelessly
-* **Hypermedia As The Engine Of Application State (HATEOAS)**
+* Hypermedia As The Engine Of Application State (HATEOAS)
 
 ## Addressability
 Addressability is the idea that every object and resource in our system is 
