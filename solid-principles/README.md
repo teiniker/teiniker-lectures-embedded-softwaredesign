@@ -2,7 +2,6 @@
 
 ## Introduction
 
-
 The **UML diagrams** representing the source code are additive to the design 
 but are not the design itself. We should not see UML diagrams separate from the code.
 
@@ -47,6 +46,9 @@ Advantages of object composition:
 ## Single-Responsibility Principle (SRP)
 
 > A class should have **only one reason to change**.
+
+In simpler terms, each class should be focused on doing **one thing** well, 
+so that if that "one thing" changes, only the corresponding class is affected.
 
 When the requirements change, that change will be manifest through a change in 
 responsibility amongst the classes. 
@@ -139,10 +141,14 @@ in situations where you know it shouldn't be modified.
 
 ## Dependency-Inversion Principle (DIP)
 
-> **High-level modules should not depend on low-level modules**. 
-> Both should depend on abstractions.
-> **Abstractions should not depend on (implementation) details**. 
-> Details should depend on abstractions.
+> The Dependency Inversion Principle tells us tat the most flexible systems are those
+> in which source code dependencies refer only to abstractions, not to concretions.
+>
+> * **High-level modules should not depend on low-level modules**. 
+>   Both should depend on abstractions.
+>
+> * **Abstractions should not depend on (implementation) details**. 
+>   Details should depend on abstractions.
 
 In simpler terms, the principle encourages us to **depend on interfaces 
 (or abstractions) rather than concrete implementations**.
@@ -202,6 +208,10 @@ This principle is sometimes known as the **Hollywood principle**:
 
 
 ## References
+
+* [YouTube (CppCon 2020): Breaking Dependencies: The SOLID Principles - Klaus Iglberger](https://youtu.be/Ntraj80qN2k?si=hKMDHEkL7mnVPY5j)
+
+* Robert C. Martin. **Clean Architecture – A Craftsman’s Guide to Software Structure and Design**. Prentice Hall, 2018
 
 * Robert C. Martin. **Agile Software Development – Principles, Patterns, and Practices**. Prentice Hall, 2003
 
