@@ -141,13 +141,40 @@ in situations where you know it shouldn't be modified.
 
 > **High-level modules should not depend on low-level modules**. 
 > Both should depend on abstractions.
-
 > **Abstractions should not depend on (implementation) details**. 
 > Details should depend on abstractions.
 
-The dependency structure is **inverted** with respect to the dependency structure 
-that normally results from traditional procedural methods (service interfaces are 
-often owned by their clients).
+In simpler terms, the principle encourages us to **depend on interfaces 
+(or abstractions) rather than concrete implementations**.
+
+* **High-level modules**: These are classes or components that contain the business 
+    logic or application rules (often the “brains” of the system).
+
+* **Low-level modules**: These are classes or components that handle more detailed 
+    or technical concerns (like database access, file systems, network communication, 
+    UI, etc.).
+
+Traditionally, we might find a high-level module directly creating or using a 
+low-level module. For example, a business logic class might directly instantiate 
+a specific network class to do its work. 
+This setup creates a **tight coupling** between the high-level module and the 
+low-level module.
+
+**Dependency Inversion Principle** suggests that both the high-level and low-level 
+modules should depend on an abstraction, not on each other:
+
+* Create an Interface or Abstract Class: Define an interface or abstract class, which 
+    describes the operations needed by the high-level module.
+
+* High-Level Module Depends on the Interface: The high-level module is designed to use 
+    instances that implement the interface. It does not know or care about the exact 
+    details of how the operations are performed.
+
+* Low-Level Module Implements the Interface: The concrete classes implement the interface. 
+    These details are “plugged in” wherever needed, often via Dependency Injection or a factory.
+
+By introducing an abstraction layer, the high-level module no longer depends on 
+the specifics of the low-level module. 
 
 Since the abstractions and details are all isolated from each other, the code is 
 much easier to maintain.
