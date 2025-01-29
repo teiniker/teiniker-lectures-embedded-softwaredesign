@@ -232,6 +232,30 @@ The final decision should be based on the specific needs and constraints of your
 embedded system project.
 
 
+## Setup Mosquitto Server (Linux)
+
+```Bash
+$ sudo apt update
+$ sudo apt install mosquitto mosquitto-clients
+```
+
+```Bash
+$ sudo systemctl status mosquitto
+mosquitto.service - Mosquitto MQTT Broker
+     Loaded: loaded (/lib/systemd/system/mosquitto.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2024-01-03 17:33:14 CET; 18s ago
+```
+
+Don't start Mosquitto MQTT Message Broker automatically when the Linux boots
+```Bash
+$ sudo systemctl disable mosquitto
+// $ sudo systemctl enable mosquitto     // default setting 
+
+$ sudo systemctl start mosquitto
+$ sudo systemctl stop mosquitto
+```
+The Mosquitto server will work with **TCP port 1883**.
+
 
 ## References
 * Gaston C. Hillar.
