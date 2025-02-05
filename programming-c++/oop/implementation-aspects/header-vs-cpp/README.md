@@ -13,13 +13,13 @@ improving readability, and supporting modular development.
    navigate code.
    * It allows multiple developers to work on different parts of the project simultaneously without conflicts.
 
-2. **Reusability and Encapsulation:**
+* **Reusability and Encapsulation:**
    * Headers serve as interfaces, making it clear what functionality a 
    class provides without exposing implementation details.
    * This is particularly useful for library development, where only the 
    headers are exposed to users, while the implementation remains private.
 
-3. **Compilation Time Optimization:**
+* **Compilation Time Optimization:**
    * Changes to a `.cpp` file only require recompiling that file and relinking, 
    whereas changes in a header file can trigger recompilation of all files that 
    include it.
