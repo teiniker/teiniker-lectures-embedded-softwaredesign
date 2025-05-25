@@ -22,7 +22,7 @@ The following topics will be covered:
   * [Introduction](architectures/introduction/README.md)
   * [Layered Architectures](architectures/layered/README.md)
   * [Client-Servcer Architectures](architectures/client-server/README.md)
-  * [Message-Oriented Architectures](architectures/README.md)
+  * [Message-Oriented Architectures](architectures/message-oriented/README.md)
   * [Microservices](architectures/microservices/README.md)
 
 
