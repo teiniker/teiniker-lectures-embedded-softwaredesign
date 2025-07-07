@@ -1,4 +1,4 @@
-# Software Design an Architectures
+# Software Design and Architectures
 
 This repository collects documentation, examples, exercises and model solutions 
 needed to understand software design and architectures for embedded systems 
