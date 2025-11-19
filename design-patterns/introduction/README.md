@@ -82,4 +82,4 @@ facilitate **communication among developers**.
 * [Refactoring Guru: Design Patterns](https://refactoring.guru/design-patterns)
 * [Refactoring Guru: The Catalog of C++ Examples](https://refactoring.guru/design-patterns/cpp)
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*

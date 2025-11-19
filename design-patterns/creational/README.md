@@ -16,19 +16,19 @@ created, and how they are configured.
 
 Overview of the key creational patterns described by the GoF:
 
-* [**Singleton**](singleton/README.md): 
+* [**Singleton**](singleton/): 
   This pattern ensures that a class has only one instance and provides a global 
   point of access to it. It is useful when exactly one object is needed to 
   coordinate actions across a system.
 
-* [**Builder**](builder/README.md): 
+* [**Builder**](builder/): 
   This pattern separates the construction of a complex object from its 
   representation, allowing the same construction process to create different
   representations. 
   It is particularly useful for creating objects with many optional parameters 
   or parts.
 
-* [**Factory Method**](factory-method/README.md): 
+* [**Factory Method**](factory-method/): 
   This pattern defines an interface for creating an object but lets subclasses 
   alter the type of objects that will be created. It encapsulates the object 
   creation process and delegates it to subclasses.
@@ -42,6 +42,11 @@ Overview of the key creational patterns described by the GoF:
   This pattern involves creating new objects by copying an existing object, 
   known as the prototype. It is used when the cost of creating a new instance 
   of a class is prohibitively expensive or complex.
+
+* [**Dependency Injection**](dependency-injection/): 
+  Dependency Injection (DI) is a pattern where an object’s required components 
+  are provided to it from the outside rather than created internally, making 
+  the code more flexible, testable, and decoupled.
 
 Each of these creational patterns addresses a specific problem related to 
 object creation, providing flexibility and control over the instantiation 
@@ -59,4 +64,4 @@ in a consistent manner.
 
 * Joshua Kerievsky. **Refactoring to Patterns**. Addison-Wesley, 2005
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2024-2025, GPL v3.0*
