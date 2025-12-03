@@ -211,6 +211,8 @@ This principle is sometimes known as the **Hollywood principle**:
 
 * [YouTube (CppCon 2020): Breaking Dependencies: The SOLID Principles - Klaus Iglberger](https://youtu.be/Ntraj80qN2k?si=hKMDHEkL7mnVPY5j)
 
+* [A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)
+
 * Robert C. Martin. **Clean Architecture – A Craftsman’s Guide to Software Structure and Design**. Prentice Hall, 2018
 
 * Robert C. Martin. **Agile Software Development – Principles, Patterns, and Practices**. Prentice Hall, 2003
