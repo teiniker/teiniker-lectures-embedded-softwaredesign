@@ -3,6 +3,7 @@
 
 #include <string>
 #include <cstdint>
+#include <memory>
 
 #include <uart.h>
 #include <uart_service.h>
@@ -11,11 +12,11 @@
 class UartAdapter : public UartService
 {
 	private :
-		UartDevice *_uartDevice;
+		std::shared_ptr<UartDevice> _uartDevice;
 
 	public:      
-		UartAdapter(void);          
-		~UartAdapter(void);
+		UartAdapter(std::shared_ptr<UartDevice> uartDevice);	// Constructor Injection
+		~UartAdapter(void) = default;
 
 		void init(const BaudRate baudRate, DataBits dataBits, Parity parity, StopBits stopBits);
 		void send(const std::string &data);

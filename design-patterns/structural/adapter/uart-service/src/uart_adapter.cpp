@@ -5,14 +5,9 @@
 
 using namespace std;
 
-UartAdapter::UartAdapter(void)
+UartAdapter::UartAdapter(std::shared_ptr<UartDevice> uartDevice)
+	: _uartDevice(uartDevice)
 {
-	_uartDevice = new UartDevice();
-}
-
-UartAdapter::~UartAdapter(void)
-{
-	delete _uartDevice;
 }
 
 void UartAdapter::init(const BaudRate baudRate, DataBits dataBits, Parity parity, StopBits stopBits)
