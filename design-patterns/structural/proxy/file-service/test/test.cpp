@@ -10,21 +10,19 @@ using namespace std;
 
 const string FILE_NAME = "../test/test.data";
 
-class ProxyTest : public ::testing::Test 
-{
-protected:
-    shared_ptr<FileService> impl;
-    shared_ptr<FileService> service;
 
-    void SetUp() override 
-    {
-        impl = make_shared<FileServiceImpl>();
-        service = make_shared<FileServiceProxy>(impl);
-    }
-};
-
-TEST_F(ProxyTest, FileServiceTest) 
+// Assembler function to set up dependencies
+shared_ptr<FileService> assemble(void)
 {
+    auto  impl = make_shared<FileServiceImpl>();
+    return make_shared<FileServiceProxy>(impl);
+}
+
+TEST(FileServiceTest, FileServiceTest) 
+{
+    // Setup using Dependency Injection
+    shared_ptr<FileService> service = assemble();
+
     // Exercise
     string data = service->readFile(FILE_NAME);
     
@@ -34,8 +32,11 @@ TEST_F(ProxyTest, FileServiceTest)
 }
 
 
-TEST_F(ProxyTest, InvalidFileExtension) 
+TEST(ProxyTest, InvalidFileExtension) 
 {
+    // Setup using Dependency Injection
+    shared_ptr<FileService> service = assemble();
+
     // Exercise + Verify
     EXPECT_THROW(service->readFile("data.txt"), invalid_argument);
 }

@@ -10,7 +10,7 @@ class ProxyTestGroup : public ::testing::Test
 protected:
     void SetUp() override
     {
-        // [:Test] --->[:UserTableProxy]--->[:UserTableImpl]
+        // Dependency Injection: [:Test] --->[:UserTableProxy]--->[:UserTableImpl]
         impl = make_shared<UserTableImpl>();
         proxy = make_shared<UserTableProxy>(impl);
     }
