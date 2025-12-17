@@ -2,16 +2,16 @@
 #include <memory>
 #include <stdexcept>
 
-#include <file_service_proxy.h>
+#include <file_service_decorator.h>
 
 using namespace std;
 
-FileServiceProxy::FileServiceProxy(shared_ptr<FileService> service)
+FileServiceDecorator::FileServiceDecorator(shared_ptr<FileService> service)
 	: service_{service}
 {
 }
 
-string FileServiceProxy::readFile(string& filename)
+string FileServiceDecorator::readFile(string& filename)
 {
 	// Pre-Processing
 	filename += ".data";

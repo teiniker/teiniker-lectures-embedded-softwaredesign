@@ -4,7 +4,7 @@
 
 #include <file_service.h>
 #include <file_service_impl.h>
-#include <file_service_proxy.h>
+#include <file_service_decorator.h>
 
 using namespace std;
 
@@ -13,7 +13,7 @@ using namespace std;
 shared_ptr<FileService> assemble(void)
 {
     auto  impl = make_shared<FileServiceImpl>();
-    return make_shared<FileServiceProxy>(impl);
+    return make_shared<FileServiceDecorator>(impl);
 }
 
 TEST(FileServiceTest, FileServiceTest) 
