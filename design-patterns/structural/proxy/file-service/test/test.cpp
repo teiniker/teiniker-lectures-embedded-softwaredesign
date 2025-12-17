@@ -8,35 +8,35 @@
 
 using namespace std;
 
+const string FILE_NAME = "../test/test.data";
 
-// Assembler function to set up dependencies
-shared_ptr<FileService> assemble(void)
+class ProxyTest : public ::testing::Test 
 {
-    auto  impl = make_shared<FileServiceImpl>();
-    return make_shared<FileServiceProxy>(impl);
-}
+protected:
+    shared_ptr<FileService> impl;
+    shared_ptr<FileService> service;
 
-TEST(FileServiceTest, FileServiceTest) 
+    void SetUp() override 
+    {
+        impl = make_shared<FileServiceImpl>();
+        service = make_shared<FileServiceProxy>(impl);
+    }
+};
+
+TEST_F(ProxyTest, FileServiceTest) 
 {
-    // Setup using Dependency Injection
-    shared_ptr<FileService> service = assemble();
-    string filename = "../test/test";
-    
     // Exercise
-    string data = service->readFile(filename);
+    string data = service->readFile(FILE_NAME);
     
     // Verify
     EXPECT_EQ(29, data.size());
     EXPECT_EQ("123,0,4567,99,66,1,777777,888", data);
 }
 
-TEST(FileServiceTest, FileNotFoundTest) 
+
+TEST_F(ProxyTest, InvalidFileExtension) 
 {
-    // Setup using Dependency Injection
-    shared_ptr<FileService> service = assemble();
-    string filename = "non_existing_file";
-    
-    // Exercise & Verify
-    EXPECT_THROW(service->readFile(filename), FileNotFound);
+    // Exercise + Verify
+    EXPECT_THROW(service->readFile("data.txt"), invalid_argument);
 }
 

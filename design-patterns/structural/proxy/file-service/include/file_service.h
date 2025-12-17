@@ -22,7 +22,7 @@ class FileService
 	public:                
 		virtual ~FileService(void) {}
 		
-		virtual std::string readFile(std::string& filename) = 0;
+		virtual std::string readFile(const std::string& filename) = 0;
 		//...
  };
 

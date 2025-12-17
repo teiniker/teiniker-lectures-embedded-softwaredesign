@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string FileServiceImpl::readFile(const string& filename)
+string FileServiceImpl::readFile(string& filename)
 {
 	ifstream file(filename.c_str());	
 	if(!file)

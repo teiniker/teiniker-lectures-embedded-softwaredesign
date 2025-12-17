@@ -1,0 +1,17 @@
+Exercise: Filename Decorator - FileService   
+-------------------------------------------------------------------------------
+
+Given a "FileService" interface, and its implementation "FileServiceImpl".
+
+Add a decorator class (compine abstract and concrete Decorator in one class) 
+to add "*.data" to the filename. 
+
+A) FileServiceDecorator
+Write a class called "FileServiceDecorator" (file_service_decorator.h, 
+file_service_decorator.cpp) that implements the "FileService" interface.
+Via the constructor, it should take a shared pointer to the "FileService" 
+object that it wraps (constructor injection).
+
+Implement the "load" method, which adds ".data" to the passed filename. 
+
+Tip: Use the "test.cpp" file to test your implementations.
