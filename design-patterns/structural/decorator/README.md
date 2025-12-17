@@ -1,6 +1,5 @@
 # Decorator 
 
-
 > Attach additional responsibilities to an object dynamically. 
 > Decorators provide a **flexible alternative to subclassing** for 
 > extending functionality.
@@ -17,7 +16,6 @@
 
 
 ## Structure
-
 
 ![Decorator Class Diagram](figures/decorator-classdiagram.jpg)
 
