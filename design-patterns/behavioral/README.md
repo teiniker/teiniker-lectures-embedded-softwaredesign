@@ -39,7 +39,7 @@ Overview of the behavioral patterns described by the GoF:
     request to pass through a chain of handlers. Each handler decides either 
     to process the request or to pass it to the next handler in the chain.
 
-* **Observer**: 
+* [**Observer**](observer/): 
     This pattern defines a one-to-many dependency between objects so that when 
     one object changes state, all its dependents are notified and updated 
     automatically.

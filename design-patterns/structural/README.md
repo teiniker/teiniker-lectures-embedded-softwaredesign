@@ -13,7 +13,7 @@ Overview of some key structural patterns described by the GoF:
   to control access to it. It is used to create a representative object that 
   controls access to another, possibly more complex, object.
 
-* **Decorator**:
+* [**Decorator**](decorator/):
   This pattern adds additional responsibilities to an object dynamically.
   Decorators provide a flexible alternative to subclassing for extending
   functionality.
