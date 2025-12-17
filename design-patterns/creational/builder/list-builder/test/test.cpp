@@ -36,7 +36,7 @@ TEST(BuilderTest, ListBuilderXml)
     ASSERT_EQ("<list><item>one</item><item>two</item><item>three</item></list>", xml);
 }
 
-TEST(BuilderTest, BaseType)
+TEST(BuilderTest, BaseTypeJson)
 {
     // Setup
     unique_ptr<ListBuilder> builder = make_unique<ListBuilderJson>();
@@ -50,4 +50,20 @@ TEST(BuilderTest, BaseType)
     ASSERT_NE(nullptr, jsonBuilder); // Verify the downcast worked
     string json = jsonBuilder->toJson();
     ASSERT_EQ("{\"list\":[\"alpha\",\"beta\",\"gamma\"]}", json);
+}
+
+TEST(BuilderTest, BaseTypeXml)
+{
+    // Setup
+    unique_ptr<ListBuilder> builder = make_unique<ListBuilderXml>();
+    
+    // Exercise
+    builder->item("alpha").item("beta").item("gamma");
+
+    // Verify
+    // Downcast to the concrete type to get the result
+    ListBuilderXml* xmlBuilder = dynamic_cast<ListBuilderXml*>(builder.get());
+    ASSERT_NE(nullptr, xmlBuilder); // Verify the downcast worked
+    string xml = xmlBuilder->toXml();
+    ASSERT_EQ("<list><item>alpha</item><item>beta</item><item>gamma</item></list>", xml);
 }

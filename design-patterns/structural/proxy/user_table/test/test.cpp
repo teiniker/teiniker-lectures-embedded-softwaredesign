@@ -8,19 +8,19 @@ using namespace std;
 class ProxyTestGroup : public ::testing::Test
 {
 protected:
+    shared_ptr<UserTable> impl;
+    shared_ptr<UserTable> proxy;
+
     void SetUp() override
     {
         // Dependency Injection: [:Test] --->[:UserTableProxy]--->[:UserTableImpl]
         impl = make_shared<UserTableImpl>();
-        proxy = make_shared<UserTableProxy>(impl);
+        proxy = make_shared<UserTableProxy>(impl);  // Constructor injection 
     }
-
-    shared_ptr<UserTable> impl;
-    shared_ptr<UserTable> proxy;
 };
 
 
-TEST_F(ProxyTestGroup, UserTableTest)
+TEST_F(ProxyTestGroup, UserTableTest)   // Without Proxy
 {
     // Setup
     auto homer = make_shared<User>(7, "homer", "c3R1ZGVudA");
