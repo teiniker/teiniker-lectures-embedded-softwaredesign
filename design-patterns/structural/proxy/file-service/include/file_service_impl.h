@@ -8,7 +8,7 @@ class FileServiceImpl : public FileService
 {
 	public:                
 		
-		std::string readFile(const std::string& filename);
+		std::string readFile(std::string& filename);
 		//...
  };
 

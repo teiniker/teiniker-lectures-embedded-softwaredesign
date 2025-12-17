@@ -13,11 +13,9 @@ class FileServiceProxy : public FileService
 	public:                
 		FileServiceProxy(std::shared_ptr<FileService> service);
 
-		std::string readFile(const std::string& filename);
+		std::string readFile(std::string& filename);
 		//...
 		
-	private:
-		bool endsWith(const std::string& s, const std::string& suffix);
  };
 
 #endif /*_FILE_SERVICE_PROXY_H_ */
