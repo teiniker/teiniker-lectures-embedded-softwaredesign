@@ -87,26 +87,35 @@ differences in functionality and application emerge.
 
 ### Dependency Injection vs. Factory Method
 
-#### Purpose:
+Although they’re often mentioned together, they solve different problems 
+at different levels of design.
 
-* **Dependency Injection**: Externalizes object creation: dependencies are given to an object.
+* **Factory Method**: Subclasses decide which concrete object to create:
+    - A class should not need to know exactly which concrete 
+        class it must instantiate.
+    - Factory Method is about object creation. It encapsulates the logic of which 
+        class to create.
+    - Factory Method operates at the **class level**
 
+* **Dependency Injection**: An external entity provides an object with 
+    its dependencies
+    - A class should not be responsible for creating its own dependencies.
+    - Dependency Injection is about object wiring. It separates object usage 
+        from object creation and assembly.
+    - Dependency Injection operates at the **system level**
 
-* **Factory Method**: Encapsulates object creation within a subclass, letting subclasses 
-    decide which concrete class to instantiate.
+**Typical Use Cases**:
 
-#### Use Cases:
+* **Factory Method**:
+    - Creating objects based on dynamic conditions.
+    - Object creation with additional logic.
+    - Avoiding direct dependency on concrete classes.
 
 * **Dependency Injection**:
     - Swapping implementations at runtime.
     - Unit testing with mocks or stubs.
     - Configurable behavior without changing code.
     - Reducing coupling in layered architectures.
-
-* **Factory Method**:
-    - Creating objects based on dynamic conditions.
-    - Object creation with additional logic.
-    - Avoiding direct dependency on concrete classes.
 
 
 ## References
