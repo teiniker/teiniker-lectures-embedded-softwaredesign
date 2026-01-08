@@ -8,15 +8,15 @@ using namespace std;
 class DecoratorTestGroup : public ::testing::Test
 {
 protected:
-    void SetUp() override
-    {
-        // Dependency Injection: [:Test] --->[:UserTableDecorator]--->[:UserTableImpl]
-        impl = make_shared<UserTableImpl>();
-        table = make_shared<UserTableLogger>(impl);
-    }
-
     shared_ptr<UserTable> impl;
     shared_ptr<UserTable> table;
+    
+    void SetUp() override
+    {
+        // Dependency Injection: [:Test] --->[:UserTableLogger]--->[:UserTableImpl]
+        impl = make_shared<UserTableImpl>();
+        table = make_shared<UserTableLogger>(impl); // Constructor injection
+    }
 };
 
 
