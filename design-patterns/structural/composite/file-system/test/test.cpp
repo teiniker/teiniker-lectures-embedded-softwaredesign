@@ -39,7 +39,7 @@ TEST(CompositeTestGroup, FileSystemTest)
     root->addNode(home);    
     
     auto teini = make_shared<Directory>("teini");
-    root->addNode(teini);
+    home->addNode(teini);
     auto bashrc = make_shared<File>(".bashrc", 1024);
     teini->addNode(bashrc);
     auto todo = make_shared<File>("TODO.txt", 2048);
