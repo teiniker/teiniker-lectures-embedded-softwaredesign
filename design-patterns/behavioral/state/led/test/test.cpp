@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <memory>
 
-#include <light_bulb.h>
+#include <led.h>
 #include <state_on.h>
 #include <state_off.h>
 
@@ -11,7 +11,7 @@ class StateTest : public ::testing::Test
 {
 protected:
     // system under test
-    LightBulb sm;
+    Led sm;
 
     void SetUp() override
     {

@@ -6,11 +6,11 @@
 #include <state_on.h>
 #include <state_off.h>
 
-class LightBulb
+class Led
 {
 public:
     // Constructor sets initial state to "Off"
-    LightBulb();
+    Led();
 
     // Trigger methods
     void switchOn();

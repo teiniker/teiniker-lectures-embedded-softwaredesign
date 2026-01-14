@@ -1,4 +1,4 @@
-#include <light_bulb.h>
+#include <led.h>
 #include <state_off.h>
 #include <state_on.h>
 
@@ -13,13 +13,13 @@ shared_ptr<StateOff> StateOff::getInstance()
 
 // Implement handler methods for state OFF
 
-void StateOff::handleSwitchOn(LightBulb& bulb)
+void StateOff::handleSwitchOn(Led& bulb)
 {
     bulb.currentOn();
     bulb.state(StateOn::getInstance());
 }
 
-void StateOff::handleSwitchOff(LightBulb& bulb) 
+void StateOff::handleSwitchOff(Led& bulb) 
 {
     // do nothing
     (void) bulb;

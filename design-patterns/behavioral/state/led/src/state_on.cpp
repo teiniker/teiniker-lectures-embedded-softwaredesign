@@ -1,4 +1,4 @@
-#include <light_bulb.h>
+#include <led.h>
 #include <state_off.h>
 #include <state_on.h>
 
@@ -12,13 +12,13 @@ shared_ptr<StateOn> StateOn::getInstance()
 }
 
 // Implement abstract methods
-void StateOn::handleSwitchOn(LightBulb& bulb)
+void StateOn::handleSwitchOn(Led& bulb)
 {
     // do nothing
     (void) bulb;
 }
 
-void StateOn::handleSwitchOff(LightBulb& bulb) 
+void StateOn::handleSwitchOff(Led& bulb) 
 {
     bulb.currentOff();
     bulb.state(StateOff::getInstance());

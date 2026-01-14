@@ -10,8 +10,8 @@ public:
     static std::shared_ptr<StateOff> getInstance();
     
     // Handler methods for state OFF
-    void handleSwitchOn(LightBulb& bulb) override;
-    void handleSwitchOff(LightBulb& bulb) override;
+    void handleSwitchOn(Led& led) override;
+    void handleSwitchOff(Led& led) override;
     
 private:
     // Private constructor to enforce singleton usage
