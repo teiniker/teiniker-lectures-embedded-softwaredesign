@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <memory>
 
-#include <sm_light_bulb.h>
+#include <sm_led.h>
 
 using namespace std;
 
@@ -14,7 +14,7 @@ TEST(StateTest, testInitialState)
 TEST(StateTest, testTurnOff)
 {
     // Exercise
-    sm_bulb(SWITCH_OFF);
+    sm_led(SWITCH_OFF);
 
     // Verify
     EXPECT_EQ(OFF, state);
@@ -25,7 +25,7 @@ TEST(StateTest, testTurnOff)
 TEST(StateTest, testTurnOn)
 {
     // Exercise 
-    sm_bulb(SWITCH_ON);
+    sm_led(SWITCH_ON);
 
     // Verify 
     EXPECT_EQ(ON, state);
@@ -35,14 +35,14 @@ TEST(StateTest, testTurnOn)
 TEST(StateTest, testTurnOnAndTurnOn)
 {
     // Exercise - Turn on once
-    sm_bulb(SWITCH_ON);
+    sm_led(SWITCH_ON);
     
     // Verify
     EXPECT_EQ(ON, state);
     EXPECT_TRUE(is_current_on);
         
     // Exercise - Turn on again
-    sm_bulb(SWITCH_ON);
+    sm_led(SWITCH_ON);
 
     // Verify 
     EXPECT_EQ(ON, state);
@@ -52,13 +52,13 @@ TEST(StateTest, testTurnOnAndTurnOn)
 TEST(StateTest, testTurnOnAndTurnOff)
 {
     // Exercise 
-    sm_bulb(SWITCH_ON);
+    sm_led(SWITCH_ON);
 
     // Verify
     EXPECT_EQ(ON, state);
 
     // Exercise
-    sm_bulb(SWITCH_OFF);
+    sm_led(SWITCH_OFF);
 
     // Verify
     EXPECT_EQ(OFF, state);

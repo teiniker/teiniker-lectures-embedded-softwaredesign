@@ -1,4 +1,4 @@
-#include <sm_light_bulb.h>
+#include <sm_led.h>
 
 void sm_led_handler_off(enum events event);
 void sm_led_handler_on(enum events event);
@@ -8,7 +8,7 @@ enum sm_states state = OFF;
 int is_current_on = false;
 
 // State Machine 
-void sm_bulb(enum events event)
+void sm_led(enum events event)
 {
     switch(state)
     {

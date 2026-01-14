@@ -19,5 +19,5 @@ extern enum sm_states state;
 extern int is_current_on;
 
 // State Machine 
-void sm_bulb(enum events event);
+void sm_led(enum events event);
 
