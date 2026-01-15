@@ -1,8 +1,8 @@
 #pragma once
 
+#include <iostream>
 #include <subject.h>	
 
-// StockMarket class representing the Subject in the Observer pattern
 class StockMarket : public Subject
 {
 	
@@ -18,6 +18,7 @@ public:
 	unsigned long dax() const { return _dax; }
 	void dax(const unsigned long value)
 	{
+		std::cout << "StockMarket: Setting DAX to " << value << std::endl;
 		_dax = value;
 		notifyObservers();
 	}	
@@ -26,6 +27,7 @@ public:
 	unsigned long dowJones() const { return _dowJones; }
 	void dowJones(const unsigned long value)
 	{
+		std::cout << "StockMarket: Setting Dow Jones to " << value << std::endl;
 		_dowJones = value;
 		notifyObservers();
 	}
