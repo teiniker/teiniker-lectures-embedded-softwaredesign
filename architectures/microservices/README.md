@@ -46,40 +46,104 @@ ensuring high cohesion and low coupling within the system.
     organization and responsibility allocation.
 
 
-## Practical Example
+## Example: RESTful APIs
 
-A **RESTful API** is a widely used approach for implementing microservices. 
-These services communicate over HTTP/HTTPS using RESTful APIs to achieve loosely 
-coupled, scalable, and flexible systems.
-
-**Representational State Transfer (REST)** is an architectural style for designing 
-distributed systems, particularly web services, and was introduced by **Roy Fielding** 
-in his doctoral dissertation in 2000.
+In his PhD thesis, **Roy Fielding** identified a set of architectural principles 
+called **REpresentational State Transfer (REST)**.
 
 ![REST](figures/REST.png)
 
-Concepts of RESTful APIs:
+## Addressability
+Addressability is the idea that every object and resource in our system is 
+reachable through a unique identifier.
 
-* **Stateless Communication**: 
-    * Each request from a client to a server contains all the information 
-    needed to process the request.
-    * The server does not store client session information.
+In the REST world, addressability is managed through the use of URIs.
 
-* **Resource-Based Design**:
-    Resources are identified by **URIs (Uniform Resource Identifiers)**, e.g., `/users`, 
-    `/orders/123`.
+_Example:_ 
+```
+http://localhost:8080/REST-Service/users/3
+```
+Using a unique URI to identify each of our services makes each of our 
+resources linkable.
 
-* **HTTP Methods**:
-    * **GET**: Retrieve a resource.
-    * **POST**: Create a resource.
-    * **PUT**: Update a resource.
-    * **DELETE**: Remove a resource.
+## Uniform, Constrained Interface
+REST uses only the finite set of operations of the HTTP application protocol 
+(HTTP methods) where each method has a specific purpose and meaning.
 
-* **Data Representation**: Data is typically exchanged in **JSON** or **XML** format.
+* **GET**: This is a **read-only** operation. It is used to query the server 
+	for specific information. 
+  	It is an **idempotent** (no matter how many times we apply the operation, 
+	the result is always the same) and **safe** (invoking a GET does not 
+	change the state of the server at all) operation.
 
+* **PUT**: This method requests that the server store the message body sent 
+	with the request under the location provided by in the HTTP message. 
+	It is also **idempotent**.
+
+* **DELETE**: This method is used to remove resources. It is **idempotent** 
+	as well.
+
+* **POST**: This is the only **nonidempotent and unsafe** operation of HTTP. 
+	Each POST method is allowed to modify the service in a unique way.
+
+* **HEAD**: This method is exactly like GET except that instead of returning a 
+	response body, it returns only a response code and any headers associated 
+	with the request.
+
+* **OPTIONS**: This method is used to request information about the communication 
+	operations of the resource we are interested in.
+
+There are other HTTP methods (like TRACE and CONNECT), but they are unimportant 
+when designing RESTful services.
+
+Advantages of constraining the interfaces:
+* **Familiarity**: If we have a URI that points to a service, we know exactly 
+	which methods are available on that resource.
+* **Interoperability**: HTTP is a very well known protocol. Most programming 
+	languages have an HTTP client library available to them.
+* **Scalability**: Because REST constrains us to a well-defined set of methods, 
+	we have predictable behavior that can have massive performance benefits 
+	(e.g. using caches).
+
+## Representation-Oriented
+
+Each service is addressable through a specific URI and representations are exchanged 
+between the client and service.
+
+These representations could be **XML**, **JSON**, **YAML**, or any format we can 
+come up with.
+
+The representation is the message body of a HTTP request or response. 
+HTTP uses the **Content-Type header** to tell the client or server what data format 
+it is receiving. With the **Accept header**, a client can list its preferred response 
+formats.
+
+## Communicate Statelessly
+
+Stateless means that there is no client session data stored on the server. 
+The server only records and manages the state of the resources it exposes.
+
+If there is a need for session-specific data, it should be held and maintained 
+by the client and transferred to the server with each request as needed.
+
+A service that does not have to maintain client sessions is a lot easier 
+to scale, without expensive replications in a clustered environment.
+
+
+## HATEOAS
+
+Hypermedia is a document-centric approach with the added support for embedding 
+links to other services. Hyperlinks allow us to reference and aggregate 
+additional data without bloating our responses.
+
+In **Hypermedia As The Engine Of Application State**, with each request returned 
+from a server it tells us what new interaction we can do next, as well as where 
+to go to transition the state of our applications. 
 
 
 ## References
+* Roy Thomas Fielding. **Architectural Styles and the Design of Network-based Software Architectures**.
+	University of California, Irvine, 2000
 
 * Martin Fowler: [Microservices](https://martinfowler.com/articles/microservices.html) 
 
@@ -89,5 +153,4 @@ Concepts of RESTful APIs:
     **Building Microservices: Designing Fine-Grained Systems**.
     O'Reilly, 2nd Edition, 2021
 
-
-*Egon Teiniker, 2020-2025, GPL v3.0*
+*Egon Teiniker, 2020-2026, GPL v3.0*
