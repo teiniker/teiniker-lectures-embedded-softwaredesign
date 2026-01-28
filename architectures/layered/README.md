@@ -31,50 +31,71 @@ but commonly, applications use a **three-tier** or four-tier setup.
     and upgrades.
 
 
-## Practical Example
+## Example: ESP32 Software Stack
 
-In the **embedded systems** domain, layered architecture is widely applied to manage 
-complexity and improve maintainability. 
+When we build an application for the ESP32 using the **Arduino development framework**, 
+we are actually leveraging a stack of software layers underneath our own code. 
 
-* **Layer 1: Hardware Abstraction Layer (HAL)**
-    * Provides an interface between the hardware and software.
-    * Manages device-specific operations, such as reading sensors or controlling actuators.
-    * Abstracts the specifics of the microcontroller and peripherals.
+Here is how these layers typically look, from lowest (closest to the hardware) to highest 
+(where your user application code runs):
 
-    * Components:
-        * Drivers for sensors (e.g., temperature, humidity).
-        * Drivers for actuators (e.g., HVAC control relays, fans).
-        * Communication protocols (e.g., SPI, I2C, UART).
+![ESP32 Software Layers](figures/ESP32-Stack.png)
 
-* **Layer 2: Firmware/Platform Layer**
-    * Manages the operating system (if present) and system-level services.
-    * Provides reusable modules for tasks like scheduling, logging, and power management.
 
-    * Components:
-        * Real-Time Operating System (RTOS) or lightweight task scheduler (e.g., FreeRTOS).
-        * Power management modules to control energy usage.
-        * Drivers for non-critical peripherals (e.g., LCD screen or buttons).
+### 1. ESP32 Hardware
 
-* **Layer 3: Application Layer**
-    * Implements the main control logic and decision-making processes.
-    * Processes data from sensors and issues commands to actuators.
-    * Ensures system behavior adheres to user-defined rules and configurations.    
+This is the actual **silicon**: the microprocessor (Tensilica Xtensa cores 
+on the ESP32, **RISC-V** on ESP32-Cx), memory, peripherals (UART, SPI, Wi-Fi, Bluetooth, 
+etc.), and GPIOs.
 
-    * Components:
-        * Control algorithms for temperature regulation (e.g., PID control).
-        * Logic for operating modes (e.g., "Energy-Saving Mode," "Comfort Mode").
-        * Communication protocols for user commands (e.g., Wi-Fi or Bluetooth handlers). 
+All other software layers ultimately communicate with the real hardware 
+registers and peripherals of the SoC (system on a chip).  
 
-* **Layer 4: User Interaction Layer**
-    * Interfaces with the end-user or other systems for configuration and control.
-    * Displays system status or takes user inputs.
-    * Provides connectivity for remote control or monitoring.
+### 2. FreeRTOS 
 
-    * Components:
-        * LCD screen and buttons for local user interaction.
-        * Wireless communication modules (e.g., Wi-Fi, Zigbee).
-        * APIs for mobile app or cloud integration.
+FreeRTOS is a popular, open-source Real-Time Operating System (RTOS) designed specifically for microcontrollers and small embedded systems. It provides a lightweight kernel that manages task scheduling, allowing you to break your application into independent, concurrent threads (tasks) rather than writing a single super-loop.
 
+As an ESP-IDF component it includes scheduler, tasks, queues, 
+semaphores, timers, ISR-to-task handoff, etc. 
+
+
+### 3. Espressif IoT Development Framework (ESP-IDF)
+
+The ESP-IDF is Espressif’s official, **low-level SDK for programming the ESP32**. 
+It is the base software stack that provides **drivers**, **Wi-Fi and Bluetooth stacks**, 
+and other core functionalities.
+
+It provides APIs to configure and control ESP32 peripherals (PWM, I2C, SPI, Wi-Fi, etc.).  
+
+
+### 3. Arduino Core for ESP32
+
+The **Arduino Core for ESP32** is essentially a wrapper or adaptation layer built on 
+top of ESP-IDF. It allows Arduino code (with its familiar functions like `setup()`, 
+`loop()`, `pinMode()`, `digitalWrite()`, etc.) to run on the ESP32.
+
+* It translates standard Arduino function calls into equivalent ESP-IDF functions.  
+* It includes board definitions, pin mappings, default configurations, and initialization 
+    routines specific to various ESP32 boards.  
+* It keeps the Arduino API consistent with the typical Arduino C++ environment.  
+
+
+### 4. Arduino Sketch
+
+This is your application (`.ino` file) or your C++ source code, which you write in the Arduino 
+IDE (or other environments like PlatformIO).  
+
+In standard Arduino style, we implement a `setup()` function (runs once) and a `loop()` 
+function (runs repeatedly).
+
+* Our code directly calls Arduino API functions (e.g., `pinMode()`, `digitalWrite()`, 
+    `WiFi.begin()`, etc.).  
+* At compile time, our code is linked with the Arduino libraries, which themselves 
+    rely on ESP-IDF.  
+* Once compiled and uploaded, our application code runs on the ESP32 hardware.  
+
+This layered architecture lets us write simple Arduino-style sketches, while under 
+the hood it benefits from the robust and feature-rich platform provided by the ESP-IDF.
 
 
 ## References 
@@ -88,4 +109,8 @@ complexity and improve maintainability.
     Addison-Wesley, 2017
     * Chapter 29: Clean Embedded Architecture
 
-*Egon Teiniker, 2020-2025, GPL v3.0*
+* [Arduino core for the ESP32, ESP32-P4, ESP32-S2, ESP32-S3, ESP32-C3, ESP32-C6 and ESP32-H2](https://github.com/espressif/arduino-esp32)
+
+* [ESP32 Arduino Core’s documentation](https://docs.espressif.com/projects/arduino-esp32/en/latest/)
+
+*Egon Teiniker, 2020-2026, GPL v3.0*
