@@ -54,7 +54,7 @@ while servers manage data processing, storage, and business logic.
         tasks.
 
 
-## Example: HTTP
+## Example: Web Application
 
 The **Hypertext Transfer Protocol (HTTP)** protocol is a classic example of 
 client-server architecture, used widely for web applications. Below is an 
