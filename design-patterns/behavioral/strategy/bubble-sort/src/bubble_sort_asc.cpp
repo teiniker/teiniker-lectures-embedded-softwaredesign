@@ -3,8 +3,6 @@
 
 using namespace std;
 
-#include <vector>
-
 void BubbleSortAsc::sort(vector<int>& data)
 {
 	int tmp = 0;
