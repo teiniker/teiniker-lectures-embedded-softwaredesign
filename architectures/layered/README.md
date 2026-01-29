@@ -82,7 +82,7 @@ top of ESP-IDF. It allows Arduino code (with its familiar functions like `setup(
 
 ### 4. Arduino Sketch
 
-This is your application (`.ino` file) or your C++ source code, which you write in the Arduino 
+This is our application (`.ino` file) or your C++ source code, which we write in the Arduino 
 IDE (or other environments like PlatformIO).  
 
 In standard Arduino style, we implement a `setup()` function (runs once) and a `loop()` 
