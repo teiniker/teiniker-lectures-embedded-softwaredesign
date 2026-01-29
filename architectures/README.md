@@ -6,6 +6,8 @@ responsibilities are divided, and how well the system meets its quality attribut
 
 The most common architectural styles are:
 
+* [Introduction](introduction/README.md)
+
 * [Layered Architectures](layered/README.md)
 
 * [Client-Server Architectures](client-server/README.md)
