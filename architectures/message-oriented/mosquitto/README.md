@@ -1,7 +1,7 @@
 # Mosquito
 
-Mosquitto is a lightweight, open-source MQTT broker developed by the Eclipse 
-Foundation that implements the MQTT messaging protocol for publish/subscribe 
+Mosquitto is a **lightweight, open-source MQTT broker** developed by the **Eclipse 
+Foundation** that implements the MQTT messaging protocol for publish/subscribe 
 communication. It is designed to be efficient and easy to deploy, making it 
 popular for IoT, embedded systems, and low-bandwidth or unreliable networks. 
 
