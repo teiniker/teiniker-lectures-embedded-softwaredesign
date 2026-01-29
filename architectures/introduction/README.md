@@ -77,7 +77,7 @@ where you want a broader system-level perspective.
 
 
 ###  BPMN (Business Process Model and Notation)
-Though primarily used for modeling business processes, BPMN can be relevant for 
+Though primarily used for **modeling business processes**, BPMN can be relevant for 
 capturing workflow and process-oriented aspects of the system. It clarifies how data 
 and tasks move between services and participants (which can inform the architecture).
 
