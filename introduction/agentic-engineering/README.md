@@ -1,4 +1,4 @@
-# Introduction to Agentic Engineering
+# Agentic Engineering
 
 * [Introduction](introduction/README.md)
 
